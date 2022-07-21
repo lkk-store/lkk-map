@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LKK Maps</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+		@font-face {
+		    font-family: 'HK Map Font'; /*a name to be used later*/
+		    src: url('HKmap-Test3.otf'); /*URL to font*/
+		}
+
+		body, html {
+			margin:  0;
+			padding:  0;
+			background: #000;
+			color:  #999;
+			font-family: 'Varela Round', sans-serif;
+			text-align: center;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		.g-footer {
+			padding: 100px 0 50px 0;
+		}
+
+		.g-small {
+			font-size: 8px;
+			opacity: 0.6;
+		}
+
+		.g-header {
+			padding: 50px 0 50px 0;
+		}
+
+		.g-header .g-hed {
+			letter-spacing: 2px;
+			font-size: 30px;
+		}
+
+		.g-hed-text {
+			padding:  25px 0 25px 0;
+		}
+
+		.g-hed {
+			font-size: 16px;
+			margin-bottom: 10px;
+			letter-spacing: 2px;
+			font-family: 'HK Map Font';
+		}
+
+		.g-text {
+			font-size: 11px;
+			opacity: 0.6;
+			margin-bottom: 3px;
+		}
+
+		.g-img-block {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.g-img-block .g-img-bg {
+			width: calc(50% - 2.5px);
+			display: inline-block;
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+
+		.g-img-block .g-img-bg:nth-child(even) {
+			margin-right: 0;
+		}
+
+
+		.g-img-bg-inner {
+			padding-bottom: 100%;
+			width: 100%;
+			background-size:  cover;
+			background-position: center;
+		}
+
+		@media screen and (min-width: 600px) {
+			.g-img-featured, .g-img-block {
+				width: calc(50% - 4px);
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.g-img-block .g-img-bg {
+				width: calc(33.333% - 3px);
+				display: inline-block;
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+
+			.g-img-bg-inner {
+				padding-bottom: 151%;
+			}
+		}
+
+		.g-project:after {
+			content: "";
+			display: block;
+			width: 20px; 
+			height: 1px; 
+			border-bottom: 5px solid rgba(255,255,255,0.2);
+			margin: 150px auto 100px auto;
+		}
+
+		a {
+			color:  #fff;
+			opacity: 0.6;
+		}
+
+		.g-img-featured {
+			border: 1px solid rgba(255,255,255,0.1);
+		}
+		
+		.g-text {
+			max-width: 400px;
+			margin:  0 auto 10px auto;
+			padding:  0 16px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="g-header">
+		<div class="g-hed-text">
+			<p class="g-hed">LKK MAPS</p>
+			<!-- <p class="g-text">it's the journey, not the place</p> -->
+		</div>
+	</div>
+
+	<!-- <div class="g-project">
+		<div class="g-hed-text">
+			<p class="g-hed">香港四徑</p>
+			<p class="g-hed">HONG KONG FOUR TRAILS</p>
+			<p class="g-text">香港有四條長途遠足徑，我將會喺 2022 年呢嘅暑假，完成呢 4 條山徑，作為自己一個小小嘅挑戰。人生好似不外乎諗啲目標俾自己然後向住嗰毎目標進發。</p>
+			<p class="g-text">There are four long distance hiking trails in Hong Kong. I'm going to hike all of them this summer as a small personal challenge. Life seems like a coming up with goals for yourself and trying to accomplish them.</p>
+		</div>
+
+		<div class="g-img-cont">
+			<div class="g-img-featured">
+				<img src="four/four.jpg" />
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="g-project">
+		<div class="g-hed-text">
+			<p class="g-hed">港島徑</p>
+			<p class="g-hed">HONG KONG TRAIL</p>
+			<p class="g-text">我喺 2022 年 6 月 27 日 行咗港島徑，45 公里，人生第一次一日行咁多路。</p>
+			<p class="g-text">I hiked the Hong Kong Trail on June 27, 2022. 45 km. Longest hike I've done in a day.</p>
+			<p class="g-text"><a href="https://www.lkk-store.com/a/hong-kong-trail">Read more</a></p>
+		</div>
+
+		<div class="g-img-cont">
+			<div class="g-img-featured">
+				<img src="hk-trail/featured.jpg" />
+			</div>
+			<div class="g-img-block">
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h073.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h100.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h102.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h062.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h023.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('hk-trail/h087.jpg');" /></div></div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="g-project">
+		<div class="g-hed-text">
+			<p class="g-hed">衞奕信徑</p>
+			<p class="g-hed">WILSON TRAIL</p>
+			<p class="g-text">我喺 2022 年 7 月 11 - 12 日 行咗衞奕信徑，78 公里，全意志。</p>
+			<p class="g-text">I hiked the Wilson Trail on July 11 - 12, 2022. 78 km. Pure will.</p>
+			<p class="g-text"><a href="https://www.lkk-store.com/a/wilson-trail">Read more</a></p>
+		</div>
+
+		<div class="g-img-cont">
+			<div class="g-img-featured">
+				<img src="wilson-trail/featured.jpg" />
+			</div>
+			<div class="g-img-block">
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/wcover.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/w000.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/w018b.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/w020a.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/w101a.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('wilson-trail/w137.jpg');" /></div></div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="g-project">
+		<div class="g-hed-text">
+			<p class="g-hed">長咀地圖</p>
+			<p class="g-hed">CHEUNG TSUI</p>
+			<p class="g-text">Cloth Map</p>
+			<p class="g-text">Silkscreen Printed on 100% Cotton</p>
+			<p class="g-text">18" x 18"</p>
+		</div>
+
+		<div class="g-img-cont">
+			<div class="g-img-featured">
+				<img src="cheung-tsui/IMG_5833.jpg" />
+			</div>
+			<div class="g-img-block">
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_2129.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_5900.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_5816.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_2458.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_2146.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('cheung-tsui/IMG_5836.jpg');" /></div></div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div class="g-project">
+		<div class="g-hed-text">
+			<p class="g-hed">VIA ALPINA</p>
+			<p class="g-text">2020 年 10 月，打橫行咗瑞士一次，390 公里。</p>
+			<p class="g-text">In October 2020, I hiked across Switzerland, 390 km.</p>
+			<p class="g-text"><a href="lkk-store.com/a/via-alpina">Read more</a></p>
+		</div>
+
+		<div class="g-img-cont">
+			<div class="g-img-featured">
+				<img src="via-alpina/featured.jpg" />
+			</div>
+			<div class="g-img-block">
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/IMG_5755.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/IMG_1873.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/IMG_5180.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/99EF07FF-6E25-4E27-8B3B-096AC0E0A695.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/IMG_5289.jpg');" /></div></div>
+				<div class="g-img-bg"><div class="g-img-bg-inner" style="background-image:  url('via-alpina/B08B48DF-3B1E-477A-80F1-71281E8CC226.jpg');" /></div></div>
+			</div>
+		</div>
+	</div>
+	 -->
+
+
+
+
+
+	<div class="g-footer">
+		<div class="g-small">© LKK MAPS 2022</div>
+	</div>
+</body>
+</html>
