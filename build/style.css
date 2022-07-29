@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'HK Map Font';
   /*a name to be used later*/
-  src: url('/HKmap-Test3.otf');
+  src: url('https://www.lkk-store.com/lkk-maps/HKmap-Test3.otf');
   /*URL to font*/
 }
 @font-face {
   font-family: 'MYuenHK';
   /*a name to be used later*/
-  src: url('/MYuenHK-Medium.ttf');
+  src: url('https://www.lkk-store.com/lkk-maps/MYuenHK-Medium.ttf');
   /*URL to font*/
 }
 body,
