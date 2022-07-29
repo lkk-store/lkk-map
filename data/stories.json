@@ -1,0 +1,32 @@
+[
+  {
+    "name_cn": "港島徑",
+    "name_en": "Hong Kong Trail",
+    "text_cn": "我喺 2022 年 6 月 27 日 行咗港島徑，45 公里，人生第一次一日行咁多路。",
+    "text_en": "I hiked the Hong Kong Trail on June 27, 2022. 45 km. Longest hike I've done in a day.",
+    "featured": "hk-trail/h023.jpg",
+    "img": "h073.jpg, h100.jpg, h102.jpg, h062.jpg, h023.jpg, h087.jpg",
+    "link": "hong-kong-trail",
+    "date": "27/6/2022"
+  },
+  {
+    "name_cn": "衛奕信徑",
+    "name_en": "Wilson Trail",
+    "text_cn": "我喺 2022 年 7 月 11 - 12 日 行咗衞奕信徑，78 公里，全意志。",
+    "text_en": "I hiked the Wilson Trail on July 11 - 12, 2022. 78 km. Pure will.",
+    "featured": "wilson-trail/wcover.jpg",
+    "img": "wcover.jpg, w000.jpg, w018b.jpg, w020a.jpg, w101a.jpg, w137.jpg",
+    "link": "wilson-trail",
+    "date": "11-12/7/2022"
+  },
+  {
+    "name_cn": "",
+    "name_en": "HK MAP TYPE",
+    "text_cn": "",
+    "text_en": "",
+    "featured": "type/old4.jpg",
+    "img": "IMG_2129.jpg, IMG_5900.jpg, IMG_5816.jpg, IMG_2458.jpg, IMG_2146.jpg, IMG_5836.jpg",
+    "link": "type",
+    "date": "BY FIBI KUNG"
+  }
+]

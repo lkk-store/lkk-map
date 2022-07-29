@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'HK Map Font';
+  /*a name to be used later*/
+  src: url('/HKmap-Test3.otf');
+  /*URL to font*/
+}
+@font-face {
+  font-family: 'MYuenHK';
+  /*a name to be used later*/
+  src: url('/MYuenHK-Medium.ttf');
+  /*URL to font*/
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #ececec;
+  font-family: 'HK Map Font', 'Varela Round', sans-serif;
+  text-align: center;
+}
+a,
+a:visited {
+  color: #ececec;
+}
+p {
+  margin: 0;
+}
+.g-footer {
+  padding: 100px 0 50px 0;
+}
+.g-header {
+  padding: 50px 0 50px 0;
+}
+.g-header a {
+  text-decoration: none;
+}
+.g-header .g-big-hed {
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.g-hed-text {
+  padding: 25px 0 25px 0;
+}
+.g-hed {
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-family: 'HK Map Font';
+  text-align: center;
+  cursor: pointer;
+}
+.g-hed-cn {
+  font-family: 'MYuenHK';
+}
+.g-text {
+  font-size: 12px;
+  max-width: 300px;
+  margin: 0 auto 5px auto;
+  padding: 0 16px;
+  line-height: 1.5;
+}
+.g-section {
+  text-align: left;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+}
+.g-small {
+  font-size: 8px;
+  opacity: 0.6;
+}
+.g-date {
+  margin-top: 8px;
+}
+.g-text-cn {
+  font-family: 'MYuenHK';
+  font-size: 14px;
+  letter-spacing: 6px;
+  margin-left: 23px;
+  line-height: 1;
+}
+@media screen and (min-width: 460px) {
+  .g-text-cn {
+    margin-left: 9px;
+  }
+}
+.g-project-cont {
+  overflow: hidden;
+}
+.g-project {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media screen and (min-width: 460px) {
+  .g-project {
+    width: calc(33.3333% - 7px);
+  }
+}
+.g-project:last-child {
+  margin-bottom: 100px;
+}
+.g-project a {
+  text-decoration: none;
+}
+.g-img-cont {
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  padding-bottom: 35%;
+  background-size: cover;
+  background-position: 0 50%;
+}
+@media screen and (min-width: 460px) {
+  .g-img-cont {
+    padding-bottom: 100%;
+  }
+}
+.g-project-about {
+  text-align: center;
+}
+.g-shop-page .g-hed {
+  margin-bottom: 10px;
+}
+.g-shop-page .g-hed-cn {
+  font-size: 19px;
+  margin-bottom: 0;
+  letter-spacing: 10px;
+  margin-left: 10px;
+}
+.g-shop-page .g-featured-img .g-featured-img-inner {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.g-shop-page .g-featured-img .g-featured-img-inner-cont {
+  position: relative;
+}
+.g-shop-page .g-featured-img .g-nav-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  height: 100%;
+  text-align: center;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+.g-shop-page .g-featured-img .g-nav-button.g-active {
+  display: block;
+}
+.g-shop-page .g-featured-img .g-nav-button .g-nav-button-inner {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 10px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  line-height: 1.1;
+  text-align: center;
+  font-size: 11px;
+}
+.g-shop-page .g-featured-img .g-nav-button.g-nav-button-next {
+  right: 0;
+  left: auto;
+}
+.g-shop-page .g-img-cont {
+  margin: 30px auto;
+  max-width: 600px;
+  padding-bottom: 0 !important;
+  border: none;
+  text-align: left;
+}
+.g-shop-page .g-img-thumbs {
+  margin-top: 10px;
+  display: flex;
+}
+.g-shop-page .g-img-thumb-cont {
+  display: inline-block;
+  margin-right: 10px;
+  opacity: 0.3;
+  border: 1px solid #000;
+}
+.g-shop-page .g-img-thumb-cont .g-img-thumb-inner {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.g-shop-page .g-img-thumb-cont img {
+  min-width: 100%;
+  min-height: 100%;
+}
+.g-shop-page .g-img-thumb-cont.g-selected {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+.g-shop-page .g-img-thumb-cont:last-child {
+  margin-right: 0;
+}
+.g-shop-page .g-detail-cont {
+  margin: 25px auto 100px auto;
+}
+.g-shop-page .g-detail-cont .g-text {
+  font-family: arial, sans-serif;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 11px;
+}
+.g-shop-page .g-detail-cont .g-text-break {
+  height: 10px;
+}

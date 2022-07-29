@@ -1,0 +1,36 @@
+<% var d = data.shop.filter(a => a.link == page)[0] %>
+<% console.log(d.link, data.imgs[d.link][0]) %>
+
+<div class="g-shop-page">
+	<div class="g-hed g-hed-cn"><%- d.name_cn %></div>
+	<div class="g-hed g-hed-en"><%- d.name_en %></div>
+	<div class="g-text g-small g-date"><%- d.date %></div>
+
+	<div class="g-img-cont g-img-cont-<%- d.link %>">
+		<div class="g-featured-img g-featured-<%- d.link %>">
+			<div class="g-featured-img-inner-cont">
+				<div class='g-featured-img-inner' style="background-image: url(../../../img/<%- d.link %>/<%- data.imgs[d.link][0] %>)"></div>
+				<div class="g-nav-button g-nav-button-back" data-dir="back" data-id="<%- d.link %>"><div class="g-nav-button-inner"><</div></div>
+				<div class="g-nav-button g-nav-button-next g-active" data-dir="next" data-id="<%- d.link %>" ><div class="g-nav-button-inner">></div></div>
+			</div>
+			<div class="g-img-thumbs g-img-thumbs-<%- d.link %>" data-counter="0" data-max="<%- data.imgs[d.link].length %>">
+				<% data.imgs[d.link].forEach(function(a,i){ 
+				%>
+				<div class="g-img-thumb-cont g-img-thumb-cont-<%- i %> <% if (i == 0) { %>g-selected<% } %>" data-count="<%- i %>" data-id="<%- d.link %>" style="width: <%- 100/data.imgs[d.link].length %>%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/<%- d.link %>/<%- a %>);"></div>
+				</div>
+				<% }) %>
+			</div>
+
+			<div class="g-detail-cont">
+				<% var lines = d.detail.split("//") %>
+				<% lines.forEach(function(l){ %>
+				<div class="g-text <% if (l == '') { %>g-text-break<% } %>"><%- l %></div>
+				<% }) %>
+				<div class="g-text g-text-break"></div>
+				<div class="g-text">email welcometolkk@gmail.com to order</div>
+			</div>
+	</div>
+
+
+</div>
