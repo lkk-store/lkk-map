@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+	<title>LKK MAPS | HONG KONG MAP TYPE</title>
+	<link rel="shortcut icon" href="../../../img/lkk-logo-06.webp" />
+	<link rel="stylesheet" type="text/css" href="../../../build/style.css">
+	<style type="text/css">
+		.g-header .g-big-hed {
+			font-size: 12px;
+			opacity: 0.5;
+		}
+
+		.g-byline {
+			font-size: 12px;
+			opacity: 0.5;
+		}
+
+		.g-img-bg-cont {
+			width: 100%;
+			height:  300px;
+			margin:  50px auto;
+			overflow: hidden;
+		}
+		.g-img-bg {
+			width: 7680px;
+			height:  100%;
+			background: url("bg.png");
+			background-size: auto 100%;
+			animation: mymove 150s infinite;
+		}
+
+		@keyframes mymove {
+		  0% {
+		    transform: translate(0);
+		  }
+		  100% {
+		    transform: translate(-3840px); /* The image width */
+		  }
+		}
+
+		.g-text-cont {
+			margin:  25px auto;
+		}
+
+		.g-text {
+			font-family: arial, sans-serif;
+			opacity: 0.8;
+		}
+
+		h1 {
+			font-size: 21px;
+		}
+
+		.g-type-img {
+			max-width: 720px;
+			margin: 0 auto;
+			-webkit-filter: invert(100%);
+			filter: invert(100%);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/">LKK MAPS</p></div></a></div>
+
+	<div class="g-body">
+			
+		<h1>HONG KONG MAP TYPE</h1>
+		<p class="g-byline">BY FIBI KUNG</p>
+		<div class="g-text-cont">
+			<div class="g-text">The typography used in this project is inspired by old maps of Hong Kong.</div>
+		</div>
+		<div class="g-img-bg-cont">
+			<div class="g-img-bg"></div>
+		</div>
+
+		<div class="g-text-cont">
+			<div class="g-text">More things to say...?</div>
+		</div>
+
+		<div class="g-type-img">
+			<img src="type.png">
+		</div>
+
+
+		<div class="g-footer"><div class="g-small">© LKK MAPS 2022</div></div>
+	</div>
+
+
+
+</body>
+</html>
