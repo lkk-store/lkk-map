@@ -5,7 +5,7 @@ sel = sel.append("div.g-map-inner");
 
 d3.select(".g-body").style("margin-top", (innerHeight/2 - d3.select(".g-body").node().getBoundingClientRect().height/2) + "px")
 
-var dot, ids, wps, dotg, projection, trailpath, path, trailf, totalLength, wps, trackpts, totaldist, trailshape, hkg, all, enddp, meta;
+var dot, ids, wps, dotg, projection, trailpath, path, trailf, totalLength, wps, trackpts, totaldist, trailshape, hkg, all, enddp, meta, elevdot, elevx, elevy, elevwidth, lastpt, elevline, elevsvg, elevpath, elevg, elevtext;
 
 var dsvg, dw, dh, dproj, dpath, dline, dmap, data;
 
@@ -16,7 +16,7 @@ var width = 300;
 var height = width*0.8;
 
 if (trailid == "hk") {
-	width = 400;
+	width = 200;
 	height = 110;
 }
 
@@ -100,6 +100,9 @@ d3.queue()
 			.attr("d", line(trailf[0].geometry.coordinates))
 
 		totalLength = Math.ceil(trailpath.node().getTotalLength());
+
+		drawElevChart();
+
 
 		ids = data.map(d => d.id);
 		var cont = d3.select(".g-content").html("")
@@ -445,18 +448,6 @@ function move(id, hash) {
 			zoomMap();
 		}
 
-		
-
-	// } else if (photoid == "000") {
-
-	// 	d3.select(".g-map").classed("g-hide", false)
-	// 	dotg.transition().duration(0).translate(projection([pts.start[0], pts.start[1]]))
-	// 	trailpath.transition().duration(0)
-	// 			  .attr("stroke-dasharray", totalLength + " " + totalLength)
-	// 			  .attr("stroke-dashoffset", totalLength)
-
-
-
 	} else {
 
 		d3.select(".g-map").classed("g-hide", false)
@@ -475,7 +466,7 @@ function move(id, hash) {
 		var prevnum = previd == "cover" ? 0 : previd.replace(trailletter.toUpperCase(), "").slice(0, 3)
 		var startpt = trackpts.filter(d => d.dp == trailletter.toUpperCase() + prevnum)[0];
 		var startpct = previd == "cover" || !startpt ? 0 : startpt.dist/totaldist;
-		startpct = id == enddp && startpct == 0 ? (trackpts[trackpts.length - 2].dist/totaldist) : startpct
+		startpct = id == enddp && startpct == 0 ? (trackpts[trackpts.length - 1].dist/totaldist) : startpct
 
 		dotg.transition()
 			.duration(duration)
@@ -489,7 +480,7 @@ function move(id, hash) {
 			lastdist = id == "cover" ? 0 : lastdist;
 			endpt = id == "000" ? trackpts[0] : id == enddp.id ? trackpts[trackpts.length - 1] : endpt;
 
-			if (trailid == "wilson" && id == enddp.id) {
+			if (trailid == "wilson" && (id == enddp.id)) {
 				endpt.dist = 78;
 			}
 
@@ -550,19 +541,43 @@ function move(id, hash) {
 		}
 
 		function pathTween(path){
+
+			// console.log(trackpts.indexOf(startpt), trackpts.indexOf(endpt))
+
 			var r = d3.interpolate(totalLength*startpct, totalLength*endpct);
+			var r = d3.interpolate(trackpts.indexOf(startpt), trackpts.indexOf(endpt));
+
 			return function(t){
 				if (!isNaN(r(t))) {
 
-					trailpath
-						.transition().duration(0)
-					  .attr("stroke-dasharray", (r(t)/totalLength)*totalLength + " " + totalLength)
-					  .transition()
-					  	.ease(d3.easeLinear)
-					    .attr("stroke-dashoffset", 0)
+					var closestpt = trackpts[Math.ceil(r(t))];
 
-					var point = trailpath.node().getPointAtLength(((r(t)/totalLength)*totalLength)+3);
-					dotg.attr("transform", "translate(" + point.x + "," + point.y + ")")
+					if (closestpt) {
+
+						trailpath
+							.transition().duration(0)
+						  .attr("stroke-dasharray", (closestpt.dist/totaldist)*totalLength + " " + totalLength)
+						  .transition()
+						  	.ease(d3.easeLinear)
+						    .attr("stroke-dashoffset", 0)
+
+						var point = trailpath.node().getPointAtLength(((closestpt.dist/totaldist)*totalLength)+3);
+						dotg.attr("transform", "translate(" + point.x + "," + point.y + ")")
+						
+						if (id != "cover" && id != enddp) {	
+							var newelevwidth = elevwidth*8
+							elevx = d3.scaleLinear().range([0,newelevwidth]).domain([0,lastpt.dist]);
+							elevpath.attr("d", elevline)
+
+
+							var targetpt = (-elevx(closestpt.dist)) + (elevwidth/2);
+							elevg.attr("transform", "translate(" + (targetpt) + ",0)")	
+
+							elevtext.text((Math.ceil(closestpt.alt / 10) * 10) + "m")
+						}
+						
+						elevdot.attr("transform", "translate(" + elevx(closestpt.dist) + "," + elevy(closestpt.alt) + ")")
+					}
 				}
 			}
 		}
@@ -624,15 +639,11 @@ function zoomMap() {
 
 		var trailf = topojson.feature(all, all.objects[trail]).features
 
-		// if (dtrailpath && trail == "t_hk") {
-		// 	dtrailpath.transition().duration(0).attr("stroke-dashoffset", 0);	
-		// } else {
-			dsvg.appendMany("path.g-trail-path.g-four-trail-path", trailf)
-				.attr("id", (d,i) => trail + "_" + i)
-				.style("stroke", trail == "t_" + trailid ? "#ffcc00" : "rgba(2555,255,255,0.7)")
-				.style("stroke-width", 4)
-				.attr("d", dpath)	
-		// }
+		dsvg.appendMany("path.g-trail-path.g-four-trail-path", trailf)
+			.attr("id", (d,i) => trail + "_" + i)
+			.style("stroke", trail == "t_" + trailid ? "#ffcc00" : "rgba(2555,255,255,0.7)")
+			.style("stroke-width", 4)
+			.attr("d", dpath)
 
 		if (trail == "t_wilson") {
 			dsvg.append("path.g-trail-path.g-four-trail-path")
@@ -687,7 +698,6 @@ function zoomMap2() {
 		.duration(duration)
 		.delay(duration/8)
 		.style("stroke-width", 0.3)
-		// .style("fill", "none")
 		.style("stroke", "rgba(255,255,255,0.5)")
 
 	dlabels = meta.dlabels;
@@ -729,19 +739,76 @@ function zoomMap2() {
 		.style("fill", "#c6c6c6")
 		.tspans(d => d[2], 10.5)
 
-
-	// dmap.append("div.g-big-text.g-big-text-cn")
-	// 	.style("opacity", 0)
-	// 	.text("香港島")
-
-	// dmap.append("div.g-big-text.g-big-text-en")
-	// 	.style("opacity", 0)
-	// 	.text("Hong Kong Island")
-
 	dmap.selectAll(".g-big-text")
 		.transition()
 		.duration(duration)
 		.delay(duration/2)
 		.style("opacity", 1)
+
+}
+
+function drawElevChart() {
+	var sel = d3.select(".g-elev-chart").html("");
+
+	var textcont = sel.append("div.g-text-elev-cont");
+	// textcont.append("div.g-text.g-text-en").text("Elevation")
+	// textcont.append("div.g-text.g-text-cn").text("高度")
+
+	elevwidth = trailid == "wilson" ? 125 : 100;
+	var height = 35;
+	elevsvg = sel.append("svg").attr("width", elevwidth).attr("height", height);
+
+	var margin = {
+		left: 5,
+		right: 30,
+		top: 10,
+		bottom: 0
+	}
+
+	elevwidth -= (margin.left + margin.right)
+	height -= (margin.top + margin.bottom)
+	elevsvg = elevsvg.append("g").translate([margin.left,margin.top])
+		
+	elevline = d3.line()
+		.x(d => elevx(d.dist))
+		.y(d => elevy(d.alt))	
+
+	var firstpt = trackpts[0];
+	lastpt = trackpts[trackpts.length - 1];
+	var maxelev = d3.max(trackpts.map(d => d.alt));	
+
+	elevx = d3.scaleLinear().range([0,elevwidth]).domain([0,lastpt.dist]);
+	elevy = d3.scaleLinear().range([height,0]).domain([0, maxelev]);
+
+	var axis = trailid == "wilson" ? [200,400,600] : [200,400];
+	axis.forEach(function(a){
+		var ypt = elevy(a);
+		elevsvg.append("path.g-axis")
+			.attr("d", "M0," + ypt + " L" + elevwidth + "," + ypt);
+		elevsvg.append("text")
+			.translate([(elevwidth+5),(ypt+2)])
+			.text(a + " m")
+	})
+
+	elevg = elevsvg.append("g");
+
+	elevpath = elevg.append("path")
+		.datum(trackpts)
+		.style("stroke", "rgba(255,255,255,0.6)")
+		.attr("d", elevline)
+
+	elevdot = elevg.append("g").translate([elevx(firstpt.dist), elevy(firstpt.alt)])
+
+	elevdot.append("circle")
+		.attr("r", 2.5)
+		.style("fill", "#fff")
+
+	elevtext = elevdot.append("text.g-elev-text")
+		.translate([3,-5])
+		.text("")
+		
+
+	// console.log(trackpts)
+
 
 }

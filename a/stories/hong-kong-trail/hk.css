@@ -1,6 +1,10 @@
 .g-map-inner svg {
-	margin-left: 22px;
+	margin-right: 40px;
 	margin-top: 20px;
+}
+
+.g-map-inner {
+	text-align: right;
 }
 
 #g-post-cover .g-text-en .g-text-inner:after {
