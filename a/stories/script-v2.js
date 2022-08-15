@@ -113,7 +113,7 @@ d3.queue()
 
 		data.filter(d => d.video == "1").forEach(function(d){
 			var el = d3.select("#g-post-" + d.id);
-			el.append("div.g-video-cont").html("<video id='g-vid-" + d.id + "' autoplay muted playsinline loop data-src='photos/" + d.id + ".mp4' />")
+			el.append("div.g-video-cont").html("<video id='g-vid-" + d.id + "' autoplay muted loop playsinline src='photos/" + d.id + ".mp4' />")
 		})
 
 		var textcont = dp.append("div.g-text-cont")
@@ -147,11 +147,9 @@ d3.queue()
 		})
 
 		d3.selectAll(".g-video-sound").on("click", function(){
-
 			var el = d3.select(this);
 			var id = el.attr("data-id");
 			d3.select("#g-vid-" + id).node().muted = false;
-
 		})
 
 
@@ -169,6 +167,11 @@ d3.selectAll(".g-nav-button").on("click", function(){
 	var el = d3.select(this);
 	var dir = el.attr("data-dir");
 	prevcounter = counter;
+
+	d3.selectAll("video").each(function(){
+		var el = d3.select(this);
+		this.muted = true;
+	})
 
 	if (dir.indexOf("step") > -1) {
 		if (dir == "step-next") {
@@ -204,11 +207,6 @@ function move(id, hash) {
 	var n = ids.indexOf(id);
 	var el = d3.select("#g-post-" + id);
 	var d = data[n];
-
-
-	d3.selectAll("video").each(function(){
-		d3.select(this).node().pause();
-	})
 
 	// button stuff
 
@@ -251,7 +249,13 @@ function move(id, hash) {
 		el.style("background-image", id == "end" ? "url(../end.jpg)" : "url(photos/" + id + ".jpg)")
 	}
 	if (video == "true") {
-		el.select("video").attr("src", el.select("video").attr("data-src"));
+
+		// console.log(el.select("video").attr("data-src"))
+		// var videl = el.select("video");
+		// if (!videl.attr("src")) {
+		// 	videl.attr("src", videl.attr("data-src"));
+		// }
+		
 	}
 
 	if (ids[n+1]) {
@@ -264,7 +268,7 @@ function move(id, hash) {
 		}
 
 		if (nextelvideo == "true") {
-			nextel.select("video").attr("src", nextel.select("video").attr("data-src"));
+			// nextel.select("video").attr("src", nextel.select("video").attr("data-src"));
 		}
 	}
 
@@ -335,7 +339,7 @@ function move(id, hash) {
 	}
 
 
-	// document.location.hash = id;	
+	document.location.hash = id;	
 }
 
 function pathTween(path){
@@ -388,11 +392,9 @@ function drawLocatorMap() {
 		  .attr("stroke-dashoffset", eltotalLength)
 	})
 
-	drawMainPath();
+	// drawMainPath();
 
-	
 	var segg = locatorg.append("g.g-segments");
-
 
 	zoomedw = width*1.8
 	segmentproj = d3.geoMercator().fitSize([zoomedw, zoomedw*0.5], countryshape);
@@ -427,7 +429,6 @@ function drawLocatorMap() {
 		.translate(d => d.offset ? d.offset : [4,3])
 		.text(d => d.name)
 
-
 	var places = locatorg.append("g.g-placesg").appendMany("g", meta.places)
 		.attr("class", d => d.class ? "g-places g-locator-places g-" + d.class : "g-places g-locator-places")
 		.attr("id", d => d.id ? "g-" + d.id : "g-" + d.name.toLowerCase())
@@ -435,7 +436,6 @@ function drawLocatorMap() {
 
 	places.append("circle")
 		.attr("r", d => d.class == "secondary" ? 1.5 : 2)
-
 
 	var textoffset = {
 		"Vaduz": [-4,1],
@@ -465,8 +465,6 @@ function drawLocatorMap() {
 		// .attr("text-anchor", d => d.anchor ? d.anchor : "start")
 		.attr("text-anchor", "end")
 		.text(d => d.name)
-
-
 
 }
 
