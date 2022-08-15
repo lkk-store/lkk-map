@@ -1,0 +1,387 @@
+/*.g-content-wrap {
+	pointer-events: none;
+}
+
+.g-map {
+	pointer-events: auto;
+}*/
+
+#g-post-cover .g-text-cont {
+	transform:  translate(0,20%);
+}
+
+#g-post-cover .g-text-en {
+	font-size: 34px;
+	line-height: 1.2;
+}
+
+path.g-country {
+	stroke-width: 0.5;
+	fill: rgba(255,255,255,0.02);
+	stroke: rgba(255,255,255,0.4);
+}
+
+
+path.g-trail {
+	fill: none;
+	stroke-width: 1;
+	stroke: rgba(255,255,255,0.8);	
+}
+
+path.g-segment {
+	fill:  none;
+	stroke: #ffcc00;
+	stroke-width: 2;
+}
+
+path.g-segment-dotted {
+	stroke-/*dash*/array: 4 4;
+	/*stroke-width:  1;*/
+	stroke:  #ff8400;
+}
+
+path.g-trail-path.g-trail-green {
+	stroke-width: 1 !important;
+	stroke:  #0c793d !important;
+}
+
+.g-map-inner {
+	background: linear-gradient(0deg, rgba(0,0,0,0) 60%, rgb(0 0 0 / 60%) 80%);
+}
+
+.g-map-inner.g-clipped {
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 70%) 70%);
+	height: 140px;
+	overflow: hidden;
+	/*background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%);*/
+	-webkit-mask-image: linear-gradient(black 80%, transparent);
+	  mask-image: linear-gradient(black 80%, transparent);
+}
+
+.g-map-inner.g-clipped.g-background-light {
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgb(0 0 0 / 60%) 100%);
+}
+
+.g-map-inner svg {
+	display: block;
+	margin:  0 auto;
+}
+
+path.g-country-all {
+	fill: rgba(255,255,255,0.05);
+	stroke:  #333;
+}
+
+.g-places circle {
+	fill: none;
+	stroke: rgba(255,255,255,0.8);
+}
+
+.g-places text {
+	font-size: 8px;
+	letter-spacing: 0.5px;
+	fill: rgba(255,255,255,0.7);
+}
+
+.g-places.g-secondary text {
+	fill: rgba(255,255,255,0.3);
+	/*font-size: 6px;	*/
+}
+
+.g-places.g-secondary circle {
+	stroke: rgba(255,255,255,0.6);	
+}
+
+text.g-country-name {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-anchor: middle;
+	font-size: 7px;
+	opacity: 0;
+	transition: opacity 2s;
+}
+
+.g-locator-places, .g-country-all, .g-trail-path, .g-dot, .g-trail, .g-segment, .g-secondary-countries, .g-stop, .g-elev-chart, .g-distance {
+	opacity: 0;
+}
+
+.g-active {
+	opacity: 1;
+	transition: opacity 2s;
+}
+
+.g-half {
+	opacity: 0.4;
+}
+
+text.g-country-name.g-active {
+	opacity: 0.3;
+}
+
+.g-text-cont {
+	margin:  0 auto;
+}
+
+.g-text-cont-inner {
+	position: relative;
+	z-index: 10;
+}
+
+#g-post-mapall .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-map .g-text-cont {
+	transform: translate(0,30%);
+}
+
+
+
+.g-text-inner em {
+	font-style: normal;
+	background: #ff8400;
+	padding: 0 4px;
+}
+
+
+#g-post-0928_pass .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-0928_pass .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1001_snow .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1001_run .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 290px;
+}
+
+
+#g-post-1001_engelberg .g-text-cont {
+	max-width: 220px;
+}
+
+#g-post-1002_gondola .g-text-cont {
+	transform: translate(0,36%);
+}
+
+#g-post-1003_wind .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 320px;
+}
+
+
+#g-post-0924_start .g-text-cont {
+	transform: translate(0,32%);
+}
+
+#g-post-0924_liechtenstein .g-text-cont {
+	transform: translate(0,33%);
+	max-width: 330px;
+}
+
+#g-post-0924_cow .g-text-cont {
+	transform: translate(0,28%);
+}
+
+#g-post-0924_end .g-text-cont {
+	transform: translate(0,35%);
+}
+
+#g-post-0926_rain .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 300px;
+}
+
+#g-post-0926_end .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-0927_climb .g-text-cont {
+	transform: translate(0,-10%);
+	max-width: 290px;
+}
+
+#g-post-0927_pass .g-text-cont {
+	transform: translate(0,-10%);
+}
+
+#g-post-0927_end .g-text-cont {
+	transform: translate(0,40%);
+}
+
+#g-post-0928_bus .g-text-cont {
+	max-width: 310px;
+}
+
+#g-post-0927_down .g-text-cont {
+	transform: translate(0,36%);
+}
+
+#g-post-0928_clouds .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-0930_views .g-text-cont {
+	transform: translate(0,25%);
+}
+
+
+#g-post-0930_pass .g-text-cont {
+	transform: translate(3%,32%);
+}
+
+#g-post-0928_climb .g-text-cont {
+	transform: translate(0,35%);
+    max-width: 240px;
+}
+
+
+#g-post-1001_pass .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1001_burgers .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1003_climb .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 310px;
+}
+
+#g-post-1003_train .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 300px;
+}
+
+#g-post-1006_rain .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 300px;
+}
+
+#g-post-1006_grindelwald .g-text-cont {
+	transform: translate(15%,30%);
+	max-width: 290px;
+}
+
+#g-post-1006_snow2 .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1006_snow3 .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 250px;
+}
+
+#g-post-1006_snowball .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1006_jungfrau .g-text-cont {
+	transform: translate(0,32%);
+}
+
+#g-post-1007_foggy .g-text-cont {
+	transform: translate(0,32%);	
+}
+
+#g-post-1007_hut .g-text-cont {
+	transform: translate(0,30%);	
+}
+
+#g-post-1007_lastmeal .g-text-cont {
+	transform: translate(0,0%);	
+}
+
+#g-post-1007_snow .g-text-cont {
+	transform: translate(0,13%);
+	max-width: 320px;
+}
+
+#g-post-1007_snowfall .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 240px;
+}
+
+#g-post-1007_pass .g-text-cont {
+	transform: translate(0,25%);	
+}
+
+#g-post-1007_scary .g-text-cont {
+	transform: translate(0,30%);	
+}
+
+#g-post-1007_lastword .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 250px;
+}
+
+#g-post-1007_safe .g-text-cont {
+	transform: translate(0,31%);
+	max-width: 340px;
+}
+
+#g-post-1008_tourist .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1009_fog .g-text-cont {
+	transform: translate(0,30%);	
+}
+
+#g-post-1009_passthefog .g-text-cont {
+	transform: translate(0,31%);
+	max-width: 340px;
+}
+
+#g-post-1009_pass .g-text-cont {
+	transform: translate(0,-8%);
+}
+
+#g-post-1010_pass .g-text-cont {
+	transform: translate(0,30%);	
+}
+
+#g-post-1015_climb .g-text-cont {
+	transform: translate(0,34%);
+	max-width: 220px;	
+}
+
+#g-post-1015_almost .g-text-cont {
+	transform: translate(0,30%);
+}
+
+#g-post-1015_pass .g-text-cont {
+	transform: translate(21%,12%);
+}
+
+#g-post-1015_tram .g-text-cont {
+	transform: translate(0,30%);
+	max-width: 300px;
+}
+
+#g-post-1015_end .g-text-cont {
+	transform: translate(21%,-4%);
+}
+
+.g-abs-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#g-post-1015_end .g-abs-label-0 {
+	top:  80%;
+	left: 10%;
+}
+
+#g-post-1015_end .g-abs-label-1 {
+	top: 67%;
+	left: 63%;
+}

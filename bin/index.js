@@ -124,6 +124,7 @@ fs.watch('src', (eventType, filename) => {
 	compile();
 })
 
+
 fs.watch(currentPath + '/data', (eventType, filename) => {
 	console.log(filename + " changed...");
 	compile();

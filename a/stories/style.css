@@ -562,7 +562,7 @@ a, a:visited {
 }
 
 #g-post-cover .g-text-en .g-text-inner:after {
-	content: "July 11 / 12, 2022";
+	/*content: "July 11 / 12, 2022";*/
 	display: block;
 	font-size: 10px;
 	letter-spacing: 2px;

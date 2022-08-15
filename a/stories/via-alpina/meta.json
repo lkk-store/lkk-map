@@ -1,0 +1,177 @@
+[
+	{
+		"ratio": 0.7,
+		"places2": [
+			{
+				"name": "Zurich",
+				"pos": [47.373878, 8.545094]
+			},
+			{
+				"name": "Vaduz",
+				"pos": [47.141030, 9.520928],
+				"offset": [5,-5]
+			},
+			{
+				"name": "Montreux",
+				"pos": [46.431221, 6.910680],
+				"anchor": "end",
+				"offset": [0,-6]
+			},
+			{
+				"name": "Grindelwald",
+				"pos": [46.624164,8.041396],
+				"offset": [5,5]
+			}
+		],
+		"places": [
+			{
+				"name": "Vaduz",
+				"pos": [47.141030, 9.520928],
+				"class": "stop"
+			},
+			{
+				"name": "Sargans",
+				"pos": [47.04896, 9.44103],
+				"class": "stop",
+				"offset": [5,3]
+			},
+			{
+				"name": "Weisstannen",
+				"pos": [46.99292,9.34595],
+				"class": "stop",
+				"offset": [5,5]
+			},
+			{
+				"name": "Elm",
+				"pos": [46.9223,9.17298],
+				"class": "stop",
+				"offset": [3,8]
+			},
+			{
+				"name": "Linthal",
+				"pos": [46.92557,8.99778],
+				"class": "stop",
+				"offset": [3,-5],
+				"anchor": "end"
+			},
+			{
+				"name": "Altdorf",
+				"pos": [46.88042,8.64441],
+				"class": "stop",
+				"anchor": "end",
+				"offset": [-5,-2]
+			},
+			{
+				"name": "Engelberg",
+				"pos": [46.820027,8.406992],
+				"class": "stop",
+				"anchor": "end",
+				"offset": [-5,0]
+			},
+			{
+				"name": "Meiringen",
+				"pos": [46.7273913,8.1858773],
+				"class": "stop",
+				"offset": [5,5]
+			},
+			{
+				"name": "Grindelwald",
+				"pos": [46.624164,8.041396],
+				"class": "stop",
+				"offset": [5,5]
+			},
+			{
+				"name": "Lauterbrunnen",
+				"pos": [46.599998,7.900000],
+				"class": "stop",
+				"anchor":"end",
+				"offset": [0,-5]
+			},
+			{
+				"name": "Griesalp",
+				"pos": [46.550, 7.750],
+				"class": "stop",
+				"offset": [5,8]
+			},
+			{
+				"name": "Kandersteg",
+				"pos": [46.494733, 7.674436],
+				"class": "stop",
+				"offset": [3,10]
+			},
+			{
+				"name": "Adelboden",
+				"pos": [46.493089, 7.559512],
+				"class": "stop",
+				"anchor": "end",
+				"offset": [5,-8]
+			},
+			{
+				"name": "Lenk",
+				"pos": [46.457194, 7.44291],
+				"class": "stop",
+				"offset": [0,10]
+			},
+			{
+				"name": "Gstaad",
+				"pos": [46.47383, 7.28669],
+				"class": "stop",
+				"offset": [5,12]
+			},
+			{
+				"name": "Château-d'Œx",
+				"id": "chateaudoex",
+				"pos": [46.461558137477915, 7.081378650707141],
+				"anchor": "end",
+				"class": "stop",
+				"offset": [0,-5]
+			},
+			{
+				"name": "Montreux",
+				"pos": [46.431221, 6.910680],
+				"anchor": "end",
+				"class": "stop",
+				"offset": [-5,5]
+			}
+		],
+		"detailed_labels": [
+			{
+				"name": "Italy",
+				"pos": [45.109197092727186, 10.337829256567115]
+			},
+			{
+				"name": "Switzerland",
+				"pos": [46.9, 8.080398151577551]
+			},
+			{
+				"name": "Germany",
+				"pos": [49.11052959732479, 10.651163560164354]
+			},
+			{
+				"name": "Austria",
+				"pos": [48.01379020724252, 14.398577127075146]
+			},
+			{
+				"name": "Slovenia",
+				"pos": [46.52986755184269, 14.833317466843624]
+			}
+		],
+		"dist": {
+			"Vaduz-Sargans": 16.1,
+			"Sargans-Weisstannen": 12.7,
+			"Weisstannen-Elm": 22.1,
+			"Elm-Linthal": 14.3,
+			"Linthal-Altdorf": 17.9,
+			"Altdorf-Engelberg": 20.9,
+			"Engelberg-Meiringen": 17.0,
+			"Grindelwald-Lauterbrunnen": 20.3,
+			"Lauterbrunnen-Griesalp": 17.0,
+			"Kandersteg-Adelboden": 18.9,
+			"Adelboden-Lenk": 13.8,
+			"Lenk-Gstaad": 16.7,
+			"Gstaad-ChateaudOex": 16.7,
+			"ChateaudOex-Montreux": 18.2
+		}
+	}
+]
+
