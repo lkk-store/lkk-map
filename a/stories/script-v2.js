@@ -335,7 +335,7 @@ function move(id, hash) {
 	}
 
 
-	document.location.hash = id;	
+	// document.location.hash = id;	
 }
 
 function pathTween(path){
