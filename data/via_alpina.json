@@ -20,7 +20,7 @@
     "pass": "",
     "id": "mapall",
     "time": "",
-    "text_en": "Via Alpina is a set of trails in the Alpine mountain ranges across eight countries. ",
+    "text_en": "Via Alpina is a set of trails in the Alpine mountain ranges spanning eight countries. ",
     "text_abs": ""
   },
   {
@@ -200,7 +200,7 @@
     "pass": "",
     "id": "0928_clouds",
     "time": "",
-    "text_en": "The day started with a lot of fog and we thought we won't get good views, but once we climbed high enough we broke through the clouds and the views were epic.",
+    "text_en": "The day started with a lot of fog, but once we climbed high enough we broke through the clouds and the views were epic.",
     "text_abs": ""
   },
   {
@@ -284,7 +284,7 @@
     "pass": "",
     "id": "1001_engelberg",
     "time": "",
-    "text_en": "Made it to Engelberg Ski Lodge, the best hotel in Switzerland",
+    "text_en": "Made it to Ski Lodge Engelberg, the best hotel in Switzerland...",
     "text_abs": ""
   },
   {
@@ -296,7 +296,7 @@
     "pass": "",
     "id": "1001_burgers",
     "time": "",
-    "text_en": "They have the best burgers.",
+    "text_en": "... where they have the best burgers!",
     "text_abs": ""
   },
   {
@@ -326,7 +326,7 @@
   {
     "nopic": "",
     "video": "1",
-    "sound": "",
+    "sound": "1",
     "day": "8",
     "stop": "Meiringen-Grindelwald",
     "pass": "",
@@ -524,7 +524,7 @@
     "pass": "",
     "id": "1007_lastword",
     "time": "",
-    "text_en": "We took a video stating our last wishes in case we didn't make it.",
+    "text_en": "We took a video stating our last wishes in case we didn't make it. Its content will not be shared!",
     "text_abs": ""
   },
   {
@@ -572,7 +572,7 @@
     "pass": "",
     "id": "1009_passthefog",
     "time": "",
-    "text_en": "But once we climbed high enough we broke through the fog and enjoyed some amazing views.",
+    "text_en": "But once we climbed high enough we broke through the fog and got some good views.",
     "text_abs": ""
   },
   {
@@ -656,7 +656,7 @@
     "pass": "Rochers De Naye, 1980",
     "id": "1015_pass",
     "time": "",
-    "text_en": "Rochers De Naye, 1980",
+    "text_en": "Last peak,<br>Rochers De Naye, 1980",
     "text_abs": ""
   },
   {

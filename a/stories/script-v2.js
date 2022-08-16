@@ -108,6 +108,7 @@ d3.queue()
 			.style("transform", (d,i) => "translate(" + i*375 + "px,0)") 
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
 			.attr("data-video", d => d.video == "1" ? "true" : "false")
+			.attr("data-sound", d => d.sound == "1" ? "true" : "false")
 			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + d.id + ".jpg)" : "url(photos-100/" + d.id + ".jpg)")
 			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 || d.id == "0924_start" ? "url(photos/" + d.id + ".jpg)" : "url(photos-100/" + d.id + ".jpg)")
 			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + d.id + ".jpg)" : "")
@@ -139,20 +140,6 @@ d3.queue()
 					.text(a)
 			})
 		})
-
-		data.filter(d => d.sound == "1").forEach(function(d){
-			var el = d3.select("#g-post-" + d.id);
-			el.append("div.g-video-sound.g-button")
-				.attr("data-id", d.id)
-				.text("Watch with Sound")
-		})
-
-		d3.selectAll(".g-video-sound").on("click", function(){
-			var el = d3.select(this);
-			var id = el.attr("data-id");
-			d3.select("#g-vid-" + id).node().muted = false;
-		})
-
 
 	if (document.location.hash) {
 		var id = document.location.hash.replace("#", "");
@@ -225,7 +212,7 @@ function move(id, hash) {
 
 
 	var lightbg = ["1006_snowball", "1006_jungfrau", "1006_snow3", "1006_snow2", "1006_grindelwald"]
-	if (lightbg.indexOf(d.id) > -1) {
+	if (lightbg.indexOf(id) > -1) {
 		sel.classed("g-background-light", true);
 	} else {
 		sel.classed("g-background-light", false);
@@ -251,15 +238,23 @@ function move(id, hash) {
 	if (pic == "true") {
 		el.style("background-image", id == "end" ? "url(../end.jpg)" : "url(photos/" + id + ".jpg)")
 	}
-	if (video == "true") {
 
+	d3.select(".g-video-sound").classed("g-active", false);
+	if (video == "true") {
 		// console.log(el.select("video").attr("data-src"))
 		var videl = el.select("video");
 		if (!videl.attr("src")) {
 			videl.attr("src", videl.attr("data-src"));
 			videl.node().play();
 		}
-		
+
+		if (el.attr("data-sound") == "true") {
+			d3.select(".g-video-sound").classed("g-active", true);
+			d3.select(".g-video-sound").on("click", function(){
+				var el = d3.select(this);
+				d3.select("#g-vid-" + id).node().muted = false;
+			})
+		}
 	}
 
 	if (ids[n+1]) {
@@ -306,6 +301,10 @@ function move(id, hash) {
 		// 	.tween("pathTween", function(){return pathTween(trailpath)})
 
 		laststop = "";
+	} else if (id == "end") {
+
+		d3.select(".g-map").classed("g-map-behind", true);
+		d3.select(".g-meta").classed("g-hide", true);
 
 	} else if (id.indexOf("map") > -1 || id.indexOf("intro") > -1) {
 		d3.select(".g-meta").classed("g-hide", true)
@@ -322,6 +321,7 @@ function move(id, hash) {
 		locatorg.selectAll(".g-trail").classed("g-active", false);
 		locatorg.selectAll(".g-trail").classed("g-half", false);
 		locatorg.selectAll(".g-trail-path").classed("g-trail-green", false);
+		locatorg.selectAll(".g-trail-path-animate").classed("g-active", false);
 
 		if (id != "cover") {
 			d3.select(".g-meta").classed("g-hide", false);
@@ -488,7 +488,7 @@ function drawMainPath() {
 
 	locatorg.append("g.g-trailbg").append("path.g-trail-path.g-trail-path-bg.g-active")
 		.datum(trackpts)
-		.style("stroke", "rgba(255,255,255,0.1)")
+		.style("stroke", "rgba(255,255,255,0.3)")
 		.attr("d", line)
 
 	trailpath = locatorg.append("g.g-trailg").append("path.g-trail-path.g-active.g-trail-path-animate")

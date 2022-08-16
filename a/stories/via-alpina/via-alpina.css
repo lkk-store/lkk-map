@@ -168,7 +168,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1002_gondola .g-text-cont {
-	transform: translate(0,36%);
+	transform: translate(0,32%);
 }
 
 #g-post-1003_wind .g-text-cont {
@@ -182,7 +182,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-0924_liechtenstein .g-text-cont {
-	transform: translate(0,33%);
+	transform: translate(0,28%);
 	max-width: 330px;
 }
 
@@ -213,7 +213,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-0927_end .g-text-cont {
-	transform: translate(0,40%);
+	transform: translate(0,33%);
 }
 
 #g-post-0928_bus .g-text-cont {
@@ -221,7 +221,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-0927_down .g-text-cont {
-	transform: translate(0,36%);
+	transform: translate(0,33%);
 }
 
 #g-post-0928_clouds .g-text-cont {
@@ -238,7 +238,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-0928_climb .g-text-cont {
-	transform: translate(0,35%);
+	transform: translate(0,32%);
     max-width: 240px;
 }
 
@@ -285,7 +285,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1006_jungfrau .g-text-cont {
-	transform: translate(0,32%);
+	transform: translate(0,30%);
 }
 
 #g-post-1007_foggy .g-text-cont {
@@ -324,8 +324,12 @@ text.g-country-name.g-active {
 }
 
 #g-post-1007_safe .g-text-cont {
-	transform: translate(0,31%);
+	transform: translate(0,23%);
 	max-width: 340px;
+}
+
+#g-post-1007_safe {
+	background-position: 0 -60px;
 }
 
 #g-post-1008_tourist .g-text-cont {
@@ -337,7 +341,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1009_passthefog .g-text-cont {
-	transform: translate(0,31%);
+	transform: translate(0,28%);
 	max-width: 340px;
 }
 
@@ -350,7 +354,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1015_climb .g-text-cont {
-	transform: translate(0,34%);
+	transform: translate(0,30%);
 	max-width: 220px;	
 }
 
@@ -359,11 +363,11 @@ text.g-country-name.g-active {
 }
 
 #g-post-1015_pass .g-text-cont {
-	transform: translate(21%,12%);
+	transform: translate(24%,20%);
 }
 
 #g-post-1015_tram .g-text-cont {
-	transform: translate(0,26%);
+	transform: translate(0,30%);
 	max-width: 300px;
 }
 

@@ -422,7 +422,7 @@ a, a:visited {
 	text-align: right;
 }
 
-.g-next-cont, .g-back-cont {
+.g-next-cont, .g-back-cont, .g-video-sound {
 	position: absolute;
 	width: 30%;
 	bottom:  20px;
@@ -437,7 +437,7 @@ a, a:visited {
 	z-index: 99;
 }
 
-.g-next-cont .g-inner, .g-back-cont .g-inner {
+.g-next-cont .g-inner, .g-back-cont .g-inner, .g-video-sound .g-inner {
 	background: rgba(0,0,0,0.7);
 	display: inline;	
 	padding:  2px 8px 4px 8px;
@@ -472,6 +472,38 @@ a, a:visited {
 
 .g-back.g-active, .g-next.g-active {
 	display: inline-block;
+}
+
+.g-video-sound {
+  /*background: rgba(0,0,0,0.7);*/
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.g-video-sound .g-inner {
+	padding:  2px 8px 2px 8px;
+}
+
+.g-video-sound.g-active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.g-video-sound img {
+	vertical-align: middle;
+	width: 12px;
+	display: inline-block;
+	margin-top: -2px;
+	margin-left: 1px;
 }
 
 
@@ -651,9 +683,11 @@ a, a:visited {
 }
 
 .g-video-cont {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: 100%;
+	top: 0;
+	left: 0;
 }
 
 .g-post video {
@@ -664,13 +698,3 @@ a, a:visited {
 	/*left: 0;*/
 }
 
-.g-video-sound {
-	position: absolute;
-  bottom: 23px;
-  left: calc(50% - 58px);
-  background: rgba(0,0,0,0.7);
-  padding: 2px 10px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.8);
-  cursor: pointer;
-}
