@@ -128,11 +128,12 @@ text.g-country-name.g-active {
 }
 
 #g-post-mapall .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
+	max-width: 300px;
 }
 
 #g-post-map .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 
@@ -145,19 +146,19 @@ text.g-country-name.g-active {
 
 
 #g-post-0928_pass .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-0928_pass .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1001_snow .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1001_run .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 290px;
 }
 
@@ -171,7 +172,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1003_wind .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 320px;
 }
 
@@ -194,12 +195,12 @@ text.g-country-name.g-active {
 }
 
 #g-post-0926_rain .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 300px;
 }
 
 #g-post-0926_end .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-0927_climb .g-text-cont {
@@ -224,7 +225,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-0928_clouds .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-0930_views .g-text-cont {
@@ -243,44 +244,44 @@ text.g-country-name.g-active {
 
 
 #g-post-1001_pass .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1001_burgers .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1003_climb .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 310px;
 }
 
 #g-post-1003_train .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 300px;
 }
 
 #g-post-1006_rain .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 300px;
 }
 
 #g-post-1006_grindelwald .g-text-cont {
-	transform: translate(15%,30%);
+	transform: translate(15%,26%);
 	max-width: 290px;
 }
 
 #g-post-1006_snow2 .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1006_snow3 .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 250px;
 }
 
 #g-post-1006_snowball .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1006_jungfrau .g-text-cont {
@@ -292,7 +293,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1007_hut .g-text-cont {
-	transform: translate(0,30%);	
+	transform: translate(0,26%);	
 }
 
 #g-post-1007_lastmeal .g-text-cont {
@@ -305,7 +306,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1007_snowfall .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 240px;
 }
 
@@ -314,11 +315,11 @@ text.g-country-name.g-active {
 }
 
 #g-post-1007_scary .g-text-cont {
-	transform: translate(0,30%);	
+	transform: translate(0,26%);	
 }
 
 #g-post-1007_lastword .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 250px;
 }
 
@@ -328,11 +329,11 @@ text.g-country-name.g-active {
 }
 
 #g-post-1008_tourist .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1009_fog .g-text-cont {
-	transform: translate(0,30%);	
+	transform: translate(0,26%);	
 }
 
 #g-post-1009_passthefog .g-text-cont {
@@ -345,7 +346,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1010_pass .g-text-cont {
-	transform: translate(0,30%);	
+	transform: translate(0,26%);	
 }
 
 #g-post-1015_climb .g-text-cont {
@@ -354,7 +355,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1015_almost .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 }
 
 #g-post-1015_pass .g-text-cont {
@@ -362,7 +363,7 @@ text.g-country-name.g-active {
 }
 
 #g-post-1015_tram .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,26%);
 	max-width: 300px;
 }
 
@@ -385,3 +386,11 @@ text.g-country-name.g-active {
 	top: 67%;
 	left: 63%;
 }
+
+/*video {
+  pointer-events: none;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}*/
