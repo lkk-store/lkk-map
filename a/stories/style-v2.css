@@ -401,14 +401,6 @@ a, a:visited {
 	line-height: 1.2;
 }
 
-.g-trail-label .g-text-en {
-	line-height: 1.3;
-}
-
-.g-trail-label .g-text-cn {
-	
-}
-
 .g-tl-t_hk {
 	top: 70%;
 	left: 75%;
@@ -606,7 +598,6 @@ a, a:visited {
 
 #g-post-map .g-text-en {
 	max-width: 280px;
-	line-height: 1.3;
 }
 
 .g-elev-chart {

@@ -610,6 +610,10 @@ a, a:visited {
 	margin:  5px auto;
 }
 
+.g-elev-chart svg {
+	overflow: visible;
+}
+
 .g-elev-chart path {
 	fill:  none;
 	stroke:  #fff;
@@ -645,4 +649,10 @@ a, a:visited {
 
 .g-elev-chart .g-text-cn {
 	font-size: 8px;
+}
+
+.g-elev-label circle {
+	fill: none;
+	stroke:  #fff;
+	stroke-width:  0.5;
 }

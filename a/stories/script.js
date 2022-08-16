@@ -768,6 +768,13 @@ function drawElevChart() {
 	elevwidth -= (margin.left + margin.right)
 	height -= (margin.top + margin.bottom)
 	elevsvg = elevsvg.append("g").translate([margin.left,margin.top])
+
+	var defs = elevsvg.append("defs")
+	defs.append("clipPath").attr("id", "elevmask")
+		.append("rect")
+		.attr("width", elevwidth+3)
+		.attr("height", height*2)
+		.attr("y", -height/2)
 		
 	elevline = d3.line()
 		.x(d => elevx(d.dist))
@@ -790,7 +797,7 @@ function drawElevChart() {
 			.text(a + " m")
 	})
 
-	elevg = elevsvg.append("g");
+	elevg = elevsvg.append("g").attr("clip-path", "url(#elevmask)").append("g")
 
 	elevpath = elevg.append("path")
 		.datum(trackpts)
@@ -800,7 +807,7 @@ function drawElevChart() {
 	elevdot = elevg.append("g").translate([elevx(firstpt.dist), elevy(firstpt.alt)])
 
 	elevdot.append("circle")
-		.attr("r", 2.5)
+		.attr("r", 2)
 		.style("fill", "#fff")
 
 	elevtext = elevdot.append("text.g-elev-text")

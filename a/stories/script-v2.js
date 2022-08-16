@@ -100,6 +100,7 @@ d3.queue()
 		var cont = d3.select(".g-content").html("")
 		cont.style("width", data.length*375 + "px")
 
+
 		var dp = cont.appendMany("div", data)	
 			.attr("data-id", d => d.id)
 			.attr("class", (d,i) => i == 0 ? "g-post g-post-active" : "g-post")
@@ -108,12 +109,12 @@ d3.queue()
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
 			.attr("data-video", d => d.video == "1" ? "true" : "false")
 			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + d.id + ".jpg)" : "url(photos-100/" + d.id + ".jpg)")
-			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + d.id + ".jpg)" : "")
+			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 || d.id == "0924_start" ? "url(photos/" + d.id + ".jpg)" : "url(photos-100/" + d.id + ".jpg)")
 			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + d.id + ".jpg)" : "")
 
 		data.filter(d => d.video == "1").forEach(function(d){
 			var el = d3.select("#g-post-" + d.id);
-			el.append("div.g-video-cont").html("<video id='g-vid-" + d.id + "' autoplay muted loop playsinline src='photos/" + d.id + ".mp4' />")
+			el.append("div.g-video-cont").html("<video class='lazy' id='g-vid-" + d.id + "' autoplay muted loop playsinline preload='none' data-src='photos/" + d.id + ".mp4' poster='photos-100/" + d.id + ".jpg' />")
 		})
 
 		var textcont = dp.append("div.g-text-cont")
@@ -225,7 +226,6 @@ function move(id, hash) {
 
 	var lightbg = ["1006_snowball", "1006_jungfrau", "1006_snow3", "1006_snow2", "1006_grindelwald"]
 	if (lightbg.indexOf(d.id) > -1) {
-		console.log("hi")
 		sel.classed("g-background-light", true);
 	} else {
 		sel.classed("g-background-light", false);
@@ -237,6 +237,9 @@ function move(id, hash) {
 		.transition()
 		.duration(1000)
 		.style("transform", "translate(-" + n*375 + "px,0)")
+		.on("end", function(){
+		});
+
 	
 
 	// pic stuff
@@ -251,10 +254,11 @@ function move(id, hash) {
 	if (video == "true") {
 
 		// console.log(el.select("video").attr("data-src"))
-		// var videl = el.select("video");
-		// if (!videl.attr("src")) {
-		// 	videl.attr("src", videl.attr("data-src"));
-		// }
+		var videl = el.select("video");
+		if (!videl.attr("src")) {
+			videl.attr("src", videl.attr("data-src"));
+			videl.node().play();
+		}
 		
 	}
 
@@ -268,36 +272,38 @@ function move(id, hash) {
 		}
 
 		if (nextelvideo == "true") {
-			// nextel.select("video").attr("src", nextel.select("video").attr("data-src"));
+			var videl = nextel.select("video")
+			videl.attr("src", nextel.select("video").attr("data-src"));
+			videl.node().play();
 		}
 	}
 
 
 	// map stuff
 
-	var delaythis = 0;
-	if (mapzoomed) {
-		d3.select(".g-map").classed("g-map-behind", false);
-		dotg.transition();
-		trailpath
-			.transition().duration(0)
-			.ease(d3.easeLinear)
-		  .attr("stroke-dasharray", totalLength + " " + totalLength)
-		  .attr("stroke-dashoffset", totalLength)
+	// var delaythis = 0;
+	// if (mapzoomed) {
+	// 	d3.select(".g-map").classed("g-map-behind", false);
+	// 	// dotg.transition();
+	// 	// trailpath
+	// 	// 	.transition().duration(0)
+	// 	// 	.ease(d3.easeLinear)
+	// 	//   .attr("stroke-dasharray", totalLength + " " + totalLength)
+	// 	//   .attr("stroke-dashoffset", totalLength)
 		  
-		resetMap();
-		delaythis = duration;
-	}
+	// 	resetMap();
+	// 	// delaythis = duration;
+	// }
 
 	if (id == "cover") {
 		d3.select(".g-map").classed("g-map-behind", false);
-		startpct = 0;
-		endpct = 1;
-		dotg.transition()
-			.delay(delaythis)
-			.duration(4000)
-			.ease(d3.easeLinear)
-			.tween("pathTween", function(){return pathTween(trailpath)})
+		// startpct = 0;
+		// endpct = 1;
+		// dotg.transition()
+		// 	.delay(delaythis)
+		// 	.duration(4000)
+		// 	.ease(d3.easeLinear)
+		// 	.tween("pathTween", function(){return pathTween(trailpath)})
 
 		laststop = "";
 
@@ -311,6 +317,12 @@ function move(id, hash) {
 		}
 		laststop = "";
 	} else {
+		d3.select(".g-map").classed("g-map-behind", false);
+		locatorg.select(".g-country-all").classed("g-active", false);
+		locatorg.selectAll(".g-trail").classed("g-active", false);
+		locatorg.selectAll(".g-trail").classed("g-half", false);
+		locatorg.selectAll(".g-trail-path").classed("g-trail-green", false);
+
 		if (id != "cover") {
 			d3.select(".g-meta").classed("g-hide", false);
 			d3.selectAll(".g-secondary").classed("g-active", false);
@@ -339,7 +351,7 @@ function move(id, hash) {
 	}
 
 
-	document.location.hash = id;	
+	// document.location.hash = id;	
 }
 
 function pathTween(path){
@@ -392,7 +404,7 @@ function drawLocatorMap() {
 		  .attr("stroke-dashoffset", eltotalLength)
 	})
 
-	// drawMainPath();
+	drawMainPath();
 
 	var segg = locatorg.append("g.g-segments");
 
@@ -485,30 +497,30 @@ function drawMainPath() {
 
 	totalLength = Math.ceil(trailpath.node().getTotalLength());
 	trailpath
-		.transition().duration(0)
-		.ease(d3.easeLinear)
+		// .transition().duration(0)
+		// .ease(d3.easeLinear)
 	  .attr("stroke-dasharray", totalLength + " " + totalLength)
 	  .attr("stroke-dashoffset", totalLength)
 
-	// trailpath
-	// 	.transition()
-	// 	.duration(4000)
-	// 	.ease(d3.easeLinear)
-	//     .attr("stroke-dashoffset", 0)
+	trailpath
+		.transition()
+		.duration(4000)
+		.ease(d3.easeLinear)
+	    .attr("stroke-dashoffset", 0)
 
-	dotg = locatorg.selectAppend("g.g-dot.g-active")
-		.translate(projection(start))
+	// dotg = locatorg.selectAppend("g.g-dot.g-active")
+	// 	.translate(projection(start))
 
-	dotg.append("circle")
-		.attr("r", 4)
-		.attr("stroke-width", 1)
-		.attr("fill", "none")
-		.attr("stroke", "#ffcc00")
-		.attr("id", "ring")
+	// dotg.append("circle")
+	// 	.attr("r", 4)
+	// 	.attr("stroke-width", 1)
+	// 	.attr("fill", "none")
+	// 	.attr("stroke", "#ffcc00")
+	// 	.attr("id", "ring")
 
-	dotg.append("circle")
-			.attr("r", 4)
-			.attr("fill", "#ffcc00")
+	// dotg.append("circle")
+	// 		.attr("r", 4)
+	// 		.attr("fill", "#ffcc00")
 
 }
 
@@ -542,12 +554,9 @@ function resetPaths(opts) {
 
 	if (opts && opts.segment) {
 
-
 		opts.segment = opts.segment == "Meiringen-Grindelwald" || opts.segment == "Griesalp-Kandersteg" ? opts.segment + "xx" : opts.segment
 		var segmenetline = d3.select("#g-segment-" + opts.segment);
 		var bb = segmentpos[opts.segment];
-
-
 		var clippedh = 140;
 		var xpos = -bb.x + (width/5*4) + (bb.width/2)
 		var ypos = -(bb.y) + clippedh/3 - (bb.height/2);
@@ -860,4 +869,6 @@ function updateElevChart(segment) {
 	// elevpath.transition().attr("d", elevline(pts));
 
 }
+
+
 
