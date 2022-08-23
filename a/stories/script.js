@@ -30,7 +30,7 @@ var counter = 0;
 var prevcounter = 0;
 var totaltime = 0;
 
-var gdays = trailid == "wilson" ? 2 : 1;
+var gdays = trailid == "wilson" || trailid == "lantau" ? 2 : 1;
 
 function addemojis(x) {
 	return x.replace(":lol:", "😂").replace(":tear:", "🥲").replace(":smile:", "🙂").replace(":sun:", "🌞")
@@ -335,13 +335,15 @@ function move(id, hash) {
 
 		var dattime = el.attr("data-time");
 
-		var hrs = trailid == "wilson" ? [[16,12], [13,54]] : [[10,51]]
+		var hrs = trailid == "lantau" ? [[15,24], [13,8]] : trailid == "wilson" ? [[16,12], [13,54]] : [[10,51]]
 
 		var firsttime = data.filter(d => d.time)[0].time.split(":");
 		var starttime = new Date(2021,6,11,+firsttime[0],+firsttime[1]);
 
 		if (trailid == "wilson" && +id.substr(0,3) > 69) {
 			starttime = new Date(2021,6,11,5,25);
+		} else if (trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b")) {
+			starttime = new Date(2021,6,11,5,0);
 		}
 
 		var newtime = new Date(2021,6,11,+dattime.split(":")[0],+dattime.split(":")[1]);
@@ -353,7 +355,7 @@ function move(id, hash) {
 
 		if (id == "cover") {
 			
-			if (trailid == "wilson") {
+			if (trailid == "wilson" || trailid == "lantau") {
 				d3.select(".g-day-2").style("opacity", 0)
 				d3.select(".g-day-2")
 					.transition()
@@ -396,7 +398,7 @@ function move(id, hash) {
 		} else if (id.indexOf("map") == -1 && id.indexOf("intro") == -1 && id.indexOf("end") == -1 && !isNaN(+id.substring(0,3))) {
 
 			var dayselector = 1;
-			if (trailid == "wilson" && id.substring(0,3) > 69) {
+			if (trailid == "wilson" && id.substring(0,3) > 69 || trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b")) {
 				d3.select(".g-day-2").style("opacity", 1)
 				dayselector = 2;
 				d3.select(".g-day-1 .g-hour").text(hrs[0][0])
@@ -600,7 +602,7 @@ function move(id, hash) {
 
 	}
 
-	document.location.hash = id;	
+	// document.location.hash = id;	
 
 }
 
