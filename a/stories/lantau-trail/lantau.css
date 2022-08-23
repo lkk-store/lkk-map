@@ -1,0 +1,37 @@
+.g-map-inner svg {
+	margin-left: 145px;
+	margin-top: 30px;
+}
+
+.g-hour {
+	margin-left: 8px;
+}
+
+#g-post-intro .g-text-cn {
+	max-width: 320px;
+}
+
+#g-post-intro .g-text-en {
+	max-width: 330px;
+}
+
+#g-post-intro .g-graf {
+	margin-bottom: 5px;
+	display: block;
+}
+
+#g-post-intro .g-graf:last-child {
+	margin-bottom: 0;
+}
+
+#g-post-intro .g-text-inner {
+	padding:  0;
+}
+
+.g-tl-t_lantau {
+	color: #ffcc00;
+}
+
+#g-post-map .g-text-cn {
+	max-width: 290px;
+}

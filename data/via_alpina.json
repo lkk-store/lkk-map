@@ -20,7 +20,7 @@
     "pass": "",
     "id": "mapall",
     "time": "",
-    "text_en": "Via Alpina is a set of trails in the Alpine mountain ranges spanning eight countries. ",
+    "text_en": "Via Alpina is a set of five trails in the Alpine mountain ranges spanning eight countries. ",
     "text_abs": ""
   },
   {
@@ -33,6 +33,18 @@
     "id": "map",
     "time": "",
     "text_en": "Last summer, my partner and I did the 390-km Green Trail that traverses Switzerland. The trail goes from town to town, never too far from civilization, something that made it more doable for less hardcore backpackers like us.",
+    "text_abs": ""
+  },
+  {
+    "nopic": "",
+    "video": "",
+    "sound": "",
+    "day": "",
+    "stop": "",
+    "pass": "",
+    "id": "intro",
+    "time": "",
+    "text_en": "There were sunny, beautiful days. And there were grueling, rainy days. We even ran into a snowstorm at 2,700 meters, not knowing whether we would make it. Our legs, our backs, every bit of our body hurt. But somehow we made it from one end of Switzerland to the other.",
     "text_abs": ""
   },
   {

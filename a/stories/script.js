@@ -9,6 +9,8 @@ var dot, ids, wps, dotg, projection, trailpath, path, trailf, totalLength, wps, 
 
 var dsvg, dw, dh, dproj, dpath, dline, dmap, data;
 
+var coords = [];
+
 var trailid = d3.select(".g-body").attr("data-trail");
 var trailletter = trailid.substring(0,1);
 
@@ -16,6 +18,9 @@ var width = 300;
 var height = width*0.8;
 
 if (trailid == "hk") {
+	width = 200;
+	height = 110;
+} else if (trailid == "lantau") {
 	width = 200;
 	height = 110;
 }
@@ -46,7 +51,8 @@ d3.queue()
 		all = res[4];
 		meta = res[5][0];
 		totaldist = trackpts[trackpts.length - 1].dist;
-		
+
+
 		var filteredn = data.filter(d => !isNaN(+d.id.substring(0,3)));
 		enddp = filteredn[filteredn.length - 1];
 
@@ -79,8 +85,18 @@ d3.queue()
 
 		trailf = trailshape.features;
 
-		if (trailid == "hk") {
-			trailf[0].geometry.coordinates = trailf[0].geometry.coordinates.reverse();
+		if (trailid == "lantau") {
+
+			trailf[0].geometry.coordinates.forEach(function(d){
+				d.forEach(function(b){
+					coords.push(b);
+				})
+			})
+			
+		} else if (trailid == "hk") {
+			coords = trailf[0].geometry.coordinates.reverse();
+		} else {
+			coords = trailf[0].geometry.coordinates;
 		}
 
 		var line = d3.line()
@@ -92,12 +108,12 @@ d3.queue()
 		trailbg.appendMany("path.g-trail-path", trailf)
 			// .style("filter", "url(#drop-shadow)")
 			.style("stroke", "rgba(255,255,255,0.6)")
-			.attr("d", line(trailf[0].geometry.coordinates))
+			.attr("d", line(coords))
 
 		var trailg = svg.append("g.g-trailg");
 		trailpath = trailg.append("path.g-trail-path")
 			// .style("filter", "url(#drop-shadow)")
-			.attr("d", line(trailf[0].geometry.coordinates))
+			.attr("d", line(coords))
 
 		totalLength = Math.ceil(trailpath.node().getTotalLength());
 
@@ -116,7 +132,7 @@ d3.queue()
 			.attr("id", (d,i) => "g-post-" + d.id)
 			.style("transform", (d,i) => "translate(" + i*375 + "px,0)") 
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
-			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + trailletter + d.id + ".jpg)" : "url(photos-100/" + trailletter + d.id + ".jpg)")
+			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + trailletter + d.id + ".jpg)" : "url(photos-100/" + trailletter + d.id + ".jpg)")
 
 		var textcont = dp.append("div.g-text-cont")
 			.style("opacity", d => !d.text_cn && !d.text_en ? "0" : "1")
@@ -167,7 +183,7 @@ d3.queue()
 	var labelg = svg.append("g");
 
 
-	var list = ["start", "end"]
+	var list = trailid == "lantau" ? ["start"] : ["start", "end"]
 	list.forEach(function(d,i){
 		labelg.append("text")
 			.translate(function(){
@@ -263,7 +279,7 @@ function move(id, hash) {
 	}
 
 
-	var duration = id == "cover" ? 3000 : 1000
+	var duration = id == "cover" && trailid == "lantau" ? 4000 : id == "cover" ? 3000 : 1000
 
 	var prev = true;
 	var postduration = hash ? 0 : 600;
@@ -278,7 +294,7 @@ function move(id, hash) {
 	var pic = el.attr("data-pic");
 
 	if (pic == "true") {
-		el.style("background-image", photoid == "end" ? "url(../end.jpg)" : "url(photos/" + trailletter + id + ".jpg)")
+		// el.style("background-image", photoid == "end" ? "url(../end.jpg)" : "url(photos/" + trailletter + id + ".jpg)")
 	}
 
 	if (ids[n+1]) {
@@ -286,7 +302,7 @@ function move(id, hash) {
 		var nextelpic = nextel.attr("data-pic");
 
 		if (nextelpic == "true") {
-			nextel.style("background-image", "url(photos/" + trailletter + ids[n+1] + ".jpg)")
+			// nextel.style("background-image", "url(photos/" + trailletter + ids[n+1] + ".jpg)")
 		}
 	}
 	
@@ -303,11 +319,11 @@ function move(id, hash) {
 	var nextnextel = d3.select("#g-post-" + next.id);
 	var nextnextelpic = nextnextel.attr("data-pic");
 	if (nextnextelpic == "true") {
-		nextnextel.style("background-image", "url(photos/" + trailletter + next.id + ".jpg)")
+		// nextnextel.style("background-image", "url(photos/" + trailletter + next.id + ".jpg)")
 	}
 
 	if (next.id == "end") {
-		nextnextel.style("background-image", "url(../end.jpg)")	
+		// nextnextel.style("background-image", "url(../end.jpg)")	
 	}
 
 		var idstring = id.substr(0,3);
@@ -584,7 +600,7 @@ function move(id, hash) {
 
 	}
 
-	// document.location.hash = id;	
+	document.location.hash = id;	
 
 }
 
@@ -620,7 +636,7 @@ function zoomMap() {
 
 	var duration = 2000;
 	dsvg.transition().duration(0)
-		.attr("transform", trailid == "hk" ? "scale(0.28) translate(" + dw*1.9 + "," + dh/0.445 + ")" : "scale(0.47) translate(" + dw + "," + dh/1.06 + ")")
+		.attr("transform", trailid == "lantau" ? "scale(0.4) translate(" + dw/12 + "," + dh/0.66 + ")" : trailid == "hk" ? "scale(0.28) translate(" + dw*1.9 + "," + dh/0.445 + ")" : "scale(0.47) translate(" + dw + "," + dh/1.06 + ")")
 	d3.select(".g-hkg-shape")
 		.style("stroke-width", 0.4).style("stroke", "rgba(255,255,255,1)")
 		.style("fill", "rgba(255,255,255,0.02")
@@ -630,7 +646,7 @@ function zoomMap() {
 
 
 	var trails = ["t_hk", "t_lantau", "t_maclehose", "t_wilson"]
-	var trailnames = ["港島徑//Hong Kong Trail//45 km", "鳳凰徑//Lantau Trail//78 km", "麥理浩徑//MacLehose Trail//100 km", "衞奕信徑//Wilson Trail//78 km"]
+	var trailnames = ["港島徑//Hong Kong Trail//45 km", "鳳凰徑//Lantau Trail//67 km", "麥理浩徑//MacLehose Trail//100 km", "衞奕信徑//Wilson Trail//78 km"]
 
 
 	dsvg.selectAll(".g-trail-path").remove();
@@ -707,7 +723,7 @@ function zoomMap2() {
 
 	dtrailpath = dsvg.append("path.g-trail-path")
 				.style("filter", "url(#drop-shadow)")
-				.attr("d", dline(trailf[0].geometry.coordinates))
+				.attr("d", dline(coords))
 
 	var dtotalLength = dtrailpath.node().getTotalLength();
 	dtrailpath.transition()
@@ -717,10 +733,12 @@ function zoomMap2() {
 	  .duration(3000)
 	  .ease(d3.easeLinear)
 	  .attr("stroke-dashoffset", 0);	
-		
+	
 	var dlabelsg = dsvg.append("g")
 	var dlabs = dlabelsg.appendMany("g.g-labels", dlabels)
-		.translate(d => dproj([d[0], d[1]]))
+		.translate(function(d){
+			return dproj([d[0], d[1]])
+		})
 	
 	dlabs.style("opacity", 0)
 		.transition()
@@ -787,7 +805,7 @@ function drawElevChart() {
 	elevx = d3.scaleLinear().range([0,elevwidth]).domain([0,lastpt.dist]);
 	elevy = d3.scaleLinear().range([height,0]).domain([0, maxelev]);
 
-	var axis = trailid == "wilson" ? [200,400,600] : [200,400];
+	var axis = trailid == "lantau" ? [400,800] : trailid == "wilson" ? [200,400,600] : [200,400];
 	axis.forEach(function(a){
 		var ypt = elevy(a);
 		elevsvg.append("path.g-axis")

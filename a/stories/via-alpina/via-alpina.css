@@ -6,6 +6,22 @@
 	pointer-events: auto;
 }*/
 
+
+.g-dp span {
+	font-size: 9px;
+	color: rgba(255,255,255,0.5);
+	margin-left: 7px;
+}
+
+#g-post-intro .g-text-cont-inner {
+	max-width: 300px;
+	transform: translate(0, 158%);
+}
+
+#g-post-intro .g-text-inner {
+	background: rgba(0,0,0,0.5);
+}
+
 #g-post-cover .g-text-cont {
 	transform:  translate(0,20%);
 }
@@ -226,6 +242,7 @@ text.g-country-name.g-active {
 
 #g-post-0928_clouds .g-text-cont {
 	transform: translate(0,26%);
+	max-width: 300px;
 }
 
 #g-post-0930_views .g-text-cont {
