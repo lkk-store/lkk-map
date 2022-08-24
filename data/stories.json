@@ -1,11 +1,11 @@
 [
   {
-    "name_cn": "鳳凰徑",
-    "name_en": "Lantau Trail",
-    "text_cn": "我喺 2022 年 7 月 11 - 12 日 行咗衞奕信徑，78 公里，全意志。",
-    "text_en": "I hiked the Wilson Trail on July 11 - 12, 2022. 78 km. Pure will.",
-    "link": "lantau-trail",
-    "date": "20-21/8/2022"
+    "name_cn": "港島徑",
+    "name_en": "Hong Kong Trail",
+    "text_cn": "我喺 2022 年 6 月 27 日 行咗港島徑，45 公里，人生第一次一日行咁多路。",
+    "text_en": "I hiked the Hong Kong Trail on June 27, 2022. 45 km. Longest hike I've done in a day.",
+    "link": "hong-kong-trail",
+    "date": "27/6/2022"
   },
   {
     "name_cn": "衛奕信徑",
@@ -16,12 +16,12 @@
     "date": "11-12/7/2022"
   },
   {
-    "name_cn": "港島徑",
-    "name_en": "Hong Kong Trail",
-    "text_cn": "我喺 2022 年 6 月 27 日 行咗港島徑，45 公里，人生第一次一日行咁多路。",
-    "text_en": "I hiked the Hong Kong Trail on June 27, 2022. 45 km. Longest hike I've done in a day.",
-    "link": "hong-kong-trail",
-    "date": "27/6/2022"
+    "name_cn": "鳳凰徑",
+    "name_en": "Lantau Trail",
+    "text_cn": "我喺 2022 年 7 月 11 - 12 日 行咗衞奕信徑，78 公里，全意志。",
+    "text_en": "I hiked the Wilson Trail on July 11 - 12, 2022. 78 km. Pure will.",
+    "link": "lantau-trail",
+    "date": "20-21/8/2022"
   },
   {
     "name_cn": "",

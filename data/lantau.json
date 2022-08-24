@@ -1,5 +1,6 @@
 [
   {
+    "video": "",
     "nopic": "",
     "id": "cover",
     "time": "",
@@ -7,6 +8,7 @@
     "text_cn": "鳳凰徑"
   },
   {
+    "video": "",
     "nopic": "1",
     "id": "map2",
     "time": "",
@@ -14,13 +16,15 @@
     "text_cn": "香港有四條長途遠足徑，我諗住今個暑假行哂佢地。<b>鳳凰徑</b>係我第三條行嘅徑。"
   },
   {
+    "video": "",
     "nopic": "1",
     "id": "map",
     "time": "",
-    "text_en": "The Lantau Trail is a 67-kilometer trail that loops around Lantau Island going over the second and third highest peak of Hong Kong.",
+    "text_en": "The Lantau Trail is a 67-kilometer trail that loops around Lantau Island going over the second highest peak of Hong Kong.",
     "text_cn": "鳳凰徑全程 67 公里，圍住成個大嶼山行一個圈，途中要行經全港第二高嘅鳳凰山。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "intro",
     "time": "",
@@ -28,6 +32,7 @@
     "text_cn": "行咗 45km 嘅港島徑同 78km 嘅衞奕信徑，身心都強大咗好多，同埋今次有位行山友一齊捱，起步嘅時候成件事感覺好唔同。但個天邊有咁容易放過我，行到一半打風落雨，搞到我地差放棄番咗屋企⋯⋯"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "001",
     "time": "07:47",
@@ -35,13 +40,15 @@
     "text_cn": "開波!"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "002",
     "time": "07:52",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "The trail is marked by these distance posts every 500 meters. I tried to take a photo with each one to record my progress.",
+    "text_cn": "鳳凰徑每 500 米會一個呢啲標距柱，我每個標距柱都影一影嚟記錄我個進度。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "003",
     "time": "07:59",
@@ -49,6 +56,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "004",
     "time": "08:06",
@@ -56,6 +64,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "005",
     "time": "08:13",
@@ -63,6 +72,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "006",
     "time": "08:22",
@@ -70,6 +80,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "007",
     "time": "08:27",
@@ -77,6 +88,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "008",
     "time": "08:37",
@@ -84,6 +96,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "009",
     "time": "08:51",
@@ -91,6 +104,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "010",
     "time": "09:08",
@@ -98,6 +112,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "011",
     "time": "09:26",
@@ -105,6 +120,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "012",
     "time": "09:35",
@@ -112,6 +128,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "013",
     "time": "09:47",
@@ -119,13 +136,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "013b",
     "time": "09:48",
-    "text_en": "As we went up to ",
-    "text_cn": ""
+    "text_en": "As we approached Lantau Peak, the fog grew thicker and the wind blew harder.",
+    "text_cn": "越近鳳凰山就越大霧越大風。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "014",
     "time": "09:59",
@@ -133,6 +152,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "015",
     "time": "10:07",
@@ -140,6 +160,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "016",
     "time": "10:17",
@@ -147,6 +168,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "017",
     "time": "10:28",
@@ -154,6 +176,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "018",
     "time": "10:46",
@@ -161,6 +184,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "019",
     "time": "10:58",
@@ -168,6 +192,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "020",
     "time": "11:05",
@@ -175,6 +200,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "021",
     "time": "11:25",
@@ -182,6 +208,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "022",
     "time": "11:51",
@@ -189,13 +216,15 @@
     "text_cn": ""
   },
   {
+    "video": "1",
     "nopic": "",
     "id": "022a",
     "time": "11:53",
-    "text_en": "Crazy wind and fog",
-    "text_cn": ""
+    "text_en": "The wind was crazy, could barely stand, felt like I was being hit by a car.",
+    "text_cn": "鳳凰山啲風癲起上嚟唔係人咁品，全程好似俾人打咁，企都企唔穩。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "023",
     "time": "12:05",
@@ -203,6 +232,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "024",
     "time": "12:18",
@@ -210,20 +240,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "024a",
     "time": "12:28",
-    "text_en": "Lantau Peak",
-    "text_cn": ""
+    "text_en": "Made it to the top of Lantau Peak, every step was a battle.",
+    "text_cn": "舉步維艱，但終於終於上到鳳凰山，打咗個大佬。"
   },
   {
-    "nopic": "",
-    "id": "025",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "026",
     "time": "12:55",
@@ -231,6 +256,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "027",
     "time": "13:07",
@@ -238,6 +264,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "028",
     "time": "13:24",
@@ -245,6 +272,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "029",
     "time": "13:34",
@@ -252,6 +280,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "030",
     "time": "13:43",
@@ -259,62 +288,79 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "031",
     "time": "13:50",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "It came down on us hard during this part, but sadly I didn't get a good photo showing how soaked to the bone we were.",
+    "text_cn": "昂坪附近開始好大雨，可惜冇影低到我地有幾咁濕撚哂。（但唔撚驚）"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "031a",
-    "time": "15:38",
-    "text_en": "",
-    "text_cn": ""
+    "time": "14:05",
+    "text_en": "But first... lunch!!!!!!!",
+    "text_cn": "飯呀!!!!!!!!"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "031b",
-    "time": "16:04",
-    "text_en": "",
-    "text_cn": ""
+    "time": "14:05",
+    "text_en": "It kept raining cats and dogs while we ate lunch and we looked at the radar images from the weather observatory and saw huge rainclouds coming our way.",
+    "text_cn": "我地一路食野就一路落狗屎，去睇天文台啲雷達圖就見有好多好大舊嘅雨雲衝緊嚟大嶼山。"
   },
   {
-    "nopic": "",
+    "video": "",
+    "nopic": "1",
     "id": "031c",
-    "time": "16:04",
-    "text_en": "",
-    "text_cn": ""
+    "time": "14:05",
+    "text_en": "It was a really hard call to make, but we decided that the weather was too unstable to continue. We were both really bummed about not being able to finish the trail and decided to treat ourselves to a gondola ride down to the train station.",
+    "text_cn": "好痛苦但決斷咁決定放棄。我地兩個都好灰完成唔到鳳凰徑，就諗住開心下搭纜車落番東涌。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "031d",
-    "time": "16:43",
-    "text_en": "",
-    "text_cn": ""
+    "time": "16:04",
+    "text_en": "BUT! Once we got on the gondola, it was clear blue skies all the way.",
+    "text_cn": "點！知！一上纜車發現藍天白雲。"
   },
   {
+    "video": "1",
     "nopic": "",
     "id": "031e",
-    "time": "17:01",
-    "text_en": "",
-    "text_cn": ""
+    "time": "16:04",
+    "text_en": "We checked the radar image again and, lo and behold, the clouds really dissipated! ",
+    "text_cn": "再 check 天文台 app，估佢唔到啲雨雲真係散哂！"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "031f",
-    "time": "17:16",
-    "text_en": "",
-    "text_cn": ""
+    "time": "16:43",
+    "text_en": "Look at that sky!",
+    "text_cn": "藍天白雲！"
   },
   {
+    "video": "",
+    "nopic": "",
+    "id": "031g",
+    "time": "17:01",
+    "text_en": "As dumb as this was, we decided to turn around and go back up. We got the gondola to ourselves this time and took the chance to air out our wet socks and shoes.",
+    "text_cn": "好戇居咁決定搭番轉頭繼續行。呢轉我地包車，即刻除鞋除襪晾乾下。"
+  },
+  {
+    "video": "",
     "nopic": "",
     "id": "032",
     "time": "17:34",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "Here we go again!",
+    "text_cn": "再開波！"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "033",
     "time": "17:44",
@@ -322,6 +368,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "034",
     "time": "17:54",
@@ -329,6 +376,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "035",
     "time": "18:03",
@@ -336,6 +384,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "036",
     "time": "18:11",
@@ -343,6 +392,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "037",
     "time": "18:22",
@@ -350,6 +400,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "038",
     "time": "18:31",
@@ -357,13 +408,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "038a",
     "time": "18:42",
-    "text_en": "Sunset",
-    "text_cn": ""
+    "text_en": "Catching the sunset at the westernmost part of Hong Kong.",
+    "text_cn": "喺香港最西嘅地方睇日落。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "039",
     "time": "18:53",
@@ -371,13 +424,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "039a",
     "time": "18:57",
-    "text_en": "Keung Shan",
+    "text_en": "",
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "040",
     "time": "19:06",
@@ -385,6 +440,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "041",
     "time": "19:16",
@@ -392,6 +448,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "042",
     "time": "19:25",
@@ -399,6 +456,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "043",
     "time": "19:38",
@@ -406,13 +464,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "043a",
     "time": "19:46",
-    "text_en": "Ling Wui Shan",
-    "text_cn": ""
+    "text_en": "Last peak of the day",
+    "text_cn": "今日最後一個山"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "044",
     "time": "19:46",
@@ -420,6 +480,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "045",
     "time": "19:55",
@@ -427,6 +488,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "046",
     "time": "20:05",
@@ -434,6 +496,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "047",
     "time": "20:31",
@@ -441,6 +504,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "048",
     "time": "20:42",
@@ -448,6 +512,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "049",
     "time": "20:54",
@@ -455,6 +520,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "050",
     "time": "21:03",
@@ -462,6 +528,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "051",
     "time": "21:14",
@@ -469,6 +536,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "052",
     "time": "21:39",
@@ -476,6 +544,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "053",
     "time": "21:44",
@@ -483,6 +552,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "054",
     "time": "21:49",
@@ -490,20 +560,23 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "054a",
     "time": "23:11",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "The trail was rough coming down to Tai O, it was long and steep and dark and wet and near the end it started pouring rain. We found a gazebo in town and decided to just sleep here instead of looking for somewhere to camp. It was nice to be able to wash up and have a roof over our heads.",
+    "text_cn": "落大澳條路又長又斜又濕又黑好難行，臨尾仲落雨。最後決定喺大澳瞓涼亭，有瓦遮頭又有得梳洗下廢事再揾地方 camp。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "054b",
     "time": "06:00",
-    "text_en": "Good morning",
+    "text_en": "Good morning :sun:",
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "055",
     "time": "06:52",
@@ -511,6 +584,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "056",
     "time": "06:58",
@@ -518,6 +592,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "057",
     "time": "07:06",
@@ -525,6 +600,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "058",
     "time": "07:12",
@@ -532,6 +608,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "059",
     "time": "07:17",
@@ -539,6 +616,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "060",
     "time": "07:23",
@@ -546,6 +624,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "061",
     "time": "07:28",
@@ -553,6 +632,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "062",
     "time": "07:34",
@@ -560,13 +640,7 @@
     "text_cn": ""
   },
   {
-    "nopic": "",
-    "id": "063",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "064",
     "time": "07:49",
@@ -574,6 +648,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "065",
     "time": "07:54",
@@ -581,13 +656,7 @@
     "text_cn": ""
   },
   {
-    "nopic": "",
-    "id": "066",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "067",
     "time": "08:09",
@@ -595,6 +664,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "068",
     "time": "08:14",
@@ -602,6 +672,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "069",
     "time": "08:20",
@@ -609,6 +680,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "070",
     "time": "08:26",
@@ -616,34 +688,31 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "070a",
     "time": "08:34",
-    "text_en": "break",
-    "text_cn": ""
+    "text_en": "The last section of the trail was really rough, cutting through a thick forest where we had to wack bushes and fight spiders. So grateful when we made it out alive to the next village. ",
+    "text_cn": "大澳去分流條路好癲，全程打蜘蛛同狂俾蚊咬，捱到去分流陳記士多嘅時候極感動。"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "070b",
     "time": "08:58",
-    "text_en": "Dragonfruit",
-    "text_cn": ""
+    "text_en": "The owners were the sweetest and gave us dragronfruits that they grew themselves.",
+    "text_cn": "陳記兩公婆超好人，請我地食自己種嘅火龍果。"
   },
   {
-    "nopic": "",
-    "id": "070c",
-    "time": "09:15",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "070d",
     "time": "09:17",
     "text_en": "Greatest pit stop",
-    "text_cn": ""
+    "text_cn": "最正補給站"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "071",
     "time": "09:23",
@@ -651,6 +720,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "072",
     "time": "09:32",
@@ -658,6 +728,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "073",
     "time": "09:39",
@@ -665,6 +736,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "074",
     "time": "09:48",
@@ -672,6 +744,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "075",
     "time": "09:55",
@@ -679,6 +752,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "076",
     "time": "10:01",
@@ -686,6 +760,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "077",
     "time": "10:07",
@@ -693,6 +768,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "078",
     "time": "10:11",
@@ -700,6 +776,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "079",
     "time": "10:19",
@@ -707,6 +784,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "080",
     "time": "10:25",
@@ -714,6 +792,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "081",
     "time": "10:31",
@@ -721,6 +800,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "082",
     "time": "10:37",
@@ -728,6 +808,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "083",
     "time": "10:41",
@@ -735,6 +816,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "084",
     "time": "10:47",
@@ -742,6 +824,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "085",
     "time": "10:53",
@@ -749,6 +832,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "086",
     "time": "10:59",
@@ -756,6 +840,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "087",
     "time": "11:06",
@@ -763,20 +848,23 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "087a",
     "time": "11:10",
-    "text_en": "Banana break!",
+    "text_en": "Banana break! Sponsored by 陳記士多",
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "088",
     "time": "11:36",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "Strong Switzerland vibes",
+    "text_cn": "好似瑞士:swiss:"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "089",
     "time": "11:42",
@@ -784,6 +872,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "090",
     "time": "11:51",
@@ -791,13 +880,7 @@
     "text_cn": ""
   },
   {
-    "nopic": "",
-    "id": "091",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "092",
     "time": "12:06",
@@ -805,6 +888,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "093",
     "time": "12:14",
@@ -812,6 +896,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "094",
     "time": "12:20",
@@ -819,6 +904,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "095",
     "time": "12:29",
@@ -826,6 +912,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "096",
     "time": "12:38",
@@ -833,6 +920,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "097",
     "time": "12:46",
@@ -840,6 +928,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "098",
     "time": "12:54",
@@ -847,20 +936,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "098a",
     "time": "13:17",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "Another great pit stop with the friendliest owner at Shui Hau Village",
+    "text_cn": "水口村補給站推介花園屋茶座，老闆超好人"
   },
   {
-    "nopic": "",
-    "id": "099",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "100",
     "time": "14:07",
@@ -868,6 +952,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "101",
     "time": "14:17",
@@ -875,6 +960,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "102",
     "time": "14:23",
@@ -882,6 +968,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "103",
     "time": "14:29",
@@ -889,6 +976,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "104",
     "time": "14:35",
@@ -896,6 +984,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "105",
     "time": "14:41",
@@ -903,6 +992,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "106",
     "time": "14:46",
@@ -910,6 +1000,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "107",
     "time": "14:55",
@@ -917,6 +1008,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "108",
     "time": "15:01",
@@ -924,6 +1016,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "109",
     "time": "15:06",
@@ -931,6 +1024,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "110",
     "time": "15:12",
@@ -938,6 +1032,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "111",
     "time": "15:19",
@@ -945,6 +1040,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "112",
     "time": "15:25",
@@ -952,6 +1048,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "113",
     "time": "15:30",
@@ -959,13 +1056,15 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "113a",
     "time": "15:41",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "Everything hurts so taking a break. Pondering why I'm doing this to myself.",
+    "text_cn": "周身痛決定抖下，順便思考下人生點解我要咁樣折磨自己"
   },
   {
+    "video": "",
     "nopic": "",
     "id": "114",
     "time": "15:50",
@@ -973,6 +1072,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "115",
     "time": "15:55",
@@ -980,13 +1080,7 @@
     "text_cn": ""
   },
   {
-    "nopic": "",
-    "id": "116",
-    "time": "",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "117",
     "time": "16:08",
@@ -994,6 +1088,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "118",
     "time": "16:15",
@@ -1001,6 +1096,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "119",
     "time": "16:20",
@@ -1008,6 +1104,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "120",
     "time": "16:26",
@@ -1015,6 +1112,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "121",
     "time": "16:33",
@@ -1022,6 +1120,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "122",
     "time": "16:53",
@@ -1029,6 +1128,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "123",
     "time": "17:01",
@@ -1036,6 +1136,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "124",
     "time": "17:09",
@@ -1043,6 +1144,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "125",
     "time": "17:18",
@@ -1050,6 +1152,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "126",
     "time": "17:26",
@@ -1057,6 +1160,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "127",
     "time": "17:41",
@@ -1064,6 +1168,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "128",
     "time": "17:48",
@@ -1071,6 +1176,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "129",
     "time": "17:57",
@@ -1078,6 +1184,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "130",
     "time": "18:03",
@@ -1085,6 +1192,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "131",
     "time": "18:08",
@@ -1092,6 +1200,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "132",
     "time": "18:18",
@@ -1099,6 +1208,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "133",
     "time": "18:23",
@@ -1106,6 +1216,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "134",
     "time": "18:32",
@@ -1113,6 +1224,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "135",
     "time": "18:38",
@@ -1120,6 +1232,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "136",
     "time": "18:43",
@@ -1127,6 +1240,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "137",
     "time": "18:49",
@@ -1134,6 +1248,7 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "138",
     "time": "18:55",
@@ -1141,23 +1256,26 @@
     "text_cn": ""
   },
   {
+    "video": "",
     "nopic": "",
     "id": "139",
     "time": "19:02",
-    "text_en": "",
-    "text_cn": ""
+    "text_en": "Last distance post",
+    "text_cn": "最後一個標距柱 :tear:"
   },
   {
-    "nopic": "",
-    "id": "139a",
-    "time": "19:07",
-    "text_en": "",
-    "text_cn": ""
-  },
-  {
+    "video": "",
     "nopic": "",
     "id": "139b",
     "time": "19:08",
+    "text_en": "67km done! Me pictured with the historic postbox that marks the end of the trail.",
+    "text_cn": "完成咗 67 km！鳳凰徑指定動作：同梅窩碼頭個舊英式郵筒合照"
+  },
+  {
+    "video": "",
+    "nopic": "",
+    "id": "end",
+    "time": "",
     "text_en": "",
     "text_cn": ""
   }

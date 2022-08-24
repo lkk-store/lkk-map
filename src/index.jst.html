@@ -6,7 +6,7 @@
 	<div class="g-hed" data-id="<%- section %>"><%- section.toUpperCase() %></div>
 	<div class="g-project-cont g-project-<%- section %>" data-id="<%- section %>" data-state="closed">
 		<% data[section].forEach(function(d){ %>
-		<div class="g-project">
+		<div class="g-project g-project-<%- d.link %>">
 			<a href="a/<%- section %>/<%- d.link %>">
 			<div class="g-img-cont" style="background-image: url('img/<%- d.link %>/<%- data.imgs[d.link][0] %>');"></div>
 			<div class="g-text g-text-cn"><%- d.name_cn.toUpperCase() %></div>

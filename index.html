@@ -133,11 +133,7 @@ img {
   padding-bottom: 35%;
   background-size: cover;
   background-position: 0 50%;
-}
-@media screen and (min-width: 460px) {
-  .g-img-cont {
-    padding-bottom: 100%;
-  }
+  padding-bottom: 100%;
 }
 .g-project-about {
   text-align: center;
@@ -237,6 +233,10 @@ img {
 .g-shop-page .g-detail-cont .g-text-break {
   height: 10px;
 }
+.g-project-lantau-trail .g-img-cont,
+.g-project-hong-kong-trail .g-img-cont {
+  background-position: 0 100%;
+}
 </style>
 </head>
 <body>
@@ -248,25 +248,7 @@ img {
 	<div class="g-hed" data-id="stories">STORIES</div>
 	<div class="g-project-cont g-project-stories" data-id="stories" data-state="closed">
 		
-		<div class="g-project">
-			<a href="a/stories/lantau-trail">
-			<div class="g-img-cont" style="background-image: url('img/lantau-trail/lcover.jpg');"></div>
-			<div class="g-text g-text-cn">鳳凰徑</div>
-			<div class="g-text g-text-en">LANTAU TRAIL</div>
-			<div class="g-text g-small g-date">20-21/8/2022</div>
-			</a>
-		</div>
-		
-		<div class="g-project">
-			<a href="a/stories/wilson-trail">
-			<div class="g-img-cont" style="background-image: url('img/wilson-trail/001.jpg');"></div>
-			<div class="g-text g-text-cn">衛奕信徑</div>
-			<div class="g-text g-text-en">WILSON TRAIL</div>
-			<div class="g-text g-small g-date">11-12/7/2022</div>
-			</a>
-		</div>
-		
-		<div class="g-project">
+		<div class="g-project g-project-hong-kong-trail">
 			<a href="a/stories/hong-kong-trail">
 			<div class="g-img-cont" style="background-image: url('img/hong-kong-trail/001.jpg');"></div>
 			<div class="g-text g-text-cn">港島徑</div>
@@ -275,7 +257,25 @@ img {
 			</a>
 		</div>
 		
-		<div class="g-project">
+		<div class="g-project g-project-wilson-trail">
+			<a href="a/stories/wilson-trail">
+			<div class="g-img-cont" style="background-image: url('img/wilson-trail/001.jpg');"></div>
+			<div class="g-text g-text-cn">衛奕信徑</div>
+			<div class="g-text g-text-en">WILSON TRAIL</div>
+			<div class="g-text g-small g-date">11-12/7/2022</div>
+			</a>
+		</div>
+		
+		<div class="g-project g-project-lantau-trail">
+			<a href="a/stories/lantau-trail">
+			<div class="g-img-cont" style="background-image: url('img/lantau-trail/lcover.jpg');"></div>
+			<div class="g-text g-text-cn">鳳凰徑</div>
+			<div class="g-text g-text-en">LANTAU TRAIL</div>
+			<div class="g-text g-small g-date">20-21/8/2022</div>
+			</a>
+		</div>
+		
+		<div class="g-project g-project-hong-kong-map-type">
 			<a href="a/stories/hong-kong-map-type">
 			<div class="g-img-cont" style="background-image: url('img/hong-kong-map-type/001.jpg');"></div>
 			<div class="g-text g-text-cn"></div>
@@ -284,7 +284,7 @@ img {
 			</a>
 		</div>
 		
-		<div class="g-project">
+		<div class="g-project g-project-via-alpina">
 			<a href="a/stories/via-alpina">
 			<div class="g-img-cont" style="background-image: url('img/via-alpina/001.jpg');"></div>
 			<div class="g-text g-text-cn"></div>
@@ -302,7 +302,7 @@ img {
 	<div class="g-hed" data-id="shop">SHOP</div>
 	<div class="g-project-cont g-project-shop" data-id="shop" data-state="closed">
 		
-		<div class="g-project">
+		<div class="g-project g-project-cheung-tsui">
 			<a href="a/shop/cheung-tsui">
 			<div class="g-img-cont" style="background-image: url('img/cheung-tsui/001.jpg');"></div>
 			<div class="g-text g-text-cn">長咀</div>

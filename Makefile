@@ -16,3 +16,4 @@ via:
 
 photos:
 	mogrify -resize 1050x a/stories/lantau-trail/photos/*.jpg
+	mogrify -resize 100x a/stories/lantau-trail/photos-100/*.jpg

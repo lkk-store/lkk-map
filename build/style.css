@@ -118,11 +118,7 @@ img {
   padding-bottom: 35%;
   background-size: cover;
   background-position: 0 50%;
-}
-@media screen and (min-width: 460px) {
-  .g-img-cont {
-    padding-bottom: 100%;
-  }
+  padding-bottom: 100%;
 }
 .g-project-about {
   text-align: center;
@@ -221,4 +217,8 @@ img {
 }
 .g-shop-page .g-detail-cont .g-text-break {
   height: 10px;
+}
+.g-project-lantau-trail .g-img-cont,
+.g-project-hong-kong-trail .g-img-cont {
+  background-position: 0 100%;
 }

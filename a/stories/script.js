@@ -33,7 +33,7 @@ var totaltime = 0;
 var gdays = trailid == "wilson" || trailid == "lantau" ? 2 : 1;
 
 function addemojis(x) {
-	return x.replace(":lol:", "😂").replace(":tear:", "🥲").replace(":smile:", "🙂").replace(":sun:", "🌞")
+	return x.replace(":lol:", "😂").replace(":tear:", "🥲").replace(":smile:", "🙂").replace(":sun:", "🌞").replace(":swiss:", "🇨🇭")
 }
 
 d3.queue()
@@ -132,7 +132,13 @@ d3.queue()
 			.attr("id", (d,i) => "g-post-" + d.id)
 			.style("transform", (d,i) => "translate(" + i*375 + "px,0)") 
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
-			// .style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + trailletter + d.id + ".jpg)" : "url(photos-100/" + trailletter + d.id + ".jpg)")
+			.attr("data-video", d => d.video == "1" ? "true" : "false")
+			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + trailletter + d.id + ".jpg)" : "url(photos-100/" + trailletter + d.id + ".jpg)")
+
+		data.filter(d => d.video == "1").forEach(function(d){
+			var el = d3.select("#g-post-" + d.id);
+			el.append("div.g-video-cont").html("<video class='lazy' id='g-vid-" + d.id + "' autoplay muted loop playsinline preload='none' data-src='photos/" + trailletter + d.id + ".mp4' poster='photos-100/" + trailletter + d.id + ".jpg' />")
+		})
 
 		var textcont = dp.append("div.g-text-cont")
 			.style("opacity", d => !d.text_cn && !d.text_en ? "0" : "1")
@@ -292,17 +298,34 @@ function move(id, hash) {
 	var photoid = el.attr("data-id")
 	var time = el.attr("data-time")	
 	var pic = el.attr("data-pic");
+	var video = el.attr("data-video");
 
 	if (pic == "true") {
-		// el.style("background-image", photoid == "end" ? "url(../end.jpg)" : "url(photos/" + trailletter + id + ".jpg)")
+		el.style("background-image", photoid == "end" ? "url(../end.jpg)" : "url(photos/" + trailletter + id + ".jpg)")
 	}
+
+	if (video == "true") {
+		var videl = el.select("video");
+		if (!videl.attr("src")) {
+			videl.attr("src", videl.attr("data-src"));
+			videl.node().play();
+		}
+	}
+
 
 	if (ids[n+1]) {
 		var nextel = d3.select("#g-post-" + ids[n+1]);
 		var nextelpic = nextel.attr("data-pic");
+		var nextelvideo = nextel.attr("data-video");
 
 		if (nextelpic == "true") {
-			// nextel.style("background-image", "url(photos/" + trailletter + ids[n+1] + ".jpg)")
+			nextel.style("background-image", "url(photos/" + trailletter + ids[n+1] + ".jpg)")
+		}
+
+		if (nextelvideo == "true") {
+			var videl = nextel.select("video")
+			videl.attr("src", nextel.select("video").attr("data-src"));
+			videl.node().play();
 		}
 	}
 	
@@ -319,13 +342,12 @@ function move(id, hash) {
 	var nextnextel = d3.select("#g-post-" + next.id);
 	var nextnextelpic = nextnextel.attr("data-pic");
 	if (nextnextelpic == "true") {
-		// nextnextel.style("background-image", "url(photos/" + trailletter + next.id + ".jpg)")
+		nextnextel.style("background-image", "url(photos/" + trailletter + next.id + ".jpg)")
 	}
 
 	if (next.id == "end") {
-		// nextnextel.style("background-image", "url(../end.jpg)")	
+		nextnextel.style("background-image", "url(../end.jpg)")	
 	}
-
 		var idstring = id.substr(0,3);
 		idstring = idstring.indexOf("map") > -1 || idstring.indexOf("intro") > -1 ? "000" : idstring
 
@@ -343,7 +365,7 @@ function move(id, hash) {
 		if (trailid == "wilson" && +id.substr(0,3) > 69) {
 			starttime = new Date(2021,6,11,5,25);
 		} else if (trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b")) {
-			starttime = new Date(2021,6,11,5,0);
+			starttime = new Date(2021,6,11,6,0);
 		}
 
 		var newtime = new Date(2021,6,11,+dattime.split(":")[0],+dattime.split(":")[1]);
@@ -521,13 +543,14 @@ function move(id, hash) {
 			}
 
 			if (id == "cover") {
+
 				d3.selectAll(".g-dp")
 					.transition()
 					.ease(d3.easeLinear)
 					.duration(duration)
 					.tween("text", function(d){
 						var element = d3.select(this);
-						var i = d3.interpolate(0, enddp.id);
+						var i = d3.interpolate(0, enddp.id.substring(0,3));
 						return function(t) {
 						    element.text(trailletter.toUpperCase() + String(Math.round(i(t))).padStart(3,'0') );
 						};
@@ -774,7 +797,7 @@ function drawElevChart() {
 	// textcont.append("div.g-text.g-text-en").text("Elevation")
 	// textcont.append("div.g-text.g-text-cn").text("高度")
 
-	elevwidth = trailid == "wilson" ? 125 : 100;
+	elevwidth = trailid == "lantau" ? 125 :  trailid == "wilson" ? 125 : 100;
 	var height = 35;
 	elevsvg = sel.append("svg").attr("width", elevwidth).attr("height", height);
 
