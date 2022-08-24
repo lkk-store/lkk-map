@@ -17,6 +17,8 @@ var trailletter = trailid.substring(0,1);
 var width = 300;
 var height = width*0.8;
 
+var contwidth = innerWidth > 460 ? 375 : innerWidth;
+
 if (trailid == "hk") {
 	width = 200;
 	height = 110;
@@ -122,7 +124,7 @@ d3.queue()
 
 		ids = data.map(d => d.id);
 		var cont = d3.select(".g-content").html("")
-		cont.style("width", data.length*375 + "px")
+		cont.style("width", data.length*contwidth + "px")
 
 		var dp = cont.appendMany("div", data)	
 			.attr("data-time", d => d.time)
@@ -130,7 +132,7 @@ d3.queue()
 			.attr("data-labeled", d => d.labeled)
 			.attr("class", (d,i) => i == 0 ? "g-post g-post-active" : "g-post")
 			.attr("id", (d,i) => "g-post-" + d.id)
-			.style("transform", (d,i) => "translate(" + i*375 + "px,0)") 
+			.style("transform", (d,i) => "translate(" + i*contwidth + "px,0)") 
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
 			.attr("data-video", d => d.video == "1" ? "true" : "false")
 			.style("background-image", (d,i) => d.nopic == '1' ? "" : i == 0 ? "url(photos/" + trailletter + d.id + ".jpg)" : "url(photos-100/" + trailletter + d.id + ".jpg)")
@@ -293,7 +295,7 @@ function move(id, hash) {
 	d3.select(".g-content")
 		.transition()
 		.duration(1000)
-		.style("transform", "translate(-" + n*375 + "px,0)")
+		.style("transform", "translate(-" + n*contwidth + "px,0)")
 	
 	var photoid = el.attr("data-id")
 	var time = el.attr("data-time")	

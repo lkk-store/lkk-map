@@ -73,7 +73,8 @@
 	position: absolute;
 	top:  0;
 	left:  0;
-	background-size: cover;
+	background-size: 100%;
+	background-position: bottom right;
 }
 
 #g-post-033 .g-text-cont {

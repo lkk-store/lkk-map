@@ -16,6 +16,7 @@ var mapzoomed = false;
 var start = [9.5666,47.1156];
 var duration = 1000;
 var laststop = ""
+var contwidth = innerWidth > 460 ? 375 : innerWidth;
 
 var segid;
 
@@ -98,14 +99,14 @@ d3.queue()
 		ids = data.map(d => d.id);
 		
 		var cont = d3.select(".g-content").html("")
-		cont.style("width", data.length*375 + "px")
+		cont.style("width", data.length*contwidth + "px")
 
 
 		var dp = cont.appendMany("div", data)	
 			.attr("data-id", d => d.id)
 			.attr("class", (d,i) => i == 0 ? "g-post g-post-active" : "g-post")
 			.attr("id", (d,i) => "g-post-" + d.id)
-			.style("transform", (d,i) => "translate(" + i*375 + "px,0)") 
+			.style("transform", (d,i) => "translate(" + i*contwidth + "px,0)") 
 			.attr("data-pic", d => d.nopic == "1" ? "false" : "true")
 			.attr("data-video", d => d.video == "1" ? "true" : "false")
 			.attr("data-sound", d => d.sound == "1" ? "true" : "false")
@@ -223,7 +224,7 @@ function move(id, hash) {
 	d3.select(".g-content")
 		.transition()
 		.duration(1000)
-		.style("transform", "translate(-" + n*375 + "px,0)")
+		.style("transform", "translate(-" + n*contwidth + "px,0)")
 		.on("end", function(){
 		});
 

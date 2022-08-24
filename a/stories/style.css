@@ -20,7 +20,7 @@ svg {
 }
 
 a, a:visited {
-	color:  #fff;
+	color:  #fff;	
 	text-decoration: none;
 }
 
@@ -40,15 +40,15 @@ a, a:visited {
 	position: relative;
 	width: 100%;
 	height:  100%;
-	max-width: 375px;
-	max-height: 667px;
 	margin:  0 auto;
 	overflow: hidden;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 460px) {
 	.g-body {
 		border:  1px solid rgba(255,255,255,0.1);
+		max-width: 375px;
+		max-height: 667px;
 	}
 }
 
@@ -74,6 +74,7 @@ a, a:visited {
 	padding-bottom: 50px;
 	overflow: hidden;
 	background: linear-gradient(20deg, rgba(0,0,0,0) 20%, rgb(0 0 0 / 60%) 100%);
+	text-align: right;
 }
 
 .g-hed-text {
@@ -152,8 +153,8 @@ a, a:visited {
 }
 
 .g-post {
-	width: 375px;
-	height:  667px;
+	width: 100vw;
+	height:  100vh;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -162,6 +163,13 @@ a, a:visited {
 	background-size:  cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+@media screen and (min-width:  460px) {
+	.g-post {
+		width: 375px;
+		height:  667px;
+	}
 }
 
 .g-post:before {
