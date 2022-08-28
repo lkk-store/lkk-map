@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'HK Map Font'; /*a name to be used later*/
-    src: url('https://www.lkk-store.com/lkk-maps/HKmap-Test3.otf'); /*URL to font*/
+    src: url('https://www.lkk-store.com/lkk-map/HKmap-Test3.otf'); /*URL to font*/
 }
 
 @font-face {
     font-family: 'MYuenHK'; /*a name to be used later*/
-    src: url('https://www.lkk-store.com/lkk-maps/MYuenHK-Medium.ttf'); /*URL to font*/
+    src: url('https://www.lkk-store.com/lkk-map/MYuenHK-Medium.ttf'); /*URL to font*/
 }
 
 body, html {
@@ -42,15 +42,25 @@ p {
 	letter-spacing: 2px;
 	font-size: 30px;
 	color:  #fff;
-	margin-bottom: 10px;
+	margin-bottom: -5px;
+}
+
+.g-big-hed img {
+	width: 80px;
 }
 
 .g-hed-text {
 	padding:  25px 0 25px 0;
+
+	.g-small {
+		max-width: 84px;
+		font-size: 7px;
+		line-height: 1.8;
+	}
 }
 
 .g-hed {
-	font-size: 16px;
+	font-size: 13px;
 	margin-bottom: 25px;
 	letter-spacing: 2px;
 	font-family: 'HK Map Font';
@@ -94,11 +104,11 @@ img {
 	font-family: 'MYuenHK';
 	font-size: 14px;
 	letter-spacing: 6px;
-	margin-left: 23px;
 	line-height: 1;
 
 	@media screen and (min-width: 460px) {
 		margin-left: 9px;
+		margin-left: 23px;
 	}
 }
 

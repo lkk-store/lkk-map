@@ -130,7 +130,7 @@ d3.queue()
 
 		var endcont = d3.select("#g-post-end").html("");
 		endcont = endcont.append("div.g-text-cont")
-		var endhed = endcont.append("div.g-end-hed").html("<a href='https://www.lkk-store.com/lkk-maps'>Read more on <br> LKK MAPS</a>")
+		var endhed = endcont.append("div.g-end-hed").html("<a href='https://www.lkk-store.com/lkk-map'>Read more on <br> LKK MAP</a>")
 
 		data.filter(d => d.text_abs != "").forEach(function(d){
 			var labels = d.text_abs.split("//");

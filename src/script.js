@@ -14,7 +14,7 @@ d3.selectAll(".g-hed").on("click", function(){
 	var target = d3.select(".g-project-" + id);
 	var state = target.attr("data-state");
 	var targetheight = target.attr("data-height");
-	var duration = targetheight < 100 ? 100 : targetheight;
+	var duration = 1000 //targetheight < 100 ? 100 : targetheight;
 
 	d3.selectAll(".g-project-opened").each(function(){
 		var el = d3.select(this);

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>LKK MAPS</title>
+<title>LKK MAP</title>
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 <link rel="shortcut icon" href="img/lkk-logo-06.webp" />
 <link rel="apple-touch-icon" sizes="128x128" href="app-icon.png">
 <link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">
-<meta property="og:title" content="lkk maps"/>
+<meta property="og:title" content="lkk map"/>
 <meta property="og:type" content=""/>
-<meta property="og:url" content="http://lkk-store.com/lkk-maps"/>
+<meta property="og:url" content="http://lkk-store.com/lkk-map"/>
 <meta property="og:image" content="https://www.lkk-store.com/img/twitter.jpg"/>
-<meta property="og:site_name" content="lkk maps"/>
+<meta property="og:site_name" content="lkk map"/>
 <meta property="og:description" content="make something 9ood"/><style>
 @font-face {
   font-family: 'HK Map Font';
   /*a name to be used later*/
-  src: url('https://www.lkk-store.com/lkk-maps/HKmap-Test3.otf');
+  src: url('https://www.lkk-store.com/lkk-map/HKmap-Test3.otf');
   /*URL to font*/
 }
 @font-face {
   font-family: 'MYuenHK';
   /*a name to be used later*/
-  src: url('https://www.lkk-store.com/lkk-maps/MYuenHK-Medium.ttf');
+  src: url('https://www.lkk-store.com/lkk-map/MYuenHK-Medium.ttf');
   /*URL to font*/
 }
 body,
@@ -54,13 +54,21 @@ p {
   letter-spacing: 2px;
   font-size: 30px;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: -5px;
+}
+.g-big-hed img {
+  width: 80px;
 }
 .g-hed-text {
   padding: 25px 0 25px 0;
 }
+.g-hed-text .g-small {
+  max-width: 84px;
+  font-size: 7px;
+  line-height: 1.8;
+}
 .g-hed {
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 25px;
   letter-spacing: 2px;
   font-family: 'HK Map Font';
@@ -96,12 +104,12 @@ img {
   font-family: 'MYuenHK';
   font-size: 14px;
   letter-spacing: 6px;
-  margin-left: 23px;
   line-height: 1;
 }
 @media screen and (min-width: 460px) {
   .g-text-cn {
     margin-left: 9px;
+    margin-left: 23px;
   }
 }
 .g-project-cont {
@@ -240,7 +248,7 @@ img {
 </style>
 </head>
 <body>
-<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/">LKK MAPS</p><p class="g-text g-small">ITS THE JOURNEY NOT THE PLACE</p></div></a></div>
+<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="lkk-map-logo-white.png" alt="LKK MAP" /></p><p class="g-text g-small">ABOUT MY FAVORITE PLACES</p></div></a></div>
 
 <div class="g-shop-page">
 	<div class="g-hed g-hed-cn">長咀</div>
@@ -330,7 +338,7 @@ hand made silk screen printing on 100% cotton cloth</div>
 
 
 </div>
-<div class="g-footer"><div class="g-small">© LKK MAPS 2022</div></div><script src="../../../d3_.js"></script>
+<div class="g-footer"><div class="g-small">© LKK MAP 2022</div></div><script src="../../../d3_.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
@@ -350,7 +358,7 @@ d3.selectAll(".g-hed").on("click", function(){
 	var target = d3.select(".g-project-" + id);
 	var state = target.attr("data-state");
 	var targetheight = target.attr("data-height");
-	var duration = targetheight < 100 ? 100 : targetheight;
+	var duration = 1000 //targetheight < 100 ? 100 : targetheight;
 
 	d3.selectAll(".g-project-opened").each(function(){
 		var el = d3.select(this);

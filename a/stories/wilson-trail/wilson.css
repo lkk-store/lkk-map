@@ -1,6 +1,7 @@
 .g-map-inner svg {
-	margin-left: 160px;
 	margin-top: 35px;
+	margin-right: -90px;
+	margin-left: auto;
 }
 
 .g-hour {

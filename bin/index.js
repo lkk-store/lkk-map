@@ -64,13 +64,13 @@ function compile() {
 			out += "<!DOCTYPE html>\n";
 			out += '<html>\n';
 			out += '<head>\n';
-			out += '<title>LKK MAPS</title>\n';
+			out += '<title>LKK MAP</title>\n';
 			out += '<meta charset="utf-8"> \n';
 			out += '<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">\n';
 			out += '<link rel="shortcut icon" href="img/lkk-logo-06.webp" />\n';
 			out += '<link rel="apple-touch-icon" sizes="128x128" href="app-icon.png">\n'
 			out += '<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">\n';
-			out += '<meta property="og:title" content="lkk maps"/>\n<meta property="og:type" content=""/>\n<meta property="og:url" content="http://lkk-store.com/lkk-maps"/>\n<meta property="og:image" content="https://www.lkk-store.com/img/twitter.jpg"/>\n<meta property="og:site_name" content="lkk maps"/>\n<meta property="og:description" content="make something 9ood"/>'
+			out += '<meta property="og:title" content="lkk map"/>\n<meta property="og:type" content=""/>\n<meta property="og:url" content="http://lkk-store.com/lkk-map"/>\n<meta property="og:image" content="https://www.lkk-store.com/img/twitter.jpg"/>\n<meta property="og:site_name" content="lkk map"/>\n<meta property="og:description" content="make something 9ood"/>'
 
 			var style = fs.readFileSync("build/style.css", "utf8");
 
@@ -81,11 +81,11 @@ function compile() {
 			out += '</head>\n';
 			out += '<body>\n';
 
-			out += '<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/">LKK MAPS</p><p class="g-text g-small">MAPPING MY FAVORITE PLACES</p></div></a></div>';
+			out += '<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="lkk-map-logo-white.png" alt="LKK MAP" /></p><p class="g-text g-small">ABOUT MY FAVORITE PLACES</p></div></a></div>';
 
 			out += ejs_rendered;
 
-			out += '<div class="g-footer"><div class="g-small">© LKK MAPS 2022</div></div>';
+			out += '<div class="g-footer"><div class="g-small">© LKK MAP 2022</div></div>';
 
 
 			if (page != "index") {
