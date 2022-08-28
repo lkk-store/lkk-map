@@ -81,7 +81,7 @@ function compile() {
 			out += '</head>\n';
 			out += '<body>\n';
 
-			out += '<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="lkk-map-logo-white.png" alt="LKK MAP" /></p><p class="g-text g-small">ABOUT MY FAVORITE PLACES</p></div></a></div>';
+			out += '<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>';
 
 			out += ejs_rendered;
 
