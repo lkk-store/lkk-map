@@ -4,6 +4,7 @@ var sel = d3.select(".g-map").html("")
 sel = sel.append("div.g-map-inner");
 
 d3.select(".g-body").style("margin-top", (innerHeight/2 - d3.select(".g-body").node().getBoundingClientRect().height/2) + "px")
+d3.select(".g-body").style("height", (window.innerHeight) + "px")
 
 var dot, ids, wps, dotg, projection, trailpath, path, trailf, totalLength, wps, trackpts, totaldist, trailshape, hkg, all, enddp, meta, elevdot, elevx, elevy, elevwidth, lastpt, elevline, elevsvg, elevpath, elevg, elevtext;
 
