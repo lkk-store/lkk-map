@@ -87,7 +87,7 @@
 }
 
 #g-post-018d .g-text-cont {
-	transform: scale(1) translate(0%,16%);	
+	transform: scale(1) translate(0%,22%);	
 }
 
 #g-post-020a .g-text-cont {
@@ -164,7 +164,7 @@
 }
 
 #g-post-046a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0, 18%);
+	transform: scale(1) rotate(0) translate(0, 22%);
 }
 
 #g-post-046a .g-text-en {
@@ -193,7 +193,7 @@
 }
 
 #g-post-058b .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 18%);
+	transform: scale(1) rotate(0) translate(0%, 22%);
 }
 
 #g-post-058b .g-text-en {
@@ -260,8 +260,12 @@
 	max-width: 290px;
 }
 
+#g-post-121a .g-text-cont {
+	transform: translate(0,10%);
+}
+
 #g-post-126 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, -20%);
+	transform: scale(1) rotate(0) translate(0%, 16%);
 }
 
 #g-post-135a .g-text-cont {

@@ -162,7 +162,7 @@ a, a:visited {
 	transform: translate(100%, 0);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: center;
 }
 
 @media screen and (min-width:  460px) {
@@ -584,7 +584,7 @@ a, a:visited {
 
 
 #g-post-map2 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-30%);	
+	transform: scale(1) rotate(0) translate(0%,-20%);	
 }
 
 #g-post-map2 .g-text-cn {
@@ -604,7 +604,7 @@ a, a:visited {
 
 
 #g-post-map .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-37%);	
+	transform: scale(1) rotate(0) translate(0%,-28%);	
 }
 
 #g-post-map .g-text-cn {
@@ -678,7 +678,7 @@ a, a:visited {
 }
 
 .g-post video {
-	width:  100%;
+	width:  auto;
 	height:  100%;
 	/*position: absolute;*/
 	/*top:  0;*/

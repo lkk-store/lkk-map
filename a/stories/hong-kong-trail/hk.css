@@ -19,12 +19,20 @@
 	color: #ffcc00;
 }
 
+#g-post-map2 .g-text-cont {
+	transform: translate(0,-20%);
+}
+
+#g-post-map .g-text-cont {
+	transform: translate(0,-20%);
+}
+
 #g-post-000 .g-text-cont {
 	transform: scale(1.5) rotate(2deg) translate(-5%, 11%);
 }
 
 #g-post-001 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-13%);
+	transform: scale(1) rotate(0) translate(0%,-7%);
 }
 
 #g-post-001 .g-text-cn {
