@@ -2,7 +2,7 @@
 
 var fs = require("fs");
 
-var trail = "lantau-trail";
+var trail = "maclehose-trail";
 
 function calcCrow(lat1, lon1, lat2, lon2) 
     {

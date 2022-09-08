@@ -26,6 +26,9 @@ if (trailid == "hk") {
 } else if (trailid == "lantau") {
 	width = 200;
 	height = 110;
+} else if (trailid == "maclehose") {
+	width = 220;
+	height = 110;
 }
 
 var dist = 0;
@@ -33,10 +36,10 @@ var counter = 0;
 var prevcounter = 0;
 var totaltime = 0;
 
-var gdays = trailid == "wilson" || trailid == "lantau" ? 2 : 1;
+var gdays = trailid == "maclehose" ? 3 : trailid == "wilson" || trailid == "lantau" ? 2 : 1;
 
 function addemojis(x) {
-	return x.replace(":lol:", "😂").replace(":tear:", "🥲").replace(":smile:", "🙂").replace(":sun:", "🌞").replace(":swiss:", "🇨🇭")
+	return x.replace(":lol:", "😂").replace(":tear:", "🥲").replace(":smile:", "🙂").replace(":sun:", "🌞").replace(":swiss:", "🇨🇭").replace(":heart:", "❤️").replace(":wave:", "👋")
 }
 
 d3.queue()
@@ -88,7 +91,7 @@ d3.queue()
 
 		trailf = trailshape.features;
 
-		if (trailid == "lantau") {
+		if (trailid == "lantau" || trailid == "maclehose") {
 
 			trailf[0].geometry.coordinates.forEach(function(d){
 				d.forEach(function(b){
@@ -360,7 +363,7 @@ function move(id, hash) {
 
 		var dattime = el.attr("data-time");
 
-		var hrs = trailid == "lantau" ? [[15,24], [13,8]] : trailid == "wilson" ? [[16,12], [13,54]] : [[10,51]]
+		var hrs = trailid == "maclehose" ? [[10,38], [13,20], [7,48]] : trailid == "lantau" ? [[15,24], [13,8]] : trailid == "wilson" ? [[16,12], [13,54]] : [[10,51]]
 
 		var firsttime = data.filter(d => d.time)[0].time.split(":");
 		var starttime = new Date(2021,6,11,+firsttime[0],+firsttime[1]);
@@ -369,6 +372,10 @@ function move(id, hash) {
 			starttime = new Date(2021,6,11,5,25);
 		} else if (trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b")) {
 			starttime = new Date(2021,6,11,6,0);
+		}  else if (trailid == "maclehose" && (+id.substr(0,3) > 137 || id == '137d')) {
+			starttime = new Date(2021,6,11,5,33);
+		} else if (trailid == "maclehose" && (+id.substr(0,3) > 69)) {
+			starttime = new Date(2021,6,11,6,30);
 		}
 
 		var newtime = new Date(2021,6,11,+dattime.split(":")[0],+dattime.split(":")[1]);
@@ -389,12 +396,29 @@ function move(id, hash) {
 					.style("opacity", 1)
 			}
 
+			if (trailid == "maclehose") {
+				d3.select(".g-day-2").style("opacity", 0)
+				d3.select(".g-day-2")
+					.transition()
+					.ease(d3.easeLinear)
+					.delay(duration/2)
+					.style("opacity", 1)
+
+				d3.select(".g-day-3").style("opacity", 0)
+				d3.select(".g-day-3")
+					.transition()
+					.ease(d3.easeLinear)
+					.delay(duration/1.5)
+					.style("opacity", 1)
+			}
+
+			var divider = trailid == 'maclehose' ? 3 : 2;
 			for (var day = 0; day < gdays; day++) {
 				d3.select(".g-day-" + (day+1) + ".g-time .g-hour")
 					.transition()
 					.ease(d3.easeLinear)
-					.duration(duration/2)
-					.delay((duration/2)*(day))
+					.duration(duration/divider)
+					.delay((duration/divider)*(day))
 					.tween("text", function(d) {
 					        var element = d3.select(this);
 					        var dataid = element.attr("data-id");
@@ -405,31 +429,42 @@ function move(id, hash) {
 				        	};
 					})
 
-				d3.select(".g-day-" + (day+1) + ".g-time .g-minute")
-					.transition()
-					.ease(d3.easeLinear)
-					.duration(duration/2)
-					.delay((duration/2)*(day))
-					.tween("text", function(d) {
-				        var element = d3.select(this);
-				        var dataid = element.attr("data-id");
-				        var i = d3.interpolate(0, hrs[dataid-1][1]);
-			        	return function(t) {
-			        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
-			        	};
-				})	
+				
+					d3.select(".g-day-" + (day+1) + ".g-time .g-minute")
+						.transition()
+						.ease(d3.easeLinear)
+						.duration(duration/divider)
+						.delay((duration/divider)*(day))
+						.tween("text", function(d) {
+					        var element = d3.select(this);
+					        var dataid = element.attr("data-id");
+					        var i = d3.interpolate(0, hrs[dataid-1][1]);
+				        	return function(t) {
+				        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
+				        	};
+					})	
+				
 			}
 
 		} else if (id.indexOf("map") == -1 && id.indexOf("intro") == -1 && id.indexOf("end") == -1 && !isNaN(+id.substring(0,3))) {
 
 			var dayselector = 1;
-			if (trailid == "wilson" && id.substring(0,3) > 69 || trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b")) {
+			if (trailid == "maclehose" && (id.substring(0,3) > 137 || id == '137d')) {
+				d3.select(".g-day-2").style("opacity", 1)
+				d3.select(".g-day-3").style("opacity", 1)
+				dayselector = 3;
+				d3.select(".g-day-1 .g-hour").text(hrs[0][0])
+				d3.select(".g-day-1 .g-minute").text(hrs[0][1])
+				d3.select(".g-day-2 .g-hour").text(hrs[1][0])
+				d3.select(".g-day-2 .g-minute").text(hrs[1][1])
+			} else if (trailid == "wilson" && id.substring(0,3) > 69 || trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b") || trailid == "maclehose" && (+id.substr(0,3) > 68 || id == "068a" || id == "068b" || id == "068c")) {
 				d3.select(".g-day-2").style("opacity", 1)
 				dayselector = 2;
 				d3.select(".g-day-1 .g-hour").text(hrs[0][0])
 				d3.select(".g-day-1 .g-minute").text(hrs[0][1])
 			} else {
 				d3.select(".g-day-2").style("opacity", 0)
+				d3.select(".g-day-3").style("opacity", 0)
 			}
 
 			d3.select(".g-detailed-map").classed("g-hide", true);
@@ -438,24 +473,30 @@ function move(id, hash) {
 			var lastmin = d3.select(".g-time .g-minute").text();
 			lastmin = lastmin == "NaN" ? 0 : lastmin
 
-			d3.select(".g-day-" + dayselector + ".g-time .g-minute")
-			.transition()
-			.ease(d3.easeLinear)
-			.duration(duration)
-			.tween("text", function(d) {
-			        var element = d3.select(this);
-			        if (diffMins < lastmin) {
-			        	var i = d3.interpolate(0, diffMins);
-			        	return function(t) {
-			        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
-			        	};
-			        } else {
-			        	var i = d3.interpolate(lastmin, diffMins);
-			        	return function(t) {
-			        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
-			        	};
-			        }
-			})
+			if (trailid == "maclehose" && (id == '137b' || id == '137c')) {
+
+				d3.select(".g-day-" + dayselector + ".g-time .g-minute").text(diffMins)
+			} else {
+				d3.select(".g-day-" + dayselector + ".g-time .g-minute")
+				.transition()
+				.ease(d3.easeLinear)
+				.duration(duration)
+				.tween("text", function(d) {
+				        var element = d3.select(this);
+				        if (diffMins < lastmin) {
+				        	var i = d3.interpolate(0, diffMins);
+				        	return function(t) {
+				        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
+				        	};
+				        } else {
+				        	var i = d3.interpolate(lastmin, diffMins);
+				        	return function(t) {
+				        	    element.text( String(Math.round(i(t))).padStart(2, '0'));
+				        	};
+				        }
+				})
+			}
+			
 		}
 		
 
@@ -617,7 +658,7 @@ function move(id, hash) {
 							var targetpt = (-elevx(closestpt.dist)) + (elevwidth/2);
 							elevg.attr("transform", "translate(" + (targetpt) + ",0)")	
 
-							elevtext.text((Math.ceil(closestpt.alt / 10) * 10) + "m")
+							// elevtext.text((Math.ceil(closestpt.alt / 10) * 10) + "m")
 						}
 						
 						elevdot.attr("transform", "translate(" + elevx(closestpt.dist) + "," + elevy(closestpt.alt) + ")")
@@ -663,15 +704,20 @@ function drawDetailedMap() {
 function zoomMap() {
 
 	var duration = 2000;
-	dsvg.transition().duration(0)
-		.attr("transform", trailid == "lantau" ? "scale(0.4) translate(" + dw/12 + "," + dh/0.66 + ")" : trailid == "hk" ? "scale(0.28) translate(" + dw*1.9 + "," + dh/0.445 + ")" : "scale(0.47) translate(" + dw + "," + dh/1.06 + ")")
-	d3.select(".g-hkg-shape")
-		.style("stroke-width", 0.4).style("stroke", "rgba(255,255,255,1)")
-		.style("fill", "rgba(255,255,255,0.02")
 
+	if (trailid != "maclehose") {
+		dsvg.transition().duration(0)
+			.attr("transform", trailid == "lantau" ? "scale(0.4) translate(" + dw/12 + "," + dh/0.66 + ")" : trailid == "hk" ? "scale(0.28) translate(" + dw*1.9 + "," + dh/0.445 + ")" : "scale(0.47) translate(" + dw + "," + dh/1.06 + ")")
+		d3.select(".g-hkg-shape")
+			.style("stroke-width", 0.4)
+			.style("stroke", "rgba(255,255,255,1)")
+			.style("fill", "rgba(255,255,255,0.02")	
+	} else {
+		dsvg.attr("transform", "scale(1) translate(" + dw*0.25 + "," + dh*0.25 + ")")
+	}
+	
 	dsvg.selectAll(".g-labels").remove();
 	dmap.selectAll(".g-big-text").remove();
-
 
 	var trails = ["t_hk", "t_lantau", "t_maclehose", "t_wilson"]
 	var trailnames = ["港島徑//Hong Kong Trail//45 km", "鳳凰徑//Lantau Trail//67 km", "麥理浩徑//MacLehose Trail//100 km", "衞奕信徑//Wilson Trail//78 km"]
@@ -686,7 +732,7 @@ function zoomMap() {
 		dsvg.appendMany("path.g-trail-path.g-four-trail-path", trailf)
 			.attr("id", (d,i) => trail + "_" + i)
 			.style("stroke", trail == "t_" + trailid ? "#ffcc00" : "rgba(2555,255,255,0.7)")
-			.style("stroke-width", 4)
+			.style("stroke-width", trailid == 'maclehose' ? 1 : 4)
 			.attr("d", dpath)
 
 		if (trail == "t_wilson") {
@@ -833,7 +879,7 @@ function drawElevChart() {
 	elevx = d3.scaleLinear().range([0,elevwidth]).domain([0,lastpt.dist]);
 	elevy = d3.scaleLinear().range([height,0]).domain([0, maxelev]);
 
-	var axis = trailid == "lantau" ? [400,800] : trailid == "wilson" ? [200,400,600] : [200,400];
+	var axis = trailid == "maclehose" ? [400,800] : trailid == "lantau" ? [400,800] : trailid == "wilson" ? [200,400,600] : [200,400];
 	axis.forEach(function(a){
 		var ypt = elevy(a);
 		elevsvg.append("path.g-axis")
@@ -856,9 +902,9 @@ function drawElevChart() {
 		.attr("r", 2)
 		.style("fill", "#fff")
 
-	elevtext = elevdot.append("text.g-elev-text")
-		.translate([3,-5])
-		.text("")
+	// elevtext = elevdot.append("text.g-elev-text")
+	// 	.translate([3,-5])
+	// 	.text("")
 		
 
 	// console.log(trackpts)
