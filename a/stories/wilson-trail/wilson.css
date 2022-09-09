@@ -37,6 +37,22 @@
 	padding:  0;
 }
 
+#g-post-map2 .g-text-cont {
+	transform: translate(0,20%);
+}
+
+#g-post-map2 .g-text-cn {
+	max-width:  310px;
+}
+
+#g-post-map .g-text-cont {
+	transform: translate(0,13%);
+}
+
+#g-post-intro .g-text-cont {
+	transform: translate(0,25%);
+}
+
 
 #g-post-000 .g-text-cont {
 	transform: scale(1) rotate(0) translate(-10%, 57%);	
@@ -55,7 +71,11 @@
 }
 
 #g-post-002 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 28%);	
+	transform: scale(1) rotate(0) translate(0%, 50%);	
+}
+
+#g-post-002 .g-text-en {
+	max-width: 250px;
 }
 
 #g-post-007a .g-text-cont {
@@ -83,7 +103,7 @@
 }
 
 #g-post-018a .g-text-cont {
-	transform: scale(1) translate(0%,48%);
+	transform: scale(1) translate(0%,55%);
 }
 
 #g-post-018a .g-text-cn {
@@ -99,7 +119,11 @@
 }
 
 #g-post-018d .g-text-cont {
-	transform: scale(1) translate(0%,48%);	
+	transform: scale(1) translate(0%,57%);	
+}
+
+#g-post-018d .g-text-cn {
+	max-width: 300px;
 }
 
 #g-post-018d .g-text-en {
@@ -127,11 +151,11 @@
 }
 
 #g-post-024a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,50%);
+	transform: scale(1) rotate(0) translate(0%,56%);
 }
 
 #g-post-024a .g-text-cn {
-	max-width: 280px;
+	max-width: 260px;
 }
 
 #g-post-024a .g-text-en {
@@ -167,7 +191,7 @@
 }
 
 #g-post-039 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0, 50%);
+	transform: scale(1) rotate(0) translate(0, 55%);
 }
 
 #g-post-039 .g-text-cn {
@@ -192,15 +216,15 @@
 }
 
 #g-post-046a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0, 46%);
+	transform: scale(1) rotate(0) translate(0, 55%);
 }
 
 #g-post-046a .g-text-en {
-	max-width: 360px;
+	max-width: 300px;
 }
 
 #g-post-046a .g-text-cn {
-	max-width: 357px;
+	max-width: 277px;
 }
 
 #g-post-049 .g-text-cont {
@@ -221,7 +245,7 @@
 }
 
 #g-post-058b .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 47%);
+	transform: scale(1) rotate(0) translate(0%, 55%);
 }
 
 #g-post-058b .g-text-cn {
@@ -229,7 +253,7 @@
 }
 
 #g-post-058b .g-text-en {
-	max-width: 340px;
+	max-width: 300px;
 }
 
 #g-post-069 .g-text-cont {
@@ -241,7 +265,7 @@
 }
 
 #g-post-070 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 25%);
+	transform: scale(1) rotate(0) translate(0%, 50%);
 }
 
 #g-post-078 .g-text-cont {
@@ -273,7 +297,7 @@
 }
 
 #g-post-101a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,50%);
+	transform: scale(1) rotate(0) translate(0%,55%);
 }
 
 #g-post-101a .g-text-cn {

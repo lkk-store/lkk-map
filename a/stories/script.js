@@ -279,11 +279,11 @@ function move(id, hash) {
 	}
 
 	if (n > 5) {
-		d3.select(".g-next").classed("g-active", true);
-		d3.select(".g-back").classed("g-active", true);
+		d3.select(".g-next-step").classed("g-active", true);
+		d3.select(".g-back-step").classed("g-active", true);
 	} else {
-		d3.select(".g-next").classed("g-active", false);
-		d3.select(".g-back").classed("g-active", false);
+		d3.select(".g-next-step").classed("g-active", false);
+		d3.select(".g-back-step").classed("g-active", false);
 	}
 
 	if (n == (ids.length - 1)) {
@@ -378,7 +378,7 @@ function move(id, hash) {
 			starttime = new Date(2021,6,11,6,0);
 		}  else if (trailid == "maclehose" && (+id.substr(0,3) > 137 || id == '137d')) {
 			starttime = new Date(2021,6,11,5,33);
-		} else if (trailid == "maclehose" && (+id.substr(0,3) > 69)) {
+		} else if (trailid == "maclehose" && (+id.substr(0,3) > 68)) {
 			starttime = new Date(2021,6,11,6,30);
 		}
 
@@ -453,6 +453,7 @@ function move(id, hash) {
 		} else if (id.indexOf("map") == -1 && id.indexOf("intro") == -1 && id.indexOf("end") == -1 && !isNaN(+id.substring(0,3))) {
 
 			var dayselector = 1;
+
 			if (trailid == "maclehose" && (id.substring(0,3) > 137 || id == '137d')) {
 				d3.select(".g-day-2").style("opacity", 1)
 				d3.select(".g-day-3").style("opacity", 1)
@@ -461,8 +462,9 @@ function move(id, hash) {
 				d3.select(".g-day-1 .g-minute").text(hrs[0][1])
 				d3.select(".g-day-2 .g-hour").text(hrs[1][0])
 				d3.select(".g-day-2 .g-minute").text(hrs[1][1])
-			} else if (trailid == "wilson" && id.substring(0,3) > 69 || trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b") || trailid == "maclehose" && (+id.substr(0,3) > 68 || id == "068a" || id == "068b" || id == "068c")) {
+			} else if (trailid == "wilson" && id.substring(0,3) > 69 || trailid == "lantau" && (+id.substr(0,3) > 54 || id == "054b") || trailid == "maclehose" && (+id.substr(0,3) > 68)) {
 				d3.select(".g-day-2").style("opacity", 1)
+				d3.select(".g-day-3").style("opacity", 0)
 				dayselector = 2;
 				d3.select(".g-day-1 .g-hour").text(hrs[0][0])
 				d3.select(".g-day-1 .g-minute").text(hrs[0][1])
@@ -501,6 +503,16 @@ function move(id, hash) {
 				})
 			}
 			
+		} else if (trailid == "maclehose" && id == "outtro") {
+			d3.select(".g-day-1").style("opacity", 1)
+			d3.select(".g-day-2").style("opacity", 1)
+			d3.select(".g-day-3").style("opacity", 1)
+			d3.select(".g-day-1 .g-hour").text(hrs[0][0])
+			d3.select(".g-day-1 .g-minute").text(hrs[0][1])
+			d3.select(".g-day-2 .g-hour").text(hrs[1][0])
+			d3.select(".g-day-2 .g-minute").text(hrs[1][1])
+			d3.select(".g-day-3 .g-hour").text(hrs[2][0])
+			d3.select(".g-day-3 .g-minute").text(hrs[2][1])
 		}
 		
 
@@ -570,6 +582,10 @@ function move(id, hash) {
 
 			if (trailid == "wilson" && (id == enddp.id)) {
 				endpt.dist = 78;
+			}
+
+			if (trailid == "maclehose" && (id == enddp.id || id == "outtro")) {
+				endpt.dist = 100;
 			}
 
 			if (id == '000') {
@@ -673,7 +689,9 @@ function move(id, hash) {
 
 	}
 
-	document.location.hash = id;	
+	if (window.location.host.indexOf("local") > -1) {
+		document.location.hash = id;
+	}
 
 }
 
@@ -897,7 +915,7 @@ function drawElevChart() {
 
 	elevpath = elevg.append("path")
 		.datum(trackpts)
-		.style("stroke", "rgba(255,255,255,0.6)")
+		.style("stroke", "rgba(255,255,255,0.7)")
 		.attr("d", elevline)
 
 	elevdot = elevg.append("g").translate([elevx(firstpt.dist), elevy(firstpt.alt)])

@@ -54,7 +54,7 @@
 }
 
 #g-post-map2 .g-text-cont {
-	transform: translate(0%,12%);
+	transform: translate(0%,16%);
 }
 
 #g-post-map2 .g-text-cn {
@@ -62,7 +62,7 @@
 }
 
 #g-post-map .g-text-cont {
-	transform: translate(0%,12%);
+	transform: translate(0%,16%);
 }
 #g-post-001 .g-text-cont {
 	transform: translate(-10%,60%) rotate(-10deg);
@@ -79,6 +79,15 @@
 #g-post-002 .g-text-en {
 	max-width: 280px;
 }
+
+#g-post-003 .g-text-cont {
+	transform: translate(0,54%);
+}
+
+#g-post-003 .g-text-en {
+	max-width: 280px;
+}
+
 
 #g-post-003:after {
 	content:  "";
@@ -112,7 +121,7 @@
 }
 
 #g-post-024a .g-text-cont {
-	transform: translate(0, 32%);
+	transform: translate(0, 35%);
 }
 
 #g-post-031 .g-text-cont {
@@ -168,7 +177,7 @@
 }
 
 #g-post-031d .g-text-cont {
-	transform: translate(0, 29%);
+	transform: translate(0, 34%);
 }
 
 #g-post-031e {
@@ -212,7 +221,7 @@
 }
 
 #g-post-043a .g-text-cont {
-	transform: translate(0, 52%);
+	transform: translate(0, 62%);
 }
 
 #g-post-054a .g-text-cont {
@@ -245,7 +254,7 @@
 
 
 #g-post-070b .g-text-cont {
-	transform: translate(0, 32%);
+	transform: translate(0, 40%);
 }
 
 #g-post-070d .g-text-cont {

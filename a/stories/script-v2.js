@@ -300,7 +300,7 @@ function move(id, hash) {
 		// 	.duration(4000)
 		// 	.ease(d3.easeLinear)
 		// 	.tween("pathTween", function(){return pathTween(trailpath)})
-
+		resetMap();
 		laststop = "";
 	} else if (id == "end") {
 

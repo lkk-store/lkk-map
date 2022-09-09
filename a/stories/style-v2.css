@@ -443,6 +443,10 @@ a, a:visited {
 	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
 	font-weight: lighter;
 	z-index: 99;
+
+	height: calc(100% - 50px);
+	bottom: 0;
+	right: 0;
 }
 
 .g-next-cont .g-inner, .g-back-cont .g-inner, .g-video-sound .g-inner {
@@ -450,10 +454,14 @@ a, a:visited {
 	display: inline;	
 	padding:  2px 8px 4px 8px;
 	border:  1px solid rgba(255,255,255,0.1);
+
+	position: absolute;
+	bottom: 0;
+	display: block;
 }
 
 .g-back-cont {
-	left:  20px;
+	left:  0;
 	right:  auto;
 	text-align: left;
 }
@@ -474,11 +482,29 @@ a, a:visited {
 	user-select: none;
 }
 
-.g-back, .g-next {
-	display: none;
+.g-back-step, .g-next-step {
+	/*display: none;*/
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
-.g-back.g-active, .g-next.g-active {
+.g-next-step .g-inner, .g-back-step .g-inner {
+	bottom:  20px;
+}
+
+.g-next-cont .g-next-step .g-inner {
+	right: 20px;
+}
+
+.g-back-cont .g-back-step .g-inner {
+	left: 20px;
+}
+
+.g-back-step.g-active, .g-next-step.g-active {
 	display: inline-block;
 }
 
