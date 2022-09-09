@@ -150,6 +150,10 @@ d3.queue()
 			.style("opacity", d => !d.text_cn && !d.text_en ? "0" : "1")
 			.append("div.g-text-cont-inner");
 
+		var number = trailid == "hk" ? 1 : trailid == "wilson" ? 2 : trailid == "lantau" ? 3 : 4
+		d3.select("#g-post-cover .g-text-cont-inner")
+			.append("div.g-text.g-title.g-text-shadow")
+			.text(number + "/4")
 		d3.select("#g-post-cover .g-text-cont-inner")
 			.append("div.g-text.g-title.g-text-shadow")
 			.text("香港四徑")
@@ -669,7 +673,7 @@ function move(id, hash) {
 
 	}
 
-	// document.location.hash = id;	
+	document.location.hash = id;	
 
 }
 

@@ -339,7 +339,7 @@ function move(id, hash) {
 
 			var allstops = Array.from(new Set(data.map(d => d.stop))).filter(d => d != '')
 			console.log(allstops)
-			d3.select(".g-dp").html(d.stop.replace("ChateaudOex", "Château-d'Œx") + "<span>" + (allstops.indexOf(d.stop)+1) + " / 16</span>")
+			d3.select(".g-dp").html(d.stop.replace("ChateaudOex", "Château-d'Œx") + "<span><span style='font-size: 8px; margin-left: 7px;'>LEG</span> " + (allstops.indexOf(d.stop)+1) + " / 16</span>")
 			var stops = d.stop.split("-");
 			d3.selectAll(".g-startend").classed("g-active", false);
 			d3.selectAll(".g-stop").classed("g-active", false);

@@ -1,5 +1,5 @@
 #g-post-cover .g-text-cont {
-    transform: scale(1) rotate(0deg) translate(0%, 0%);
+    transform: scale(1) rotate(0deg) translate(0%, 30%);
 }
 
 #g-post-cover .g-text-en .g-text-inner:after {
@@ -12,12 +12,16 @@
 
 .g-map-inner svg {
 	margin-left: auto;
-	margin-top: 30px;
+	margin-top: 40px;
 	margin-right: 25px;
 }
 
 .g-hour {
 	margin-left: 8px;
+}
+
+#g-post-intro .g-text-cont {
+	transform: translate(0, 30%);
 }
 
 #g-post-intro .g-text-cn {
@@ -50,7 +54,7 @@
 }
 
 #g-post-map2 .g-text-cont {
-	transform: translate(0%,-25%);
+	transform: translate(0%,12%);
 }
 
 #g-post-map2 .g-text-cn {
@@ -58,12 +62,23 @@
 }
 
 #g-post-map .g-text-cont {
-	transform: translate(0%,-20%);
+	transform: translate(0%,12%);
 }
 #g-post-001 .g-text-cont {
-	transform: translate(-25%,20%) rotate(-10deg);
+	transform: translate(-10%,60%) rotate(-10deg);
 }
 
+#g-post-002 .g-text-cont {
+	transform: translate(0,52%);
+}
+
+#g-post-002 .g-text-cn {
+	max-width: 260px;
+}
+
+#g-post-002 .g-text-en {
+	max-width: 280px;
+}
 
 #g-post-003:after {
 	content:  "";
@@ -80,7 +95,7 @@
 }
 
 #g-post-013b .g-text-cont {
-	transform: translate(0%,28%);
+	transform: translate(0%,70%);
 	max-width: 300px;
 }
 
@@ -97,11 +112,11 @@
 }
 
 #g-post-024a .g-text-cont {
-	transform: translate(0, -10%);
+	transform: translate(0, 32%);
 }
 
 #g-post-031 .g-text-cont {
-	transform: translate(0,20%);
+	transform: translate(0,60%);
 }
 
 #g-post-031 .g-text-cn {
@@ -117,7 +132,7 @@
 }
 
 #g-post-031a .g-text-cont {
-	transform: translate(5%,30%) scale(2);
+	transform: translate(0%,92%) scale(2);
 }
 
 #g-post-031b {
@@ -125,7 +140,7 @@
 }
 
 #g-post-031b .g-text-cont {
-	transform: translate(0, 28%);
+	transform: translate(0, 62%);
 }
 
 #g-post-031b .g-text-cn {
@@ -134,6 +149,10 @@
 
 #g-post-031b .g-text-en {
 	max-width: 270px;
+}
+
+#g-post-031c .g-text-cont {
+	transform: translate(0, 40%);
 }
 
 #g-post-031c .g-text-en {
@@ -161,7 +180,7 @@
 }
 
 #g-post-031e .g-text-cont {
-	transform: translate(0, 30%);
+	transform: translate(0, 66%);
 }
 
 #g-post-031e .g-text-en {
@@ -169,11 +188,11 @@
 }
 
 #g-post-031f .g-text-cont {
-	transform: translate(0,1%);
+	transform: translate(0,32%);
 }
 
 #g-post-031g .g-text-cont {
-	transform: translate(0, 16%);
+	transform: translate(0, 54%);
 }
 
 #g-post-031g .g-text-cn {
@@ -181,7 +200,7 @@
 }
 
 #g-post-032 .g-text-cont {
-	transform: translate(0, 15%);
+	transform: translate(0, 55%);
 }
 
 #g-post-038a .g-text-en {
@@ -189,15 +208,15 @@
 }
 
 #g-post-038a .g-text-cont {
-	transform: translate(0, 10%);
+	transform: translate(0, 52%);
 }
 
 #g-post-043a .g-text-cont {
-	transform: translate(0, 21%);
+	transform: translate(0, 52%);
 }
 
 #g-post-054a .g-text-cont {
-	transform: translate(0, 21%);
+	transform: translate(0, 51%);
 }
 
 #g-post-054a .g-text-cn {
@@ -209,11 +228,11 @@
 }
 
 #g-post-054b .g-text-cont {
-	transform: translate(0, 10%);
+	transform: translate(0, 55%);
 }
 
 #g-post-070a .g-text-cont {
-	transform: translate(0, 13%);
+	transform: translate(0, 48%);
 }
 
 #g-post-070a .g-text-cn {
@@ -226,23 +245,23 @@
 
 
 #g-post-070b .g-text-cont {
-	transform: translate(0, -8%);
+	transform: translate(0, 32%);
 }
 
 #g-post-070d .g-text-cont {
-	transform: translate(0, 7%);
+	transform: translate(0, 50%);
 }
 
 #g-post-087a .g-text-cont {
-	transform: translate(0, -3%);
+	transform: translate(0, 40%);
 }
 
 #g-post-088 .g-text-cont {
-	transform: translate(0, 6%);
+	transform: translate(0, 49%);
 }
 
 #g-post-098a .g-text-cont {
-	transform: translate(0, 15%);
+	transform: translate(0, 58%);
 }
 
 #g-post-098a .g-text-en {
@@ -250,7 +269,7 @@
 }
 
 #g-post-113a .g-text-cont {
-	transform: translate(0,30%);
+	transform: translate(0,70%);
 }
 
 #g-post-113a .g-text-en {
@@ -258,7 +277,7 @@
 }
 
 #g-post-139 .g-text-cont {
-	transform: translate(0, 13%);
+	transform: translate(0, 56%);
 }
 
 #g-post-139b .g-text-cn {
@@ -270,17 +289,5 @@
 }
 
 #g-post-139b .g-text-cont {
-	transform: translate(0, 28%);
-}
-
-#g-post-002 .g-text-cont {
-	transform: translate(0,12%);
-}
-
-#g-post-002 .g-text-cn {
-	max-width: 260px;
-}
-
-#g-post-002 .g-text-en {
-	max-width: 280px;
+	transform: translate(0, 62%);
 }

@@ -1,6 +1,6 @@
 .g-map-inner svg {
 	margin-right: 40px;
-	margin-top: 20px;
+	margin-top: 38px;
 }
 
 .g-map-inner {
@@ -9,6 +9,10 @@
 
 #g-post-cover .g-text-en .g-text-inner:after {
 	content: "June 27, 2022";
+}
+
+#g-post-cover .g-text-cont {
+	transform: translate(0, 20%);
 }
 
 .g-map-inner {
@@ -20,19 +24,19 @@
 }
 
 #g-post-map2 .g-text-cont {
-	transform: translate(0,-20%);
+	transform: translate(0,14%);
 }
 
 #g-post-map .g-text-cont {
-	transform: translate(0,-20%);
+	transform: translate(0,10%);
 }
 
 #g-post-000 .g-text-cont {
-	transform: scale(1.5) rotate(2deg) translate(-5%, 11%);
+	transform: scale(1.5) rotate(2deg) translate(-5%, 55%);
 }
 
 #g-post-001 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-7%);
+	transform: scale(1) rotate(0) translate(0%,26%);
 }
 
 #g-post-001 .g-text-cn {
@@ -46,7 +50,7 @@
 
 
 #g-post-002 .g-text-cont {
-	transform: scale(1) rotate(0) translate(-20%, 23%);
+	transform: scale(1) rotate(0) translate(-14%, 63%);
 }
 
 #g-post-002 .g-text-cn {
@@ -58,7 +62,7 @@
 }
 
 #g-post-003 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0, -10%);
+	transform: scale(1) rotate(0) translate(0, 37%);
 }
 
 #g-post-003 .g-text-cn {
@@ -86,15 +90,15 @@
 }
 
 #g-post-033 .g-text-cont {
-	transform: scale(1.5) translate(0%,-5%);
+	transform: scale(1) translate(0%,40%);
 }
 
 #g-post-049 .g-text-cont {
-	transform: scale(1) rotate(0) translate(-4%,-15%);
+	transform: scale(1) rotate(0) translate(0%,28%);
 }
 
 #g-post-050 .g-text-cont {
-	transform: rotate(-10deg) translate(2%,-12%);
+	transform: rotate(-10deg) translate(2%,30%);
 }
 
 #g-post-050 .g-text-en {
@@ -103,28 +107,27 @@
 }
 
 #g-post-050a .g-text-cont {
-	transform: scale(3) translate(0%,-3%);
+	transform: scale(3) translate(0%,42%);
 }
 
 #g-post-051 .g-text-cont {
-	transform: rotate(0) translate(0%,10%);
+	transform: rotate(0) translate(0%,50%);
 }
 
 #g-post-051 .g-text-cn {
-	max-width: 250px;
+	max-width: 210px;
 }
 
 #g-post-051 .g-text-en {
-	max-width: 260px;
-	margin-top: 10px;
+	max-width: 240px;
 }
 
 #g-post-054a .g-text-cont {
-	transform: scale(0.8) rotate(10deg) translate(-30%,-20%);
+	transform: scale(0.8) rotate(10deg) translate(-30%,24%);
 }
 
 #g-post-058a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,23%);
+	transform: scale(1) rotate(0) translate(0%,55%);
 }
 
 #g-post-058a .g-text-en {
@@ -137,7 +140,7 @@
 }
 
 #g-post-085b .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 16%);	
+	transform: scale(1) rotate(0) translate(0%, 56%);	
 }
 
 #g-post-085b .g-text-cn {
@@ -149,11 +152,11 @@
 }
 
 #g-post-087a .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, -18%);	
+	transform: scale(1) rotate(0) translate(0%, 26%);	
 }
 
 #g-post-100 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%, 5%);	
+	transform: scale(1) rotate(0) translate(0%, 45%);	
 }
 
 
@@ -166,5 +169,5 @@
 }
 
 #g-post-cheers .g-text-cont {
-	transform: scale(2) rotate(10deg) translate(10%,4%);	
+	transform: scale(2) rotate(10deg) translate(10%,50%);	
 }

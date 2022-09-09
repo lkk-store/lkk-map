@@ -10,7 +10,7 @@
 .g-dp span {
 	font-size: 9px;
 	color: rgba(255,255,255,0.5);
-	margin-left: 7px;
+	margin-left: 0;
 }
 
 #g-post-intro .g-text-cont-inner {
@@ -81,6 +81,7 @@ path.g-trail-path.g-trail-green {
 .g-map-inner svg {
 	display: block;
 	margin:  0 auto;
+	padding-top:  50px;
 }
 
 path.g-country-all {

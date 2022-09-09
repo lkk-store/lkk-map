@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'HK Map Font'; /*a name to be used later*/
-    src: url('../../HKmap-Test3.otf'); /*URL to font*/
+    src: url('../../Hong-Kong-Map-Type.otf'); /*URL to font*/
 }
 
 html,body {
@@ -26,7 +26,7 @@ a, a:visited {
 
 .g-header {
 	text-align: center;
-	padding:  8px 0;
+	padding:  10px 0;
 	font-family: 'HK Map Font';
 	position: absolute;
 	z-index: 10;
@@ -35,6 +35,7 @@ a, a:visited {
 	top: 0;
 	font-size: 11px;
 }
+
 
 .g-body {
 	position: relative;
@@ -256,7 +257,7 @@ a, a:visited {
 
 .g-meta {
 	position: absolute;
-	top:  10px;
+	top:  42px;
 	left:  0;
 	font-size: 11px;
 	width: 100%;

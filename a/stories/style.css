@@ -138,9 +138,10 @@ a, a:visited {
 }
 
 .g-text-cont {
-	display: flex;
+	/*display: flex;
 	justify-content: center;
-	align-items: center; 
+	align-items: center; */
+	transform: scale(1) rotate(0deg) translate(0%, 50%);
 	height: 100%;
 	position: relative;
 	margin-left: auto;
@@ -252,7 +253,7 @@ a, a:visited {
 
 .g-meta {
 	position: absolute;
-	top:  10px;
+	top:  30px;
 	left:  0;
 	font-size: 11px;
 	width: 100%;
@@ -550,8 +551,8 @@ a, a:visited {
 	display: block;
 	width: 15px;
 	height: 1px;
-	background: #fff;
-	margin:  15px auto;
+	background: rgba(255,255,255,0.5);
+	margin: 10px auto 5px auto;
 	box-shadow: 0px 0px 3px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1);
 }
 
@@ -565,6 +566,7 @@ a, a:visited {
 	letter-spacing: 10px;
 	font-size: 28px;
 	margin-bottom: 0;
+	line-height: 1;
 }
 
 #g-post-cover .g-text-en {
@@ -584,7 +586,7 @@ a, a:visited {
 
 
 #g-post-map2 .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-20%);	
+	transform: scale(1) rotate(0) translate(0%,10%);	
 }
 
 #g-post-map2 .g-text-cn {
@@ -604,7 +606,7 @@ a, a:visited {
 
 
 #g-post-map .g-text-cont {
-	transform: scale(1) rotate(0) translate(0%,-28%);	
+	transform: scale(1) rotate(0) translate(0%,3%);	
 }
 
 #g-post-map .g-text-cn {

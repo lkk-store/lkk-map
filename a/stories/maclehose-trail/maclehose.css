@@ -2,8 +2,13 @@
 	pointer-events: auto;
 }
 */
+
+.g-map-inner {
+	background:  linear-gradient(360deg, rgba(0,0,0,0) -10%, rgb(0 0 0 / 80%) 70%);
+}
+
 #g-post-cover .g-text-cont {
-    transform: scale(1) rotate(0deg) translate(0%, 0%);
+    transform: scale(0.9) rotate(0deg) translate(0%, 31%);
 }
 
 #g-post-cover .g-text-en .g-text-inner:after {
@@ -33,7 +38,7 @@
 }
 
 #g-post-cover .g-title-en:after {
-	margin:  8px auto;
+	margin: 11px auto 8px auto;
 }
 
 #g-post-cover .g-text-cn {
@@ -60,19 +65,31 @@
 }
 
 #g-post-map2 .g-text-cont {
-	transform: translate(0%,-30%);
+	transform: translate(0%,12%);
+}
+
+#g-post-map .g-text-cont {
+	transform: translate(0,16%);
 }
 
 #g-post-map .g-text-cn {
 	max-width: 250px;
 }
 
+#g-post-intro .g-text-cont {
+	transform: translate(0,28%);
+}
+
+#g-post-intro .g-text-cn {
+	max-width: 330px;
+}
+
 #g-post-000 .g-text-cont {
-	transform: translate(0%,22%);
+	transform: scale(1.4) rotate(-10deg) translate(-18%,52%)
 }
 
 #g-post-001 .g-text-cont {
-	transform: translate(0%,16%);
+	transform: translate(0%,56%);
 }
 
 #g-post-001 .g-text-cn {
@@ -84,15 +101,15 @@
 }
 
 #g-post-013a .g-text-cont {
-	transform: translate(0, 15%);
+	transform: translate(0, 60%);
 }
 
 #g-post-018 .g-text-cont {
-	transform: translate(0, 13%);
+	transform: translate(0, 29%);
 }
 
 #g-post-020a .g-text-cont {
-	transform: translate(0, 11%);
+	transform: translate(0, 54%);
 }
 
 #g-post-021a .g-text-en {
@@ -100,7 +117,7 @@
 }
 
 #g-post-025a .g-text-cont {
-	transform: translate(0, 6%);
+	transform: translate(0, 48%);
 }
 
 #g-post-025b .g-text-cont {
@@ -108,11 +125,11 @@
 }
 
 #g-post-035a .g-text-cont {
-	transform: translate(0%, -10%);
+	transform: translate(0%, 35%);
 }
 
 #g-post-035b .g-text-cont {
-	transform: translate(0%, -18%);
+	transform: translate(0%, 43%);
 }
 
 #g-post-035b .g-text-en {
@@ -120,7 +137,7 @@
 }
 
 #g-post-035c .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 58%);
 }
 
 #g-post-035c .g-text-en {
@@ -128,11 +145,11 @@
 }
 
 #g-post-037a .g-text-cont {
-	transform: translate(0%, 10%);
+	transform: translate(0%, 54%);
 }
 
 #g-post-048a .g-text-cont {
-	transform: translate(0%, -8%);
+	transform: translate(0%, 33%);
 }
 
 #g-post-048a .g-text-en {
@@ -140,7 +157,7 @@
 }
 
 #g-post-062a .g-text-cont {
-	transform: translate(0%, 17%);
+	transform: translate(0%, 53%);
 }
 
 #g-post-062a .g-text-cn {
@@ -152,7 +169,7 @@
 }
 
 #g-post-062b .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 63%);
 }
 
 #g-post-062b .g-text-en {
@@ -160,11 +177,11 @@
 }
 
 #g-post-063a .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 55%);
 }
 
 #g-post-068b .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 60%);
 }
 
 #g-post-068b .g-text-en {
@@ -176,7 +193,7 @@
 }
 
 #g-post-072a .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 58%);
 }
 
 #g-post-072a .g-text-en {
@@ -184,23 +201,31 @@
 }
 
 #g-post-097a .g-text-cont {
-	transform: translate(0%, 5%);
+	transform: translate(0%, 50%);
+}
+
+#g-post-097a .g-text-cn {
+	max-width: 230px;
+}
+
+#g-post-097a .g-text-en {
+	max-width: 290px;
 }
 
 #g-post-097b .g-text-cont {
-	transform: translate(0%, 5%);
+	transform: translate(0%, 45%);
 }
 
 #g-post-100 .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 30%);
 }
 
 #g-post-100a .g-text-cont {
-	transform: translate(-28%, 8%);
+	transform: translate(-2%, 25%);
 }
 
 #g-post-101a .g-text-cont {
-	transform: translate(0%, 8%);
+	transform: translate(0%, 53%);
 }
 
 #g-post-101a .g-text-en {
@@ -208,11 +233,11 @@
 }
 
 #g-post-106a .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 65%);
 }
 
 #g-post-106b .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 60%);
 }
 
 #g-post-106b .g-text-en {
@@ -224,7 +249,7 @@
 }
 
 #g-post-115a .g-text-cont {
-	transform: translate(0%, 6%);
+	transform: translate(0%, 47%);
 }
 
 #g-post-115a .g-text-cn {
@@ -232,7 +257,7 @@
 }
 
 #g-post-115b .g-text-cont {
-	transform: translate(13%, -17%);
+	transform: translate(-16%, 48%);
 }
 
 #g-post-115b .g-text-en {
@@ -240,15 +265,15 @@
 }
 
 #g-post-115c .g-text-cont {
-	transform: translate(0%, 25%);
+	transform: translate(0%, 69%);
 }
 
 #g-post-115d .g-text-cont {
-	transform: translate(0%, 18%);
+	transform: translate(0%, 55%);
 }
 
 #g-post-115e .g-text-cont {
-	transform: translate(0%, 10%);
+	transform: translate(0%, 50%);
 }
 
 #g-post-115e .g-text-en {
@@ -256,39 +281,43 @@
 }
 
 #g-post-118 .g-text-cont {
-	transform: translate(0%, 14%);
+	transform: translate(0%, 57%);
 }
 
 #g-post-118a .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 65%);
 }
 
 #g-post-118b .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 70%);
 }
 
 #g-post-125a .g-text-cont {
-	transform: translate(0%, -5%);
+	transform: translate(0%, 39%);
 }
 
 #g-post-125c .g-text-cont {
-	transform: translate(-12%, 30%);
+	transform: translate(-12%, 70%);
 }
 
 #g-post-128a .g-text-cont {
-	transform: translate(0%, -20%);
+	transform: translate(2%, 24%);
 }
 
 #g-post-128c .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 59%);
+}
+
+#g-post-128d .g-text-cont {
+	transform: translate(0, 44%);
 }
 
 #g-post-135a .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 60%);
 }
 
 #g-post-137a .g-text-cont {
-	transform: translate(0%, 30%);
+	transform: translate(0%, 70%);
 }
 
 #g-post-137a .g-text-en {
@@ -296,12 +325,12 @@
 }
 
 #g-post-137b .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 67%);
 }
 
 
 #g-post-137d .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 55%);
 }
 
 #g-post-137d .g-text-en {
@@ -309,47 +338,47 @@
 }
 
 #g-post-138a .g-text-cont {
-	transform: translate(0%, 5%);
+	transform: translate(0%, 50%);
 }
 
 #g-post-138b .g-text-cont {
-	transform: translate(0%, 5%);
+	transform: translate(0%, 50%);
 }
 
 #g-post-138c .g-text-cont {
-	transform: translate(0%, 22%);
+	transform: translate(0%, 65%);
 }
 
 #g-post-138c .g-text-en {
-	max-width: 270px;
+	max-width: 270px;金
 }
 
 #g-post-144 .g-text-cont {
-	transform: translate(0%, -10%);
+	transform: translate(0%, 38%);
 }
 
 #g-post-146a .g-text-cont {
-	transform: translate(20%, -22%);
+	transform: translate(15%, 22%);
 }
 
 #g-post-155a .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 61%);
 }
 
 #g-post-155b .g-text-cont {
-	transform: translate(0%, 6%);
+	transform: translate(0%, 49%);
 }
 
 #g-post-186a .g-text-cont {
-	transform: translate(0%, 15%);
+	transform: translate(0%, 55%);
 }
 
 #g-post-190 .g-text-cont {
-	transform: translate(0%, -15%);
+	transform: translate(0%, 30%);
 }
 
 #g-post-196a .g-text-cont {
-	transform: translate(0%, 5%);
+	transform: translate(0%, 45%);
 }
 
 #g-post-198a .g-text-cont {
@@ -361,23 +390,23 @@
 }
 
 #g-post-198b .g-text-cont {
-	transform: translate(0%, 20%);
+	transform: translate(0%, 32%);
 }
 
 #g-post-200 .g-text-cont {
-	transform: translate(0%, 12%);
+	transform: translate(0%, 55%);
 }
 
 #g-post-200a .g-text-cont {
-	transform: translate(0%, 12%);
+	transform: translate(0%, 62%);
 }
 
 #g-post-outtro .g-text-cont {
-	transform: translate(0%, 10%);
+	transform: translate(0%, 28%);
 }
 
 #g-post-outtro .g-text-cn {
-	max-width: 296px;
+	max-width: 346px;
 }
 
 /*#g-post-cover .g-text-cont-inner {
