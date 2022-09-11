@@ -120,7 +120,7 @@ img {
   display: inline-block;
   width: 100%;
   vertical-align: top;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -128,6 +128,7 @@ img {
 @media screen and (min-width: 460px) {
   .g-project {
     width: calc(33.3333% - 7px);
+    margin-bottom: 25px;
   }
 }
 .g-project:last-child {
@@ -160,6 +161,13 @@ img {
   padding-bottom: 100%;
   background-size: cover;
   background-position: center;
+}
+.g-shop-page .g-featured-img .g-featured-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .g-shop-page .g-featured-img .g-featured-img-inner-cont {
   position: relative;
@@ -251,6 +259,10 @@ img {
 <body>
 <div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-store.com/lkk-map/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>
 
+
+
+
+
 <div class="g-shop-page">
 	<div class="g-hed g-hed-cn">香港四徑</div>
 	<div class="g-hed g-hed-en">HONG KONG FOUR TRAILS</div>
@@ -259,14 +271,32 @@ img {
 	<div class="g-img-cont g-img-cont-four-trails">
 		<div class="g-featured-img g-featured-four-trails">
 			<div class="g-featured-img-inner-cont">
-				<div class='g-featured-img-inner' style="background-image: url(../../../img/four-trails/001.jpg)"></div>
+				<div class='g-featured-img-inner' style="background-image: url(../../../img/four-trails/001.jpg)">
+					<video class='g-featured-vid' autoplay playsinline muted loop></video>
+				</div>
 				<div class="g-nav-button g-nav-button-back" data-dir="back" data-id="four-trails"><div class="g-nav-button-inner"><</div></div>
 				<div class="g-nav-button g-nav-button-next g-active" data-dir="next" data-id="four-trails" ><div class="g-nav-button-inner">></div></div>
 			</div>
-			<div class="g-img-thumbs g-img-thumbs-four-trails" data-counter="0" data-max="1">
+			<div class="g-img-thumbs g-img-thumbs-four-trails" data-counter="0" data-max="5">
 				
-				<div class="g-img-thumb-cont g-img-thumb-cont-0 g-selected" data-count="0" data-id="four-trails" style="width: 100%;">
-					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/001.jpg);"></div>
+				<div class="g-img-thumb-cont g-img-thumb-cont-0 g-selected" data-count="0" data-id="four-trails" style="width: 20%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/001.jpg);" data-src='001.jpg' data-vid=""></div>
+				</div>
+				
+				<div class="g-img-thumb-cont g-img-thumb-cont-1 " data-count="1" data-id="four-trails" style="width: 20%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/002.jpg);" data-src='002.jpg' data-vid="yes"></div>
+				</div>
+				
+				<div class="g-img-thumb-cont g-img-thumb-cont-2 " data-count="2" data-id="four-trails" style="width: 20%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/003.jpg);" data-src='003.jpg' data-vid=""></div>
+				</div>
+				
+				<div class="g-img-thumb-cont g-img-thumb-cont-3 " data-count="3" data-id="four-trails" style="width: 20%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/004.jpg);" data-src='004.jpg' data-vid=""></div>
+				</div>
+				
+				<div class="g-img-thumb-cont g-img-thumb-cont-4 " data-count="4" data-id="four-trails" style="width: 20%;">
+					<div class='g-img-thumb-inner' style="background-image: url(../../../img/four-trails/005.jpg);" data-src='005.jpg' data-vid=""></div>
 				</div>
 				
 			</div>
@@ -354,12 +384,20 @@ d3.selectAll(".g-img-thumb-cont").on("click", function(){
 	var el = d3.select(this);
 	var id = el.attr("data-id");
 	var src = el.select(".g-img-thumb-inner").style("background-image");
+	var thumbel = el.select(".g-img-thumb-inner");
+
+	if (thumbel.attr("data-vid") == 'yes') {
+		d3.select(".g-featured-" + id + "	 .g-featured-img-inner video").attr("src", src.replace('.jpg', '.mp4').replace('url("', '').replace('")', ''))
+	} else {
+		d3.select(".g-featured-" + id + "	 .g-featured-img-inner video").attr("src", "")
+	}
 
 	d3.selectAll(".g-img-cont-" + id + " .g-img-thumb-cont").classed("g-selected", false);
 	el.classed("g-selected", true);
 
 	d3.select(".g-featured-" + id + "	 .g-featured-img-inner").style("background-image", src)
 
+	console.log(src)
 
 	updateButtons(el.attr("data-count"));
 })
@@ -383,6 +421,14 @@ d3.selectAll(".g-nav-button").on("click", function(){
 
 	var src = targetel.select(".g-img-thumb-inner").style("background-image")
 	d3.select(".g-featured-" + id + " .g-featured-img-inner").style("background-image", src);
+
+	var thumbel = targetel.select(".g-img-thumb-inner");
+	if (thumbel.attr("data-vid") == 'yes') {
+		d3.select(".g-featured-" + id + "	 .g-featured-img-inner video").attr("src", src.replace('.jpg', '.mp4').replace('url("', '').replace('")', ''))
+	} else {
+		d3.select(".g-featured-" + id + "	 .g-featured-img-inner video").attr("src", "")
+	}
+
 
 	updateButtons(counter);
 })
