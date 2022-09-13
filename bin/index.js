@@ -81,7 +81,7 @@ function compile() {
 			out += '</head>\n';
 			out += '<body>\n';
 
-			out += '<div class="g-header"><a href="/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-store.com/lkk-map/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>';
+			out += '<div class="g-header"><a href="https://www.lkk-store.com/lkk-map/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-store.com/lkk-map/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>';
 
 			out += ejs_rendered;
 
