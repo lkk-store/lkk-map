@@ -62,8 +62,63 @@
 		.g-type-img {
 			max-width: 720px;
 			margin: 0 auto;
-			-webkit-filter: invert(100%);
-			filter: invert(100%);
+		}
+
+		.g-img-invert {
+			/*-webkit-filter: invert(100%);
+			filter: invert(100%);*/
+		}
+
+		.g-hed {
+			margin: 200px auto 50px auto;
+			font-size: 20px;
+		}
+
+		.g-img-grid {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 720px;
+			margin:  25px auto;
+		}
+
+		.g-img-grid-4 .g-grid-img-cont {
+			width: calc(25% - 4px);
+			/*flex: 0 0 calc(25% - 3px);*/
+			margin-right: 5px;
+			height: auto;
+			position: relative;
+		}
+
+		.g-img-inner {
+			padding-bottom: 200%;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.g-img-grid-2 .g-grid-img-cont {
+			width: 50%;
+		}
+
+		.g-img-grid-2 .g-img-inner {
+			padding-bottom: 100%;
+			background-position: top;
+			margin-right: 5px;
+		}
+
+		.g-img-grid .g-grid-img-cont:last-child {
+			margin-right: 0;
+		}
+
+		.g-text-cont {
+			margin: 50px auto 25px auto;
+			font-size: 13px;
+		}
+
+		.g-img-inner.g-img-smaller {
+			background: #000;
+			background-size: 80%;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 	</style>
 </head>
@@ -82,13 +137,70 @@
 			<div class="g-img-bg"></div>
 		</div>
 
+		<!-- <div class="g-text g-hed">TYPE</div>
+		<div class="g-type-img g-img-invert">
+			<img src="type.png">
+		</div> -->
+
 		<div class="g-text-cont">
 			<!-- <div class="g-text">More things to say...?</div> -->
 		</div>
 
+		<div class="g-text g-hed">WIP</div>
+
 		<div class="g-type-img">
-			<img src="type.png">
+			<div class="g-grid-img-cont"><img src="draft.png"></div>
 		</div>
+
+
+		<div class="g-text-cont">
+			<p class="g-text">photos taken at a library research trip</p>
+			<p class="g-text">reference: latin</p>
+		</div>
+		<div class="g-img-grid g-img-grid-4">
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid4.jpeg');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid3.jpeg');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid2.jpeg');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid1.jpeg');"></div></div>
+		</div>
+
+		<div class="g-text-cont">
+			<p class="g-text">reference: chinese</p>
+		</div>
+		<div class="g-img-grid g-img-grid-4">
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid5.jpeg');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('grid6.jpeg');"></div></div>
+		</div>
+
+		<div class="g-text-cont">
+			<p class="g-text">comparison</p>
+		</div>
+		<div class="g-img-grid g-img-grid-2">
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('ref1.jpeg');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('ref2.png');"></div></div>
+		</div>
+
+		<div class="g-type-img">
+			<div class="g-grid-img-cont"><img src="ref3.png"></div>
+		</div>
+
+		<div class="g-img-grid g-img-grid-2">
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('ref4.png');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner g-img-smaller" style="background-image:  url('ref5.jpeg');"></div></div>
+		</div>
+
+		<div class="g-img-grid g-img-grid-2">
+			<div class="g-grid-img-cont"><div class="g-img-inner" style="background-image:  url('ref6.png');"></div></div>
+			<div class="g-grid-img-cont"><div class="g-img-inner g-img-smaller" style="background-image:  url('ref5.jpeg');"></div></div>
+		</div>
+
+		<div class="g-text-cont">
+			<p class="g-text">type on a path</p>
+		</div>
+		<div class="g-type-img">
+			<div class="g-grid-img-cont"><img src="ref7.png"></div>
+		</div>
+
 
 
 		<div class="g-footer"><div class="g-small">© LKK MAP 2022</div></div>
