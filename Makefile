@@ -19,3 +19,10 @@ via:
 
 photos:
 	mogrify -resize 100x a/stories/maclehose-trail/photos-100/*.jpg
+
+mon:
+	montage wood-2021-08-21.jpg	wood-2021-09-05.jpg	wood-2021-12-05.jpg	wood-2021-12-10.jpg	wood-2021-12-31.jpg	wood-2022-01-03.jpg	wood-2022-02-06.jpg	wood-2022-02-07.jpg	wood-2022-02-12.jpg	wood-2022-02-15.jpg	wood-2022-02-27.jpg	wood-2022-04-25.jpg	wood-2022-06-20.jpg	wood-2022-06-22.jpg	wood-2022-08-14.jpg	wood-2022-08-16.jpg -geometry +0+0 -tile 4x montage.jpg
+
+	
+
+	
