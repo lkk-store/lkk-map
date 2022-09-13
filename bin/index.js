@@ -38,7 +38,7 @@ function compile() {
 			data.imgs[d] = imgs;
 		}
 	})
-
+	
 	var pages = ["index"]
 
 	data.shop.forEach(function(d){

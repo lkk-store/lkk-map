@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Hong Kong Map Type'; /*a name to be used later*/
+    src: url('../../../Hong-Kong-Map-Type.otf'); /*URL to font*/
+}
+
+html,body {
+	padding:  0;
+	margin:  0;
+	background: #000;
+	color:  #fff;
+	font-family: 'Nunito', sans-serif;
+}
+
+svg {
+	stroke-linejoin:  round;
+	stroke-linecap:  round;
+}
+
+a, a:visited {
+	color:  #fff;
+	text-decoration: none;
+}
+
+.g-header {
+	text-align: center;
+	
+	font-family: 'Hong Kong Map Type';
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	font-size: 11px;
+	background: #000;
+	border-bottom: 1px solid #333;
+}
+
+.g-header-inner {
+	padding:  10px 0 10px 0;
+}
+
+.g-body {
+	padding-top: 50px;
+}
+
+.g-hed {
+	text-align: center;
+	opacity: 0.8;
+	font-size: 22px;
+	font-family: 'Hong Kong Map Type';
+	margin:  50px auto;
+}
+
+.g-hed .g-text-cn {
+	font-size: 18px;
+	letter-spacing: 8px;
+	margin-left: 13px;
+	margin-bottom: 5px;
+}
+
+.g-hed .g-text-en {
+	font-size: 16px;
+}
+
+.g-chapter {
+	margin:  50px auto;
+}
+
+.g-chapter:after {
+	content:  "";
+	display: block;
+	width: 25px;
+	height: 1px;
+	background: rgba(255,255,255,0.5);
+	margin: 100px auto;
+}
+
+.g-graf {
+	max-width: 263px;
+	margin:  0 auto 20px auto;
+	font-size: 13px;
+	font-family: 'Nunito', sans-serif;
+}
+
+.g-hed .g-graf {
+	margin:  45px auto 0 auto;
+}
+
+p, a {
+	margin: 0 auto 3px auto;
+	color:  rgba(255,255,255,0.7);
+}
+
+a {
+	text-decoration: underline;
+}
+
+img {
+	width: 100%;
+	max-width: 460px;
+	margin:  0 auto;
+	display: block;
+}
+
+.g-img-cont {
+	margin: 25px auto;
+}
+
+.g-chapter-meta {
+	max-width: 263px;
+	margin:  0 auto 15px auto;
+	text-align: center;
+}
+
+p.g-chapter-hed {
+	font-size: 18px;
+	letter-spacing: 8px;
+	font-weight: 700;
+	margin-left: 8px;
+}
+
+p.g-date {
+	font-size: 12px;
+}
+
+.g-img-small-grid {
+	max-width: 460px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 25px auto;
+}
+
+.g-img-small-grid .g-img-grid-cont {
+	display: inline-block;
+	width: 33%;
+	margin-right: 5px;
+	position: relative;
+	flex: 0 0 calc(33% - 2.1px);
+}
+
+.g-img-small-grid .g-img-grid-cont:last-child {
+	margin-right: 0;
+}
+
+.g-img-date {
+	position: absolute;
+	top:  0;
+	/*bottom: 0px;*/
+	left: 0px;
+	color: #fff;
+	font-size: 9px;
+	background: rgba(0,0,0,1);
+	padding:  2px 5px;
+	margin-bottom: 0;
+}
+
+.g-chapter-feet img, .g-chapter-first img {
+	max-width: 300px;
+}
+
+.g-chapter-feingo img {
+	max-width: 720px;
+}
+
+.g-chapter-all .g-img-small-grid {
+	margin: 0 auto 5px auto;
+	max-width: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.g-chapter-all .g-img-small-grid .g-img-grid-cont div {
+	padding-bottom: 100%;
+	position: relative;
+	overflow:  hidden;
+}
+
+.g-chapter-all .g-img-small-grid .g-img-grid-cont img {
+	position: absolute;
+	width: 100%;
+	height:  auto;
+	bottom:  0;
+
+}
+
+
+.g-chapter-all .g-img-small-grid .g-img-grid-cont {
+	flex: 0 0 33.3333%;
+	margin: 0;
+}
+
+
+@media screen and (min-width:  600px) {
+	.g-chapter-all .g-img-small-grid .g-img-grid-cont {	
+		flex: 0 0 20%;
+	}
+}
+
+@media screen and (min-width:  1050px) {
+	.g-chapter-all .g-img-small-grid .g-img-grid-cont {	
+		flex: 0 0 10%;
+	}
+}

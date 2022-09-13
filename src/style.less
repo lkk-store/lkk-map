@@ -123,13 +123,14 @@ img {
 	display: inline-block;
 	width: 100%;
 	vertical-align: top;
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 
 	@media screen and (min-width: 460px) {
 		width: calc(33.3333% - 7px);
+		margin-bottom: 25px;
 	}
 
 	&:last-child {
@@ -177,6 +178,14 @@ img {
 			padding-bottom: 100%;
 			background-size: cover;
 			background-position: center;
+		}
+
+		.g-featured-vid {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 
 		.g-featured-img-inner-cont {
