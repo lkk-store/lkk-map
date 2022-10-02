@@ -70,7 +70,7 @@ function compile() {
 			out += '<link rel="shortcut icon" href="img/lkk-logo-06.webp" />\n';
 			out += '<link rel="apple-touch-icon" sizes="128x128" href="app-icon.png">\n'
 			out += '<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">\n';
-			out += '<meta property="og:title" content="lkk map"/>\n<meta property="og:type" content=""/>\n<meta property="og:url" content="http://lkk-store.com/lkk-map"/>\n<meta property="og:image" content="https://www.lkk-store.com/img/twitter.jpg"/>\n<meta property="og:site_name" content="lkk map"/>\n<meta property="og:description" content="make something 9ood"/>'
+			out += '<!-- For Google -->\n<meta name="description" content="hiking and making trail maps" />\n<meta name="keywords" content="LKK MAP" />\n<meta name="author" content="LKK" />\n<meta name="copyright" content="LKK" />\n<meta name="application-name" content="LKK" />\n<!-- For Facebook -->\n<meta property="og:title" content="LKK MAP" />\n<meta property="og:image" content="https://www.lkk-store.com/lkk-map/facebook.jpg" />\n<meta property="og:url" content="https://www.lkk-store.com/lkk-map/" />\n<meta property="og:description" content="hiking and making trail maps" />\n<!-- For Twitter -->\n<meta name="twitter:card" content="summary" />\n<meta name="twitter:title" content="LKK MAP" />\n<meta name="twitter:description" content="hiking and making trail maps" />\n<meta name="twitter:image" content="https://www.lkk-store.com/lkk-map/twitter.jpg" />'
 
 			var style = fs.readFileSync("build/style.css", "utf8");
 
