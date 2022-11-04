@@ -170,7 +170,7 @@ d3.queue()
 		textcont.append("div.g-text.g-text-en")
 			.style("opacity", d => !d.text_en ? "0" : "1")
 			.append("div.g-text-inner")
-			.html(d => "<div class='g-graf'>" + addemojis(d.text_en.split("//").join("</div><div class='g-graf'>next")) + "</div>")
+			.html(d => "<div class='g-graf'>" + addemojis(d.text_en.split("//").join("</div><div class='g-graf'>")) + "</div>")
 
 
 		// end div

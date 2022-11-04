@@ -41,12 +41,24 @@
 	transform: translate(0,20%);
 }
 
+@media screen and (min-width:  460px) {
+	#g-post-map2 .g-text-cont {
+		transform: translate(0,10%);
+	}
+}
+
 #g-post-map2 .g-text-cn {
 	max-width:  310px;
 }
 
 #g-post-map .g-text-cont {
 	transform: translate(0,13%);
+}
+
+@media screen and (min-width:  460px) {
+	#g-post-map .g-text-cont {
+		transform: translate(0,3%);
+	}
 }
 
 #g-post-intro .g-text-cont {
