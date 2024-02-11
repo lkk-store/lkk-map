@@ -124,13 +124,12 @@ fs.watch('src', (eventType, filename) => {
 	compile();
 })
 
-
 fs.watch(currentPath + '/data', (eventType, filename) => {
 	console.log(filename + " changed...");
 	compile();
 })
 
-// this is from https://github.com/1wheel/hot-server
+// // this is from https://github.com/1wheel/hot-server
 
 var defaults = {port: 3989, dir: currentPath} 
 var args = require('minimist')(process.argv.slice(2))

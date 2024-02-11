@@ -356,46 +356,36 @@ img {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
-function calcheight() {
-	d3.selectAll(".g-project-cont").each(function(){
-		var el = d3.select(this);
-		var height = el.node().getBoundingClientRect().height;
-		el.attr("data-height", height);
-		el.style("height", 0)
-	})
-}
+// d3.selectAll(".g-hed").on("click", function(){
+// 	var el = d3.select(this);
+// 	var id = el.attr("data-id");
+// 	var target = d3.select(".g-project-" + id);
+// 	var state = target.attr("data-state");
+// 	var targetheight = target.attr("data-height");
+// 	var duration = 1000 //targetheight < 100 ? 100 : targetheight;
 
-calcheight();
-d3.selectAll(".g-hed").on("click", function(){
-	var el = d3.select(this);
-	var id = el.attr("data-id");
-	var target = d3.select(".g-project-" + id);
-	var state = target.attr("data-state");
-	var targetheight = target.attr("data-height");
-	var duration = 1000 //targetheight < 100 ? 100 : targetheight;
+// 	d3.selectAll(".g-project-opened").each(function(){
+// 		var el = d3.select(this);
+// 		var elid = el.attr("data-id");
+// 		var openedel = d3.select(".g-project-" + elid);
+// 		openedel.transition().style("height", 0)
+// 		openedel.attr("data-state", "closed");
+// 		openedel.classed("g-project-opened", false);
+// 	})
 
-	d3.selectAll(".g-project-opened").each(function(){
-		var el = d3.select(this);
-		var elid = el.attr("data-id");
-		var openedel = d3.select(".g-project-" + elid);
-		openedel.transition().style("height", 0)
-		openedel.attr("data-state", "closed");
-		openedel.classed("g-project-opened", false);
-	})
-
-	if (state == "closed") {
-		target
-			.transition()
-			.duration(duration)
-			.style("height", targetheight + "px")
-		target.attr("data-state", "opened");
-		target.classed("g-project-opened", true);
-	} else {
-		target.transition().style("height", 0)
-		target.attr("data-state", "closed");
-		target.classed("g-project-opened", false);
-	}
-})
+// 	if (state == "closed") {
+// 		target
+// 			.transition()
+// 			.duration(duration)
+// 			.style("height", targetheight + "px")
+// 		target.attr("data-state", "opened");
+// 		target.classed("g-project-opened", true);
+// 	} else {
+// 		target.transition().style("height", 0)
+// 		target.attr("data-state", "closed");
+// 		target.classed("g-project-opened", false);
+// 	}
+// })
 
 d3.selectAll(".g-img-thumb-cont").on("click", function(){
 

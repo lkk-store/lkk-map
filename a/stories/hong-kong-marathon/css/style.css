@@ -1,0 +1,363 @@
+@font-face {
+    font-family: 'Hong Kong Map Type'; /*a name to be used later*/
+    src: url('https://www.lkk-store.com/lkk-map/Hong-Kong-Map-Type.otf');
+}
+
+@font-face {
+	font-family: 'MYuenHK';
+	/*a name to be used later*/
+	src: url('https://www.lkk-store.com/lkk-map/MYuenHK-Medium.ttf');
+	/*URL to font*/
+  }
+
+
+html,body {
+	padding:  0;
+	margin:  0;
+	background: #000;
+	color:  #fff;
+	font-family: 'Nunito', sans-serif;
+}
+
+a, a:visited {
+	/* color:  #fff; */
+	/* text-decoration: none; */
+	color:  rgba(255,255,255,0.7);
+}
+
+.g-header {
+	text-align: center;	
+	font-family: 'Hong Kong Map Type';
+	position: fixed;
+	z-index: 10;
+	width: 100%;
+	top: 0;
+	font-size: 11px;
+	background: #000;
+	border-bottom: 1px solid #333;
+}
+
+.g-header a, .g-header a:visited {
+	color:  #fff;
+	text-decoration: none;
+}
+
+
+
+.g-header-inner {
+	padding:  10px 0 10px 0;
+}
+
+.g-hed {
+	text-align: center;
+	margin:  100px auto 25px auto;
+}
+
+.g-graf {
+	font-size: 13px;
+	font-family: 'Nunito', sans-serif;
+}
+
+p {
+	max-width: 600px;
+	margin: 0 auto 20px auto;
+	color:  rgba(255,255,255,0.7);
+	padding: 0 16px;
+}
+
+@media screen and (min-width: 460px) {
+	p {
+		padding: 0;
+	}
+}
+
+.g-switch {
+	text-align: center;
+	opacity: 0.3;
+	margin: 0 auto;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+.g-switch .g-divider {
+	margin: 0 10px;
+	display: inline-block;
+}
+
+.g-switch .g-read {
+	display: inline-block;
+}
+
+.g-read {
+	cursor: pointer;
+}
+
+.g-read::hover {
+	color: #fff;
+}
+
+.g-version {
+	display: none;
+}
+
+.g-version.g-show {
+	display: block;
+}
+
+.g-en-version .g-hed, .g-en-version h1 {
+	font-family: "Hong Kong Map Type";
+}
+
+.g-en-version h1 {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.g-en-version p {
+	font-size: 18px;
+    line-height: 1.4;
+	font-weight: 100;
+	max-width: 600px;
+}
+
+.g-en-version.g-hed p {
+	max-width: 450px;
+}
+
+.g-cn-version p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+.g-cn-version.g-hed p {
+	max-width: 380px;
+}
+
+.g-cn-version h1 {
+	font-family: 'MYuenHK';
+	font-size: 38px;
+	line-height: 1.4;
+	letter-spacing: 10px;
+	max-width: 380px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+	.g-cn-version h1 {
+		max-width: none;
+	}
+}
+
+.g-cn-version .g-hed {
+	font-size: 22px;
+	letter-spacing: 8px;
+}
+
+/* training chart stuff */
+
+.g-key {
+    display: flex;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: rgba(255,255,255,0.8)
+}
+
+.g-key .g-rect {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.g-key .g-key-text {
+    display: inline-block;
+    vertical-align: top;
+    margin: 3px 12px 10px 3px;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.g-training-chart {
+	max-width: 600px;
+	padding: 0 16px;
+	margin: 50px auto 50px auto;
+}
+
+.g-training-chart .g-chart {
+	padding-top: 20px;
+}
+
+.g-chart-hed {
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	border-bottom: 1px solid rgba(255,255,255,0.4);
+	margin-bottom: 5px;
+}
+
+.g-training-chart .g-chart-hed, .g-training-chart .g-chart-intro, .g-training-chart .g-chart-source {
+	padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+	.g-chart-hed, .g-chart-intro, .g-chart-source {
+		padding: 0;
+	}
+}
+
+.g-en-version .g-chart-hed {
+	font-family: 'Hong Kong Map Type';
+	letter-spacing: 0;	
+}
+
+p.g-chart-intro {
+	font-size: 15px;
+	margin-bottom: 20px;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p.g-chart-source {
+	font-size: 12px;
+	margin-bottom: 0;
+	font-style: italic;
+	opacity: 0.7;
+}
+
+svg {
+	overflow: visible;
+	padding-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+	svg {
+		padding-top: 20px;
+	}
+}
+
+svg text {
+	fill: #fff;
+	font-size: 11px;
+	opacity: 0.8;
+}
+
+.g-small-text {
+	font-size: 11px;
+}
+
+.axis line {
+	stroke: rgba(255,255,255,0.2);
+}
+
+
+.g-vid-cont {
+	width: 100%;
+	max-width: 1050px;
+	margin: 40px auto;
+	display: block;
+}
+
+.g-vid-cont video {
+	width: 100%;
+}
+
+.g-svg-anno {
+	text-anchor: end;
+}
+
+.g-tempo {
+	background: rgba(77, 238, 234, .6);
+	padding: 0 3px;
+	margin: 0 0 0 2px;
+	color: #000;
+}
+
+.g-interval {
+	background: rgba(116, 238, 21, .6);
+	padding: 0 3px;
+	margin: 0 0 0 2px;
+	color: #000;
+}
+
+.g-long {
+	background: rgba(240, 0, 255, .6);
+	padding: 0 3px;
+	margin: 0 0 0 2px;
+	color: #000;
+}
+
+.g-img-cont {
+	margin: 40px auto 40px auto;
+	max-width: 375px;
+}
+
+.g-img-cont.g-body-width {
+	max-width: 600px;
+	margin: 50px auto;
+}
+
+img {
+	width: 100%;
+}
+
+p.g-caption {
+	font-size: 15px;
+	font-style: italic;
+	padding: 0 16px;
+}
+
+@media screen and (min-width: 460px) {
+	p.g-caption {
+		padding: 0;
+	}
+}
+
+i {
+	position: relative;
+	font-style: nor;
+	/* padding: 0 4px; */
+}
+i::after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: rgba(255,255,255,0.7);
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	top: 100%;
+	left: calc(50% - 2px);
+}
+
+.g-end .g-img-text {
+	position: absolute;
+    top: 50%;
+    left: calc(50% - 70px);
+    width: 100%;
+    text-align: center;
+    max-width: 140px;
+}
+
+.g-img-text .g-text-inner {
+	background-color: #000;
+	display: inline-block;
+	padding: 0 10px;
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.g-img-cont.g-body-width.g-end {
+	position: relative;
+	margin: 100px auto;
+}
+
+
+.g-showroom {
+	max-width: 80px;
+}
+
+.g-img-cont.g-large-img {
+	max-width: 1050px;
+}
