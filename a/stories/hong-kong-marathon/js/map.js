@@ -48,8 +48,9 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
     }, true);
 
     function drawMap(initial) {
-        d3.selectAll(".g-map-cont-inner-2").each(function(){
-            let sel = d3.select(this).html("");
+        d3.selectAll(".g-map-cont-inner").each(function(){
+            let outercont = d3.select(this);
+            let sel = outercont.select(".g-map-cont-inner-2").html("");
 
             let width = d3.select(".g-version.g-show .g-map-cont").node().getBoundingClientRect().width;
             let height = width;
@@ -57,7 +58,7 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
             let projection = d3.geoIdentity().reflectY(true).fitSize([width*.8, height*.8], longest);
             let path = d3.geoPath().projection(projection);
 
-            let counter = sel.append("div.g-counter-cont");
+            let counter = outercont.select(".g-counter-cont").html("");
             let svg = sel.append("svg").attr("width", width).attr("height", height);
 
             let gleft = width*.2;

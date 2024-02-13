@@ -100,12 +100,6 @@
     font-size: 19px;
 }
 
-.g-counter-cont {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .g-counter-cont .g-dot {
     width: 5px;
     height: 5px;

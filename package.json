@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "d3v4": "^4.2.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "minimist": "^1.2.8",
+    "serve-index": "^1.9.1",
+    "ws": "^8.16.0"
+  }
+}
