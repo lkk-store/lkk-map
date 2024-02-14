@@ -226,7 +226,7 @@ p.g-chart-source {
 	opacity: 0.7;
 }
 
-svg {
+/* svg {
 	overflow: visible;
 	padding-top: 40px;
 }
@@ -235,7 +235,7 @@ svg {
 	svg {
 		padding-top: 20px;
 	}
-}
+} */
 
 svg text {
 	fill: #fff;
