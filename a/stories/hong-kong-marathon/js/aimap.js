@@ -64,10 +64,9 @@ let duration = 12000;
 
     let path = sel.select("#" + id + "-route-img path")
     console.log("#" + id + "-route-img path")
-
     if (path && path.node()) {
-        let length = path.node().getTotalLength();
-        console.log(path.node().getTotalLength())
+        let scale = path.node().getBoundingClientRect().width/path.node().getBBox().width;
+        let length = path.node().getTotalLength()*scale;
         
         repeat(length);
         function repeat(length) {
@@ -97,7 +96,7 @@ let duration = 12000;
                 const i = d3.interpolateRound(0, length);
                 return function(t) { 
                   let pct = i(t)/length;
-                  console.log(length)
+                //   console.log(length)
                   path.attr("stroke-dashoffset", length*(1-pct))
                   kmlabels.forEach(function(d){
                     if (pct >= d.pct) {
