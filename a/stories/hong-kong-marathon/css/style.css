@@ -184,6 +184,10 @@ p {
 	margin: 50px auto 50px auto;
 }
 
+.g-training-chart svg {
+	overflow: visible;
+}
+
 .g-training-chart .g-chart {
 	padding-top: 20px;
 }
