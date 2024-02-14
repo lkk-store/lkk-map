@@ -52,7 +52,7 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
             let outercont = d3.select(this);
             let sel = outercont.select(".g-map-cont-inner-2").html("");
 
-            let width = d3.select(".g-version.g-show .g-map-cont").node().getBoundingClientRect().width;
+            let width = outercont.select(".g-version.g-show .g-map-cont").node().getBoundingClientRect().width;
             let height = width;
 
             let projection = d3.geoIdentity().reflectY(true).fitSize([width*.8, height*.8], longest);
@@ -89,10 +89,10 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
                 .text(d => d.properties.name.split(" ")[1])
             
             let delay = 0;
-            let date = d3.selectAll('.g-map-cont .g-date');
-            let dist = d3.selectAll('.g-map-cont .g-dist');
-            let time = d3.selectAll('.g-map-cont .g-time');
-            let pace = d3.selectAll('.g-map-cont .g-pace');
+            let date = outercont.selectAll('.g-map-cont .g-date');
+            let dist = outercont.selectAll('.g-map-cont .g-dist');
+            let time = outercont.selectAll('.g-map-cont .g-time');
+            let pace = outercont.selectAll('.g-map-cont .g-pace');
             let formatdate = d3.timeFormat("%b %e");
 
             shapes.forEach(function(d,i){

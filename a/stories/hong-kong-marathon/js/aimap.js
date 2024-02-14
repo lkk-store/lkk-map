@@ -62,16 +62,15 @@ let duration = 12000;
         d.selname = "#" + id + "-arrows-img g[data-name='" + d.id + "']"
     })
 
-    // labels.forEach(function(d){
-    //     d.selname = "#" + id + "-notes-img g[data-name='" + d.id + "']"
-    // })
-
     let path = sel.select("#" + id + "-route-img path")
+    console.log("#" + id + "-route-img path")
 
     if (path && path.node()) {
         let length = path.node().getTotalLength();
-
-        function repeat() {
+        console.log(path.node().getTotalLength())
+        
+        repeat(length);
+        function repeat(length) {
             kmlabels.forEach(function(d){
                 sel.selectAll(d.selname).style("opacity", 0.1)
             })
@@ -98,7 +97,7 @@ let duration = 12000;
                 const i = d3.interpolateRound(0, length);
                 return function(t) { 
                   let pct = i(t)/length;
-                //   console.log(Math.round(pct * 100) / 100)
+                  console.log(length)
                   path.attr("stroke-dashoffset", length*(1-pct))
                   kmlabels.forEach(function(d){
                     if (pct >= d.pct) {
@@ -110,16 +109,11 @@ let duration = 12000;
                         sel.selectAll(d.selname).style("opacity", 1)
                     }
                   })
-                //   labels.forEach(function(d){
-                //     if (pct >= d.pct) {
-                //         sel.selectAll(d.selname).style("opacity", 1)
-                //     }
-                //   })
                 };
-              }).on("end", () => setTimeout(repeat, 1000)); // this will repeat the animation after waiting 1 second;
+              }).on("end", () => setTimeout(function(){
+                repeat(length)
+              }, 1000)); // this will repeat the animation after waiting 1 second;
         };
-
-        repeat();   
     }    
 
 
