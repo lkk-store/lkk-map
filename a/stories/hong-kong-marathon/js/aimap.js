@@ -43,16 +43,11 @@ let labels = [
 ]
 
 let duration = 12000;
-
-// d3.selectAll(".g-artboard").each(function(){
-
+function run() {
     let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
     let abid = "g-map-black-" + abpick;
     let sel = d3.select("#" + abid);
     let id = abid;
-
-    // let sel = d3.select(this);
-    // let id = abid;
     
     kmlabels.forEach(function(d){
         d.selname = "#" + id + "-kmlabels-img g[data-name='" + d.id + "']"
@@ -63,7 +58,6 @@ let duration = 12000;
     })
 
     let path = sel.select("#" + id + "-route-img path")
-    console.log("#" + id + "-route-img path")
     if (path && path.node()) {
         let scale = path.node().getBoundingClientRect().width/path.node().getBBox().width;
         let length = path.node().getTotalLength()*scale;
@@ -113,8 +107,10 @@ let duration = 12000;
                 repeat(length)
               }, 1000)); // this will repeat the animation after waiting 1 second;
         };
-    }    
+    }
+}
 
-
-
-// })
+run();
+window.addEventListener('resize', function(event) {
+    run();
+}, true);

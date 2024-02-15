@@ -52,7 +52,7 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
             let outercont = d3.select(this);
             let sel = outercont.select(".g-map-cont-inner-2").html("");
 
-            let width = outercont.select(".g-version.g-show .g-map-cont").node().getBoundingClientRect().width;
+            let width = d3.select(".g-version.g-show .g-map-cont").node().getBoundingClientRect().width;
             let height = width;
 
             let projection = d3.geoIdentity().reflectY(true).fitSize([width*.8, height*.8], longest);
