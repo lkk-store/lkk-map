@@ -1,5 +1,3 @@
-console.log("hi")
-
 let kmlabels = [
     { id: "start", pct: 0},
     { id: "5km", pct: 0.12},
@@ -42,7 +40,17 @@ let labels = [
     { id: "walking", pct: 0.9},
 ]
 
+let running = false;
 let duration = 12000;
+
+function reset() {
+    let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
+    let abid = "g-map-black-" + abpick;
+    let sel = d3.select("#" + abid);
+    let id = abid;
+    sel.transition()
+}
+
 function run() {
     let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
     let abid = "g-map-black-" + abpick;
@@ -51,16 +59,22 @@ function run() {
     
     kmlabels.forEach(function(d){
         d.selname = "#" + id + "-kmlabels-img g[data-name='" + d.id + "']"
+        sel.selectAll(d.selname).style("opacity", 0.1)
     })
 
     arrows.forEach(function(d){
         d.selname = "#" + id + "-arrows-img g[data-name='" + d.id + "']"
+        sel.selectAll(d.selname).style("opacity", 0.1)
     })
 
-    let path = sel.select("#" + id + "-route-img path")
+    let path = sel.select("#" + id + "-route-img path")    
+
     if (path && path.node()) {
         let scale = path.node().getBoundingClientRect().width/path.node().getBBox().width;
         let length = path.node().getTotalLength()*scale;
+
+        // d3.selectAll(".g-map-black-kmlabels-img g").style("opacity", 0.1)
+        // d3.selectAll(".g-map-black-arrows-img g").style("opacity", 0.1)
         
         repeat(length);
         function repeat(length) {
@@ -69,10 +83,6 @@ function run() {
             })
 
             arrows.forEach(function(d){
-                sel.selectAll(d.selname).style("opacity", 0.1)
-            })
-
-            labels.forEach(function(d){
                 sel.selectAll(d.selname).style("opacity", 0.1)
             })
     
@@ -90,27 +100,66 @@ function run() {
                 const i = d3.interpolateRound(0, length);
                 return function(t) { 
                   let pct = i(t)/length;
-                //   console.log(length)
                   path.attr("stroke-dashoffset", length*(1-pct))
-                  kmlabels.forEach(function(d){
+                  if (running) {
+                    kmlabels.forEach(function(d){
                     if (pct >= d.pct) {
                         sel.selectAll(d.selname).style("opacity", 1)
                     }
-                  })
-                  arrows.forEach(function(d){
+                    })
+                    arrows.forEach(function(d){
                     if (pct >= d.pct) {
                         sel.selectAll(d.selname).style("opacity", 1)
                     }
-                  })
+                    })
+                  }
                 };
-              }).on("end", () => setTimeout(function(){
-                repeat(length)
-              }, 1000)); // this will repeat the animation after waiting 1 second;
+              }).on("end", function(){
+                timeout = setTimeout(function(){
+                    repeat(length);
+                }, 1000)
+              }); // this will repeat the animation after waiting 1 second;
         };
     }
 }
 
-run();
+if (elementInViewport2() && !running) {
+    running = true;
+    run();
+}
+
 window.addEventListener('resize', function(event) {
     run();
 }, true);
+
+window.addEventListener('scroll', function(event) {
+    if (elementInViewport2() && !running) {
+        running = true;
+        run();
+    } else if (!elementInViewport2()) {
+        running = false;
+        reset();
+    }
+}, true);
+
+
+function elementInViewport2(el) {
+    var el = d3.select(".g-version.g-show #g-map-black-box").node()
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+  
+    while(el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+      left += el.offsetLeft;
+    }
+  
+    return (
+      top < (window.pageYOffset + window.innerHeight) &&
+      left < (window.pageXOffset + window.innerWidth) &&
+      (top + height) > window.pageYOffset &&
+      (left + width) > window.pageXOffset
+    );
+  }
