@@ -23,17 +23,17 @@
 		box-sizing: border-box;
 	}
 	#g-map-en-box .g-aiPointText p { white-space: nowrap; }
-	#g-map-en-Artboard_1 {
+	#g-map-en-1050 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-map-en-Artboard_1 p {
+	#g-map-en-1050 p {
 		font-family:'Hong Kong Map Type', arial,helvetica,sans-serif;
-		line-height:16px;
+		line-height:18px;
 		height:auto;
 		opacity:1;
-		letter-spacing:-0.04em;
-		font-size:12px;
+		letter-spacing:-0.05em;
+		font-size:13px;
 		text-align:left;
 		color:rgb(102,102,102);
 		text-transform:none;
@@ -43,29 +43,112 @@
 		font-style:normal;
 		position:static;
 	}
-	#g-map-en-Artboard_1 .g-pstyle0 {
-		height:16px;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	#g-map-en-Artboard_1 .g-pstyle1 {
-		line-height:18px;
+	#g-map-en-1050 .g-pstyle0 {
 		height:18px;
-		letter-spacing:0.3em;
+		text-align:center;
+	}
+	#g-map-en-1050 .g-pstyle1 {
+		height:18px;
+		letter-spacing:0em;
 		font-size:14px;
 		text-align:center;
 	}
-	#g-map-en-Artboard_1 .g-pstyle2 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
+	#g-map-en-1050 .g-pstyle2 {
 		line-height:19px;
 		height:19px;
+		font-size:14px;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-1050 .g-pstyle3 {
+		line-height:15px;
+		height:15px;
 		letter-spacing:0em;
-		font-size:13px;
 		text-align:center;
 		color:rgb(255,255,255);
 	}
-	#g-map-en-Artboard_1 .g-pstyle3 {
+	#g-map-en-1050 .g-pstyle4 {
+		line-height:19px;
+		height:19px;
+		font-size:14px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-1050 .g-pstyle5 {
+		height:18px;
+		letter-spacing:-0.09em;
+		text-align:right;
+		text-transform:uppercase;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-1050 .g-pstyle6 {
+		height:18px;
+		text-align:center;
+		text-transform:uppercase;
+	}
+	#g-map-en-1050 .g-pstyle7 {
+		height:18px;
+		letter-spacing:-0.09em;
+		text-align:center;
+		text-transform:uppercase;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-1050 .g-cstyle0 {
+		font-family:'MYuenHK', sans-serif;
+		font-weight:700;
+	}
+	#g-map-en-375 {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-map-en-375 p {
+		font-family:'Hong Kong Map Type', arial,helvetica,sans-serif;
+		line-height:16px;
+		opacity:1;
+		letter-spacing:-0.05em;
+		font-size:12px;
+		text-align:left;
+		text-transform:none;
+		color:rgb(255,255,255);
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		height:auto;
+		position:static;
+	}
+	#g-map-en-375 .g-pstyle0 {
+		font-family:'MYuenHK', sans-serif;
+		font-weight:700;
+		line-height:14px;
+		height:14px;
+		letter-spacing:0.1em;
+		font-size:13px;
+		text-align:center;
+		color:rgb(102,102,102);
+	}
+	#g-map-en-375 .g-pstyle1 {
+		font-family:'MYuenHK', sans-serif;
+		font-weight:700;
+		line-height:14px;
+		height:14px;
+		letter-spacing:0.7em;
+		font-size:13px;
+		text-align:center;
+		color:rgb(102,102,102);
+	}
+	#g-map-en-375 .g-pstyle2 {
+		line-height:18px;
+		height:18px;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:center;
+		color:rgb(102,102,102);
+	}
+	#g-map-en-375 .g-pstyle3 {
+		height:16px;
+		text-align:center;
+	}
+	#g-map-en-375 .g-pstyle4 {
 		font-family:'MYuenHK', sans-serif;
 		font-weight:700;
 		line-height:15px;
@@ -73,181 +156,98 @@
 		letter-spacing:0em;
 		font-size:13px;
 		text-align:center;
-		color:rgb(255,255,255);
 	}
-	#g-map-en-Artboard_1 .g-pstyle4 {
-		height:16px;
+	#g-map-en-375 .g-pstyle5 {
 		text-align:center;
+		text-transform:uppercase;
 	}
-	#g-map-en-Artboard_1 .g-pstyle5 {
+	#g-map-en-375 .g-pstyle6 {
 		font-family:'MYuenHK', sans-serif;
 		font-weight:700;
-		line-height:19px;
-		height:19px;
-		letter-spacing:0em;
-		font-size:14px;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_1 .g-pstyle6 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:17px;
-		height:17px;
-		letter-spacing:0em;
-		font-size:14px;
-		text-align:right;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_1 .g-pstyle7 {
-		line-height:24px;
-		height:24px;
-		letter-spacing:0.3em;
-		font-size:14px;
+		line-height:14px;
+		height:14px;
+		letter-spacing:0.1em;
 		text-align:center;
+		color:rgb(102,102,102);
 	}
-	#g-map-en-Artboard_4 {
+	#g-map-en-375 .g-pstyle7 {
+		line-height:13px;
+		height:13px;
+		text-align:center;
+		text-transform:uppercase;
+		color:rgb(102,102,102);
+	}
+	#g-map-en-375 .g-cstyle0 {
+		font-weight:500;
+	}
+	#g-map-en-600 {
 		position:relative;
 		overflow:hidden;
 	}
-	#g-map-en-Artboard_4 p {
+	#g-map-en-600 p {
 		font-family:'Hong Kong Map Type', arial,helvetica,sans-serif;
-		line-height:13px;
+		line-height:14px;
 		height:auto;
 		opacity:1;
-		letter-spacing:-0.04em;
+		letter-spacing:-0.05em;
 		font-size:11px;
 		text-align:left;
-		text-transform:none;
 		color:rgb(102,102,102);
+		text-transform:none;
 		padding-bottom:0;
 		padding-top:0;
 		mix-blend-mode:normal;
 		font-style:normal;
 		position:static;
 	}
-	#g-map-en-Artboard_4 .g-pstyle0 {
-		height:13px;
-		text-align:center;
-		text-transform:uppercase;
-	}
-	#g-map-en-Artboard_4 .g-pstyle1 {
-		line-height:18px;
-		height:18px;
-		letter-spacing:0.3em;
-		font-size:14px;
+	#g-map-en-600 .g-pstyle0 {
+		height:14px;
 		text-align:center;
 	}
-	#g-map-en-Artboard_4 .g-pstyle2 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:15px;
-		height:15px;
+	#g-map-en-600 .g-pstyle1 {
+		line-height:12px;
+		height:12px;
 		letter-spacing:0em;
-		font-size:14px;
-		text-align:center;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_4 .g-pstyle3 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:15px;
-		height:15px;
-		letter-spacing:0em;
-		font-size:13px;
-		text-align:center;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_4 .g-pstyle4 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:17px;
-		height:17px;
-		letter-spacing:0em;
-		font-size:14px;
-		text-align:right;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_4 .g-pstyle5 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:15px;
-		height:15px;
-		letter-spacing:0em;
-		font-size:13px;
-		text-align:right;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_4 .g-pstyle6 {
-		height:13px;
-		letter-spacing:0em;
-		text-align:center;
-	}
-	#g-map-en-Artboard_4 .g-pstyle7 {
-		height:13px;
-		text-align:center;
-	}
-	#g-map-en-Artboard_5 {
-		position:relative;
-		overflow:hidden;
-	}
-	#g-map-en-Artboard_5 p {
-		font-family:'Hong Kong Map Type', arial,helvetica,sans-serif;
-		line-height:13px;
-		height:auto;
-		opacity:1;
-		letter-spacing:-0.04em;
 		font-size:12px;
-		text-align:left;
-		color:rgb(102,102,102);
-		text-transform:none;
-		padding-bottom:0;
-		padding-top:0;
-		mix-blend-mode:normal;
-		font-style:normal;
-		position:static;
+		text-align:center;
+		color:rgb(112,112,112);
 	}
-	#g-map-en-Artboard_5 .g-pstyle0 {
-		height:13px;
+	#g-map-en-600 .g-pstyle2 {
+		line-height:16px;
+		height:16px;
+		text-align:center;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-600 .g-pstyle3 {
+		line-height:16px;
+		height:16px;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-600 .g-pstyle4 {
+		line-height:18px;
+		letter-spacing:-0.09em;
+		font-size:13px;
+		text-align:right;
+		text-transform:uppercase;
+		color:rgb(255,255,255);
+	}
+	#g-map-en-600 .g-pstyle5 {
+		line-height:16px;
+		height:16px;
+		letter-spacing:0.14em;
+		font-size:12px;
+		text-align:center;
+		color:rgb(112,112,112);
+	}
+	#g-map-en-600 .g-pstyle6 {
+		letter-spacing:-0.1em;
+		font-size:12px;
 		text-align:center;
 		text-transform:uppercase;
-	}
-	#g-map-en-Artboard_5 .g-pstyle1 {
-		line-height:16px;
-		height:16px;
-		letter-spacing:0.2em;
-		text-align:center;
-	}
-	#g-map-en-Artboard_5 .g-pstyle2 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:16px;
-		height:16px;
-		letter-spacing:0em;
-		font-size:14px;
-		text-align:center;
 		color:rgb(255,255,255);
 	}
-	#g-map-en-Artboard_5 .g-pstyle3 {
-		height:13px;
-		text-align:center;
-	}
-	#g-map-en-Artboard_5 .g-pstyle4 {
+	#g-map-en-600 .g-cstyle0 {
 		font-family:'MYuenHK', sans-serif;
 		font-weight:700;
-		line-height:16px;
-		height:16px;
-		letter-spacing:0em;
-		font-size:14px;
-		color:rgb(255,255,255);
-	}
-	#g-map-en-Artboard_5 .g-pstyle5 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:16px;
-		height:16px;
-		letter-spacing:0em;
-		font-size:14px;
-		text-align:right;
-		color:rgb(255,255,255);
 	}
 

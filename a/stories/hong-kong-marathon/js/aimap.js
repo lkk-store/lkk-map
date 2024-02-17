@@ -45,15 +45,18 @@ let duration = 12000;
 
 function reset() {
     let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
-    let abid = "g-map-black-" + abpick;
+    let grabid = d3.select(".g-version.g-show .ai2html");
+    let iduse = grabid.attr("id").split("-")[2];
+    let abid = "g-map-" + iduse + "-" + abpick;
     let sel = d3.select("#" + abid);
-    let id = abid;
     sel.transition()
 }
 
 function run() {
     let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
-    let abid = "g-map-black-" + abpick;
+    let grabid = d3.select(".g-version.g-show .ai2html");
+    let iduse = grabid.attr("id").split("-")[2];
+    let abid = "g-map-" + iduse + "-" + abpick;
     let sel = d3.select("#" + abid);
     let id = abid;
     
@@ -72,9 +75,6 @@ function run() {
     if (path && path.node()) {
         let scale = path.node().getBoundingClientRect().width/path.node().getBBox().width;
         let length = path.node().getTotalLength()*scale;
-
-        // d3.selectAll(".g-map-black-kmlabels-img g").style("opacity", 0.1)
-        // d3.selectAll(".g-map-black-arrows-img g").style("opacity", 0.1)
         
         repeat(length);
         function repeat(length) {
@@ -144,7 +144,7 @@ window.addEventListener('scroll', function(event) {
 
 
 function elementInViewport2(el) {
-    var el = d3.select(".g-version.g-show #g-map-black-box").node()
+    var el = d3.select(".g-version.g-show .ai2html").node()
     var top = el.offsetTop;
     var left = el.offsetLeft;
     var width = el.offsetWidth;
