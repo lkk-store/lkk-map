@@ -7,14 +7,14 @@
 
 .g-map-cont-inner {
     width: 100%;
-    padding-bottom: 115%;
+    padding-bottom: calc(100% + 10px);
     position: relative;
 }
 
 @media screen and (min-width: 460px) {
     .g-map-cont-inner {
         width: 100%;
-        padding-bottom: 105%;
+        padding-bottom: calc(100% + 10px);
     }
 }
 
