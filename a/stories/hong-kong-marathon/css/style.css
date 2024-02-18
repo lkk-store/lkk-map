@@ -366,3 +366,9 @@ i {
 .g-img-cont.g-large-img {
 	max-width: 1050px;
 }
+
+@media screen and (max-width: 460px) {
+	.g-en-version .g-text-14-2 {
+		display: none;
+	}
+}

@@ -35,6 +35,10 @@ d3.select(".g-read.g-en").on("click", function(){
     switchTo("en")
 })
 
+function updatechartlang() {
+    let se
+}
+
 d3.loadData("js/list.csv", function(err, res){
     let data = res[0];
 
@@ -49,7 +53,9 @@ d3.loadData("js/list.csv", function(err, res){
     let weeks = d3.range(1,16);
 
     
-    function drawChart(sel) {
+    function drawChart(v) {
+        let sel = d3.select(".g-" + v + "-version .g-training-chart .g-chart").html("");
+        console.log(".g-" + v + "-version .g-training-chart .g-chart")
         let keycont = sel.append("div.g-key");
         let colors = {
             "tempo": "rgba(77, 238, 234, .6)",
@@ -64,7 +70,7 @@ d3.loadData("js/list.csv", function(err, res){
             if (d != "bike ride") {
                 let k = keycont.append("div.g-key-each");
                 k.append("div.g-rect").style("background", colors[d])
-                k.append("div.g-key-text").text(pagestate == "cn" ? chinesekey[i] : d);
+                k.append("div.g-key-text").text(v == "cn" ? chinesekey[i] : d);
             }
         })
 
@@ -118,7 +124,7 @@ d3.loadData("js/list.csv", function(err, res){
             barg.translate([leftmargin,0])
 
             // let left = 0;
-            filtered.forEach(function(d,i){
+            filtered.forEach(function(d,di){
                 let km = d["Distance"];
                 
                 barg.append("circle")
@@ -128,7 +134,7 @@ d3.loadData("js/list.csv", function(err, res){
                     .style("stroke", d.type == "bike ride" ? "rgba(255,255,255,0.5)" : "")
                     .style("stroke-dasharray", d.type == "bike ride" ? "3 2" : "")
                 
-                barg.append("text")
+                barg.append("text.g-text-" + i + "-" + di)
                     .style("text-anchor", "middle")
                     .style("text-shadow", "0 0 3px #000")
                     .text(Math.round(+d.Distance))
@@ -172,7 +178,7 @@ d3.loadData("js/list.csv", function(err, res){
                 barg.append("text")
                 .style("text-anchor", "middle")
                     .translate([x(6),rowh/2 + 5])
-                    .text(pagestate == "cn" ? "馬拉松" : "MARATHON")
+                    .text(v == "cn" ? "馬拉松" : "MARATHON")
             }
         })
 
@@ -181,9 +187,9 @@ d3.loadData("js/list.csv", function(err, res){
         let annog = svg.append("g.g-svg-anno").translate([width-115,-50])
         let y1 = -10;
         let lineheight = pagestate == "cn" ? 13 : 11.5;
-        annog.append("text").translate([75,y1]).text(pagestate == "cn" ? "沿紐約馬拉松路徑" : "Biked the NYC")
-        annog.append("text").translate([75,y1+lineheight]).text(pagestate == "cn" ? "踩了趟長途單車" : "marathon route")
-        annog.append("text").translate([75,y1+lineheight*2]).text(pagestate == "cn" ? "所以沒有跑長課" : "instead of running")
+        annog.append("text").translate([75,y1]).text(v == "cn" ? "沿紐約馬拉松路徑" : "Biked the NYC")
+        annog.append("text").translate([75,y1+lineheight]).text(v == "cn" ? "踩了趟長途單車" : "marathon route")
+        annog.append("text").translate([75,y1+lineheight*2]).text(v == "cn" ? "所以沒有跑長課" : "instead of running")
 
         annog.append("path")
             .translate([80,0])
@@ -200,10 +206,14 @@ d3.loadData("js/list.csv", function(err, res){
     }
 
     function drawAllCharts() {
-        d3.selectAll(".g-training-chart .g-chart").each(function(){
-            let sel = d3.select(this).html("");
-            drawChart(sel);
+        // d3.selectAll(".g-training-chart .g-chart").each(function(){
+
+        let versions = ["en", "cn"]
+        versions.forEach(function(v){
+            drawChart(v);
         })
+            
+        // })
     }
 
     drawAllCharts();
