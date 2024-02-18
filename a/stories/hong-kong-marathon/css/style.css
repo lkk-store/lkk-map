@@ -323,7 +323,7 @@ i {
 	font-style: nor;
 	/* padding: 0 4px; */
 }
-i::after {
+.g-cn-version i::after {
 	content: "";
 	display: block;
 	position: absolute;
@@ -331,7 +331,7 @@ i::after {
 	width: 4px;
 	height: 4px;
 	border-radius: 100%;
-	top: 100%;
+	top: 92%;
 	left: calc(50% - 2px);
 }
 

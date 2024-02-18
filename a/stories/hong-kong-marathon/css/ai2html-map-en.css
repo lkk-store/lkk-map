@@ -74,8 +74,9 @@
 		color:rgb(255,255,255);
 	}
 	#g-map-en-1050 .g-pstyle5 {
-		height:18px;
-		letter-spacing:-0.09em;
+		line-height:15px;
+		height:15px;
+		font-size:12px;
 		text-align:right;
 		text-transform:uppercase;
 		color:rgb(255,255,255);
@@ -86,15 +87,16 @@
 		text-transform:uppercase;
 	}
 	#g-map-en-1050 .g-pstyle7 {
-		height:18px;
-		letter-spacing:-0.09em;
+		line-height:14px;
+		height:14px;
+		letter-spacing:-0.1em;
+		font-size:12px;
 		text-align:center;
 		text-transform:uppercase;
 		color:rgb(255,255,255);
 	}
 	#g-map-en-1050 .g-cstyle0 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
+		font-weight:500;
 	}
 	#g-map-en-375 {
 		position:relative;
@@ -102,7 +104,8 @@
 	}
 	#g-map-en-375 p {
 		font-family:'Hong Kong Map Type', arial,helvetica,sans-serif;
-		line-height:16px;
+		line-height:15px;
+		height:auto;
 		opacity:1;
 		letter-spacing:-0.05em;
 		font-size:12px;
@@ -113,7 +116,6 @@
 		padding-top:0;
 		mix-blend-mode:normal;
 		font-style:normal;
-		height:auto;
 		position:static;
 	}
 	#g-map-en-375 .g-pstyle0 {
@@ -127,16 +129,18 @@
 		color:rgb(102,102,102);
 	}
 	#g-map-en-375 .g-pstyle1 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:14px;
-		height:14px;
-		letter-spacing:0.7em;
-		font-size:13px;
+		line-height:16px;
+		height:16px;
 		text-align:center;
 		color:rgb(102,102,102);
 	}
 	#g-map-en-375 .g-pstyle2 {
+		line-height:14px;
+		height:14px;
+		text-align:center;
+		color:rgb(102,102,102);
+	}
+	#g-map-en-375 .g-pstyle3 {
 		line-height:18px;
 		height:18px;
 		letter-spacing:0em;
@@ -144,31 +148,20 @@
 		text-align:center;
 		color:rgb(102,102,102);
 	}
-	#g-map-en-375 .g-pstyle3 {
+	#g-map-en-375 .g-pstyle4 {
+		line-height:16px;
 		height:16px;
 		text-align:center;
 	}
-	#g-map-en-375 .g-pstyle4 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
-		line-height:15px;
-		height:15px;
-		letter-spacing:0em;
-		font-size:13px;
-		text-align:center;
-	}
 	#g-map-en-375 .g-pstyle5 {
+		height:15px;
 		text-align:center;
 		text-transform:uppercase;
 	}
 	#g-map-en-375 .g-pstyle6 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
 		line-height:14px;
 		height:14px;
-		letter-spacing:0.1em;
 		text-align:center;
-		color:rgb(102,102,102);
 	}
 	#g-map-en-375 .g-pstyle7 {
 		line-height:13px;
@@ -224,9 +217,9 @@
 		color:rgb(255,255,255);
 	}
 	#g-map-en-600 .g-pstyle4 {
-		line-height:18px;
-		letter-spacing:-0.09em;
-		font-size:13px;
+		line-height:15px;
+		height:15px;
+		font-size:12px;
 		text-align:right;
 		text-transform:uppercase;
 		color:rgb(255,255,255);
@@ -247,7 +240,6 @@
 		color:rgb(255,255,255);
 	}
 	#g-map-en-600 .g-cstyle0 {
-		font-family:'MYuenHK', sans-serif;
-		font-weight:700;
+		font-weight:500;
 	}
 
