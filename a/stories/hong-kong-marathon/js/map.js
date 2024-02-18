@@ -4,7 +4,22 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
     let shorelineshp = topojson.feature(shoreline, shoreline.objects["shoreline-2002"]);
 
     let all = res[1];
-    let names = Object.keys(all.objects).filter(d => d.indexOf("long") > -1);
+    // let names = Object.keys(all.objects).filter(d => d.indexOf("long") > -1);
+    let names = [
+        'a2023-10-15_long',
+        'a2023-10-22_long',
+        'a2023-10-29_long',
+        'a2023-11-12_long',
+        'a2023-11-19_long',
+        'a2023-11-26_long',
+        'a2023-12-03_long',
+        'a2023-12-10_long',
+        'a2023-12-17_long',
+        'a2023-12-24_long',
+        'a2023-12-31_long',
+        'a2024-01-07_long',
+        'a2024-01-14_long',
+    ]
 
     let points = res[2];
     let pointshp = topojson.feature(points, points.objects.points);
@@ -36,22 +51,30 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
 
     let g, path;
     let delayTime = 3000;
+    let intervalId;
+    let timeouts = [];
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
     drawMap();
-    let handle;
-    handle = setInterval(drawMap, names.length*delayTime);
+    intervalId = setInterval(drawMap, names.length*delayTime);
 
-    // let ow = window.innerWidth;
-    // window.addEventListener('resize', function(event) {
-    //     if (window.innerWidth !== ow ) {
-    //         ow = window.innerWidth;
-    //         clearInterval(handle);
-    //         handle = null;
-    //         drawMap();
-    //         handle = setInterval(drawMap, names.length*delayTime);
-    //     }
-    // }, true);
+    let ow = window.innerWidth;
+    window.addEventListener('resize', function(event) {
+        if (window.innerWidth !== ow ) {
+            ow = window.innerWidth;
+            clearInterval(intervalId);
+            for (var i=0; i<timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+            timeouts = [];
+            drawMap();
+            intervalId = setInterval(drawMap, names.length*delayTime);
+        }
+    }, true);
 
     function drawMap(initial) {
+        // console.log("draw map called");
         d3.selectAll(".g-map-cont-inner").each(function(){
             let outercont = d3.select(this);
             let sel = outercont.select(".g-map-cont-inner-2").html("");
@@ -149,7 +172,7 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
                         return n > 9 ? "" + n: "0" + n;
                     }
 
-                    setTimeout(function(){
+                    timeouts.push(setTimeout(function(){
                         let distn = distlookup[datetext][0];
                         let timen = distlookup[datetext][1];
                         let pacen = Math.round((timen/60)/distn * 100) / 100;
@@ -168,7 +191,7 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
                         time.html(secondsToHms(timen));
                         pace.html(pacetext);
 
-                    }, delay)
+                    }, delay));
 
                     delay += delayTime;
 
