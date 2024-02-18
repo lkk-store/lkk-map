@@ -67,7 +67,7 @@ function run() {
 
     arrows.forEach(function(d){
         d.selname = "#" + id + "-arrows-img g[data-name='" + d.id + "']"
-        sel.selectAll(d.selname).style("opacity", 0.1)
+        sel.selectAll(d.selname).style("opacity", 0)
     })
 
     let path = sel.select("#" + id + "-route-img path")    
@@ -82,9 +82,9 @@ function run() {
                 sel.selectAll(d.selname).style("opacity", 0.1)
             })
 
-            arrows.forEach(function(d){
-                sel.selectAll(d.selname).style("opacity", 0.1)
-            })
+            // arrows.forEach(function(d){
+            //     sel.selectAll(d.selname).style("opacity", 0.1)
+            // })
     
             path.attr("stroke-dasharray", length + " " + length)
                 .attr("stroke-dashoffset", length)
@@ -107,11 +107,11 @@ function run() {
                         sel.selectAll(d.selname).style("opacity", 1)
                     }
                     })
-                    arrows.forEach(function(d){
-                    if (pct >= d.pct) {
-                        sel.selectAll(d.selname).style("opacity", 1)
-                    }
-                    })
+                    // arrows.forEach(function(d){
+                    // if (pct >= d.pct) {
+                    //     sel.selectAll(d.selname).style("opacity", 1)
+                    // }
+                    // })
                   }
                 };
               }).on("end", function(){
