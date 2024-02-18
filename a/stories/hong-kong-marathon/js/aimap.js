@@ -51,13 +51,15 @@ function reset() {
     let sel = d3.select("#" + abid);
     sel.transition()
 }
-
+window.d3 = d3;
 function run() {
+    console.log("run called")
     let abpick = innerWidth > 1050 ? 1050 : innerWidth > 600 ? 600 : 375;
     let grabid = d3.select(".g-version.g-show .ai2html");
     let iduse = grabid.attr("id").split("-")[2];
     let abid = "g-map-" + iduse + "-" + abpick;
     let sel = d3.select("#" + abid);
+    sel.style("display", "block")
     let id = abid;
     
     kmlabels.forEach(function(d){
@@ -70,13 +72,12 @@ function run() {
         sel.selectAll(d.selname).style("opacity", 0)
     })
 
-    let path = sel.select("#" + id + "-route-img path")    
-
+    let path = sel.select("#" + id + "-route-img path")
     if (path && path.node()) {
         let scale = path.node().getBoundingClientRect().width/path.node().getBBox().width;
         let length = path.node().getTotalLength()*scale;
-        
         repeat(length);
+
         function repeat(length) {
             kmlabels.forEach(function(d){
                 sel.selectAll(d.selname).style("opacity", 0.1)
@@ -124,6 +125,7 @@ function run() {
 }
 
 if (elementInViewport2() && !running) {
+    console.log("hi")
     running = true;
     run();
 }
@@ -131,7 +133,6 @@ if (elementInViewport2() && !running) {
 let ow = window.innerWidth;
 window.addEventListener('resize', function(event) {
     if (window.innerWidth !== ow ) {
-        console.log("resized call")
         ow = window.innerWidth;
         run();
     }
