@@ -40,12 +40,16 @@ d3.loadData("js/shoreline.json", "js/all.json", "js/pointsproj.json", function(e
     let handle;
     handle = setInterval(drawMap, names.length*delayTime);
 
-    window.addEventListener('resize', function(event) {
-        clearInterval(handle);
-        handle = null;
-        drawMap();
-        handle = setInterval(drawMap, names.length*delayTime);
-    }, true);
+    // let ow = window.innerWidth;
+    // window.addEventListener('resize', function(event) {
+    //     if (window.innerWidth !== ow ) {
+    //         ow = window.innerWidth;
+    //         clearInterval(handle);
+    //         handle = null;
+    //         drawMap();
+    //         handle = setInterval(drawMap, names.length*delayTime);
+    //     }
+    // }, true);
 
     function drawMap(initial) {
         d3.selectAll(".g-map-cont-inner").each(function(){

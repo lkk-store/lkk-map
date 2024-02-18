@@ -208,8 +208,12 @@ d3.loadData("js/list.csv", function(err, res){
 
     drawAllCharts();
 
+    let ow = window.innerWidth;
     window.addEventListener('resize', function(event) {
-        drawAllCharts();
+        if (window.innerWidth !== ow ) {
+            ow = window.innerWidth;
+            drawAllCharts();
+        }
     }, true);
 
    

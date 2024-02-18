@@ -128,8 +128,13 @@ if (elementInViewport2() && !running) {
     run();
 }
 
+let ow = window.innerWidth;
 window.addEventListener('resize', function(event) {
-    run();
+    if (window.innerWidth !== ow ) {
+        console.log("resized call")
+        ow = window.innerWidth;
+        run();
+    }
 }, true);
 
 window.addEventListener('scroll', function(event) {
