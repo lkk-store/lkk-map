@@ -1650,13 +1650,13 @@ let days = [1,2,3,4,5];
 
 let route, routef;
 
-d3.loadData(
-    "_assets/box.json",
-    "_assets/box-mobile.json",
-    "_assets/route-byday-simplified.json",
-    "_assets/maplabels.json",
-    "_assets/chart-byday.json"
-, function (err, res){
+d3.queue()
+    .defer(d3.json, "_assets/box.json")
+    .defer(d3.json, "_assets/box-mobile.json")
+    .defer(d3.json, "_assets/route-byday-simplified.json")
+    .defer(d3.json, "_assets/maplabels.json")
+    .defer(d3.json, "_assets/chart-byday.json")
+.awaitAll(function (err, res){
 
     let box = res[0];
     let boxf = topojson.feature(box, box.objects.box);
