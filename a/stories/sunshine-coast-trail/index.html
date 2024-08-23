@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sunshine Coast Trail</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<link rel="shortcut icon" href="https://www.lkk-store.com/lkk-map/img/lkk-logo-06.webp" />
+<link rel="apple-touch-icon" sizes="128x128" href="https://www.lkk-store.com/lkk-map/app-icon.png">
+<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">
+<meta property="og:title" content="lkk.store"/>
+<meta property="og:type" content=""/>
+<meta property="og:url" content="http://lkk-store.com"/>
+<meta property="og:image" content="https://www.lkk-store.com/img/twitter.jpg"/>
+<meta property="og:site_name" content="lkk.store"/>
+<meta property="og:description" content="make something 9ood"/><style>
+@font-face {
+  font-family: 'Hong Kong Map Type';
+  /*a name to be used later*/
+  src: url('https://www.lkk-store.com/lkk-map/Hong-Kong-Map-Type.otf');
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #0c0c0c;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 1.5;
+}
+a,
+a:visited {
+  color: rgba(255, 255, 255, 0.7);
+}
+.g-header {
+  text-align: center;
+  font-family: 'Hong Kong Map Type';
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  font-size: 11px;
+  background: #0c0c0c;
+  border-bottom: 1px solid #333;
+}
+.g-header a,
+.g-header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.g-header-inner {
+  padding: 10px 0 10px 0;
+}
+.g-slide-cont {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.g-slide-cont-inner {
+  display: flex;
+}
+.g-slide-cont-inner.g-animate {
+  transition: transform 0.5s;
+}
+.g-slide {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.g-slide .g-slide-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  background-color: #0c0c0c;
+}
+.g-slide.g-slide-center {
+  text-align: center;
+}
+.g-slide.g-slide-hed {
+  font-family: "Hong Kong Map Type";
+}
+.g-slide.g-slide-mobilebg-left {
+  background-position: 0 0;
+}
+.g-slide.g-slide-nopic {
+  background-color: #0c0c0c;
+}
+.g-slide.g-slide-0 {
+  background-color: transparent;
+}
+.g-slide.g-slide-0 .g-slide-background,
+.g-slide.g-slide-end .g-slide-background {
+  background-color: transparent;
+}
+.g-text-cont {
+  position: absolute;
+  left: 50%;
+  top: auto;
+  bottom: 30px;
+  width: calc(100% - 65px);
+  transform: translate(-50%, 0);
+  text-shadow: 0 0 3px #000, 0 0 6px #000;
+  line-height: 1.4;
+}
+@media screen and (min-width: 600px) {
+  .g-text-cont {
+    font-size: 17px;
+    width: calc(100% - 80px);
+  }
+}
+.g-text-cont .g-text {
+  max-width: 500px;
+  margin: 0 auto 10px auto;
+}
+.g-text-cont .g-text:last-child {
+  margin-bottom: 0;
+}
+.g-text-cont .g-text .g-text-inner {
+  background: #0c0c0c;
+  display: inline;
+  padding: 2px 6px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.g-text-cont .g-text .g-text-inner b {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.g-text-cont .g-text .g-text-inner em {
+  opacity: 0.6;
+  margin-top: 10px;
+  display: block;
+  padding: 2px 6px;
+}
+#sarah-point-coast .g-text-cont .g-text,
+#manzanita-inside .g-text-cont .g-text {
+  text-align: center;
+}
+#sarah-point-coast .g-text-cont .g-text,
+#powell-lake .g-text-cont .g-text {
+  max-width: 250px;
+}
+.g-slide-1 .g-text-cont,
+.g-slide-nopic .g-text-cont {
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.g-slide-0 .g-text-cont {
+  top: 120px;
+  max-width: 240px;
+  font-family: 'Hong Kong Map Type';
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 600px) {
+  .g-slide-0 .g-text-cont {
+    top: 150px;
+    max-width: 360px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+.g-slide-0 .g-text-cont .g-text-inner {
+  background-color: transparent;
+}
+.g-slide-0 .g-text-cont .g-text-inner span:last-child {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0;
+  margin-top: 7px;
+  opacity: 0.7;
+}
+#shuttle .g-slide-background {
+  background-position: bottom left;
+}
+@media screen and (max-width: 600px) {
+  #welcome {
+    background-position: 60% 0;
+  }
+  #food .g-text-cont {
+    top: 30%;
+    bottom: auto;
+  }
+  .g-slide-34 .g-text-cont {
+    top: 56%;
+    bottom: auto;
+  }
+  #sarah-point-coast .g-text-cont {
+    top: 50%;
+  }
+  #chat .g-text-cont {
+    top: 55%;
+  }
+  #related .g-text-cont {
+    top: 50%;
+    bottom: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+#sarah-point-coast .g-slide-background {
+  background-position: bottom right;
+}
+#wednesday-lake .g-slide-background,
+#sarah-point .g-slide-background,
+#sarah-point-coast .g-slide-background {
+  background-position: bottom center;
+}
+.g-slide-light .g-text {
+  text-shadow: none;
+  color: #000;
+}
+.g-slide-light .g-text .g-text-inner {
+  background-color: transparent;
+  padding: 0;
+}
+@media screen and (min-width: 600px) {
+  .g-slide-portrait .g-text-cont {
+    width: 50vw;
+    height: 100%;
+    background-color: #0C0C0C;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  .g-slide-portrait .g-text-cont .g-text-cont-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 80px);
+    max-width: 400px;
+  }
+  .g-slide-portrait .g-slide-background {
+    width: 50%;
+    left: 50%;
+  }
+  .g-slide-portrait.g-slide-light .g-text {
+    text-shadow: none;
+    color: #fff;
+  }
+}
+.g-nav-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  cursor: pointer;
+}
+.g-nav-cont .g-nav {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.g-nav-cont .g-nav.g-hide .g-nav-inner {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+.g-nav-cont .g-nav .g-nav-inner {
+  position: absolute;
+  top: calc(50% - 10px);
+  transform: scaleY(1.5);
+}
+.g-nav-cont .g-nav-left .g-nav-inner {
+  left: 10px;
+}
+.g-nav-cont .g-nav-right {
+  right: 0;
+}
+.g-nav-cont .g-nav-right .g-nav-inner {
+  right: 10px;
+}
+.g-nav-cont.g-noclick {
+  width: 50vw;
+}
+.g-nav-cont.g-noclick .g-nav-right {
+  display: none;
+}
+.g-map {
+  position: fixed;
+  top: 0;
+  left: -4%;
+  width: 100vw;
+  height: 100vh;
+  transform-origin: center;
+  overflow: visible;
+}
+@media screen and (min-width: 600px) {
+  .g-map {
+    left: 0;
+  }
+}
+.g-map svg {
+  overflow: visible;
+}
+path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.g-track-point {
+  stroke-width: 1.5;
+  fill: #FCEE21;
+  stroke: #000;
+}
+.g-map-label {
+  fill: #fff;
+  font-size: 7px;
+  font-family: "Hong Kong Map Type";
+  text-transform: uppercase;
+  transition: opacity 0.2;
+}
+@media screen and (min-width: 600px) {
+  .g-map-label {
+    font-size: 10px;
+  }
+}
+.g-map-label.g-map-label-place text,
+.g-map-label.g-map-label-water text {
+  fill: #727272;
+  text-shadow: 0 0 3px #000, 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.g-map-label.g-hide {
+  opacity: 0;
+}
+.g-map-point {
+  fill: #fff;
+  stroke: #0000;
+  stroke-width: 2;
+}
+.g-map-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.g-map-bg img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.g-map-bg img.fitheight {
+  width: auto;
+  height: 100%;
+}
+.g-chart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 10px);
+  background-image: linear-gradient(to top, #000 50%, rgba(0, 0, 0, 0));
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 600px) {
+  .g-chart {
+    bottom: 60px;
+    left: 60px;
+    background: none;
+  }
+}
+.g-chart svg {
+  overflow: visible;
+}
+.g-chart path.domain {
+  display: none;
+}
+.g-chart .axis line {
+  stroke: rgba(255, 255, 0, 0.1);
+}
+.g-chart .axis text,
+.g-chart .axis-lab {
+  fill: rgba(255, 255, 255, 0.7);
+  font-size: 7px;
+  font-family: "Hong Kong Map Type";
+}
+.g-chart .x.axis line {
+  stroke: rgba(255, 255, 255, 0.3);
+}
+.g-chart .g-chart-point {
+  stroke: #000;
+  stroke-width: 2;
+  fill: #FCEE21;
+}
+.g-minimap {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  width: calc(100vw - 0px);
+  padding: 35px 0 80px 10px;
+  height: 50px;
+  z-index: 999;
+  font-family: "Hong Kong Map Type";
+  text-transform: uppercase;
+  font-size: 10px;
+  text-shadow: 0 0 3px #000, 0 0 3px #000;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.5s;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent 100%);
+}
+@media screen and (min-width: 600px) {
+  .g-minimap {
+    padding-top: 70px;
+  }
+}
+.g-minimap .g-minimap-inner {
+  width: 100%;
+  height: 100%;
+  max-width: 460px;
+  margin: 15px 0 0 0;
+  display: flex;
+}
+.g-minimap.g-active {
+  opacity: 1;
+}
+.g-minimap .g-inner {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+@media screen and (min-width: 600px) {
+  .g-minimap .g-inner {
+    top: 30px;
+    left: 40px;
+  }
+}
+.g-minimap .g-inner .g-total-dist {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.g-minimap .g-inner .g-total-dist.g-active {
+  opacity: 1;
+}
+.g-minimap .g-inner .g-total-dist {
+  opacity: 0;
+}
+.g-minimap .g-inner .g-total-dist.g-active {
+  opacity: 0.7;
+}
+.g-minimap .g-inner td:first-child {
+  padding-right: 10px;
+}
+.g-minimap .g-map-svg {
+  width: calc(100%);
+  height: 100%;
+  transform-origin: top left;
+  transform: rotate(-56deg) translate(-40px, 30px);
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.g-minimap .g-map-svg.g-active {
+  opacity: 1;
+}
+.g-minimap .g-map-svg svg {
+  overflow: visible;
+}
+.g-minimap .g-map-svg svg path {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+.g-minimap .g-map-svg svg .g-mini-dot {
+  fill: #FCEE21;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
+}
+.g-minimap .g-map-svg svg .g-mini-dot-bg {
+  -webkit-animation: pulse 1s infinite;
+  -moz-animation: pulse 1s infinite;
+  fill: none;
+  stroke: #FCEE21;
+  stroke-width: 1;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+.g-minimap .g-map-svg svg text {
+  fill: #fff;
+  text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000;
+  font-size: 7px;
+  transform-origin: top left;
+  text-anchor: middle;
+}
+.g-path-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.4);
+  stroke-width: 1;
+}
+.g-minimap .g-path-bg {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+.g-path {
+  fill: none;
+  stroke: #FCEE21;
+  stroke-width: 2;
+}
+.g-chart .g-path {
+  stroke-width: 1;
+}
+#related {
+  background-color: #0C0C0C;
+}
+#related .g-related-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#related .g-slide-background {
+  background-image: url("https://www.lkk-store.com/lkk-map/a/stories/end.jpg");
+  background-size: cover;
+}
+#related a {
+  text-decoration: none;
+  color: #fff;
+}
+#related .g-text {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: "Hong Kong Map Type";
+}
+@media screen and (min-width: 600px) {
+  #related .g-text {
+    font-size: 15px;
+  }
+}
+#related .g-text-cont {
+  left: 62%;
+  top: 48%;
+  transform: none;
+  background: none;
+}
+@media screen and (min-width: 600px) {
+  #related .g-text-cont {
+    left: 50%;
+    top: 0%;
+    transform: none;
+  }
+}
+#related .g-text-cont-inner {
+  max-width: 100px;
+  line-height: 2;
+}
+@media screen and (min-width: 600px) {
+  #related .g-text-cont-inner {
+    max-width: 200px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="g-header"><a href="https://www.lkk-store.com/lkk-map">
+    <div class="g-header-inner">LKK MAP</div>
+</a></div>
+
+<div class="g-map"></div>
+
+<div class="g-chart"></div>
+
+<div class="g-minimap">
+    <div class="g-minimap-inner">
+        <div class="g-inner">
+            <table>
+                <tr>
+                    <td class="g-day">DAY <span>1</span></td>
+                    <td class="g-dist"><span>0.0 km</span></td>
+                </tr>
+                <tr class="g-total-dist">
+                    <td>TOTAL</td>
+                    <td><span>0 km</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="g-map-svg"></div>
+    </div>
+</div>
+
+<div class="g-slide-cont">
+    <div class="g-slide-cont-inner" style="width: 6000%;">
+        
+        <div id="" class="g-slide g-slide-0       g-slide-nopic " data-slide="0" data-id="" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Hiking the Sunshine Coast Trail<span>July 2024</span></span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-1       g-slide-nopic " data-slide="1" data-id="" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Over five days this summer, I hiked the 180-km Sunshine Coast Trail near Powell River, an area a few hours north of Vancouver.</span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner">I set an ambitious goal of doing the hike in four days. I hiked without stopping until I ran into a thunderstorm. I wrapped myself in all the layers I brought but was still shivering from the cold. I wondered why I put myself through this. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> I took the weather as a sign to slow down. That night I enjoyed my first swim on the trip and lounged around until it got dark, taking in the beautiful wilderness. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> I hiked. I didn't die. I learned a little bit about myself.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="welcome" class="g-slide g-slide-2      g-slide-portrait  " data-slide="2" data-id="welcome" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="welcome"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">On a July morning, I flew from Vancouver to Powell River. From there, I caught a ride with the Sunshine Coast Shuttle, a local company that offers rides to the trailhead.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="lund" class="g-slide g-slide-3        " data-slide="3" data-id="lund" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="lund"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Fun fact: We stopped by a town called Lund to pick up someone. Turns out, Lund is Mile 0 of Highway 101 which stretches all the way to Chile. (Yes! That Chile! In South America!)</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="shuttle" class="g-slide g-slide-4        " data-slide="4" data-id="shuttle" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="shuttle"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">It was another hour or so to the trail head, with some rough off roading at the end. But our driver Mark does this route all the time and we arrived without a hitch.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="sarah-point" class="g-slide g-slide-5      g-slide-portrait  " data-slide="5" data-id="sarah-point" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="sarah-point"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Sarah Point marks the beginning of the trail. I explored this wonderful hut, one of many located along this trail. The huts are all free and are maintined by volunteers. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="sarah-point-coast" class="g-slide g-slide-6      g-slide-portrait   g-slide-start" data-slide="6" data-id="sarah-point-coast" data-km="0.0" data-kmacc="0.0" data-day="1" data-mark="start">
+            <div class="g-slide-background" data-bg="sarah-point-coast"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Taking my first steps on the Sunshine Coast Trail!</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="trailblaze" class="g-slide g-slide-7      g-slide-portrait  " data-slide="7" data-id="trailblaze" data-km="1" data-kmacc="0.5" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="trailblaze"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The trail is marked with these S.C.T. SOUTH wooden signs and orange reflective markers. These signs became my best friends over the course of the next few days. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="tenk" class="g-slide g-slide-8      g-slide-portrait  " data-slide="8" data-id="tenk" data-km="10" data-kmacc="10" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="tenk"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">There are also these kilometer markers. I made it a lil’ ritual to yell out the distance when I ran into these. "10!"</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="wednesday-lake" class="g-slide g-slide-9      g-slide-portrait  " data-slide="9" data-id="wednesday-lake" data-km="13.1" data-kmacc="13.1" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="wednesday-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">A break at Wednesday Lake, one of the many many spots for swimming along the SCT.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="manzanita" class="g-slide g-slide-10        " data-slide="10" data-id="manzanita" data-km="17.3" data-kmacc="17.3" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="manzanita"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">After a bit of climbing, I made it to the next pitstop, the Manzanita Hut. The hut was beautiful, with glass panes facing the vista. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="manzanita-inside" class="g-slide g-slide-11        " data-slide="11" data-id="manzanita-inside" data-km="17.3" data-kmacc="17.3" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="manzanita-inside"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Inside the hut.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="late" class="g-slide g-slide-12        " data-slide="12" data-id="late" data-km="30" data-kmacc="30" data-day="1" data-mark="">
+            <div class="g-slide-background" data-bg="late"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I continued on until late as a light rain began. But as they say: “There is no bad weather! Only bad clothing!” With the July warmth, I didn’t even need my rain jacket. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="rieveley" class="g-slide g-slide-13         g-slide-end-1" data-slide="13" data-id="rieveley" data-km="34.8" data-kmacc="34.8" data-day="1" data-mark="end-1">
+            <div class="g-slide-background" data-bg="rieveley"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I reached Rieveley Pond hut at 11 p.m. after completing more than 34 kilometers. There were already people sleeping at the hut. I set up my tent and crawled in exhausted and quickly fell asleep.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-14         g-slide-end" data-slide="14" data-id="" data-km="34.8" data-kmacc="34.8" data-day="1" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="rieveley-morning" class="g-slide g-slide-15         g-slide-start" data-slide="15" data-id="rieveley-morning" data-km="0" data-kmacc="34.81" data-day="2" data-mark="start">
+            <div class="g-slide-background" data-bg="rieveley-morning"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">In the morning, I met Jarvier from Spain. He was surprised I was up so early after a late night, and even more surprised when I told him I started at Sarah Point yesterday. We chatted a bit but I was ready before him so I said goodbye and set off.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="jarvier" class="g-slide g-slide-16      g-slide-portrait  " data-slide="16" data-id="jarvier" data-km="1.8" data-kmacc="36.61" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="jarvier"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">He caught up with me surprisingly quickly, saying that I motivated him to get going. Over the next two days, we would keep running into each other. He called me the boss of the mountains. “Oh, the boss is here,” he would say when we ran into each other.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="packs" class="g-slide g-slide-17      g-slide-portrait  " data-slide="17" data-id="packs" data-km="1.8" data-kmacc="36.61" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="packs"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I didn’t think we would walk together as much as we did. Jarvier’s pack was maybe triple the size of mine. But to his credit, he kept up with me for quite a bit!</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="sliammon-lake" class="g-slide g-slide-18      g-slide-portrait  " data-slide="18" data-id="sliammon-lake" data-km="7.4" data-kmacc="42.21" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="sliammon-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">That morning we walked past gorgeous lakes and incredible views. Here’s Sliammon Lake.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="savary-island" class="g-slide g-slide-19        " data-slide="19" data-id="savary-island" data-km="14.4" data-kmacc="49.21" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="savary-island"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I loved this view of Savary Island. I would keep hearing interesting stories about this Island over the next few days. It’s been added to the list.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="food" class="g-slide g-slide-20      g-slide-portrait  " data-slide="20" data-id="food" data-km="17" data-kmacc="51.81" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="food"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">After a long morning, I was so relieved to reach the Shingle Mill Pub. This would be my only civilized meal for five days. I'll never get over the strange feeling of walking into a nice place carrying a large pack and covered in dirt.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="powell-lake" class="g-slide g-slide-21        " data-slide="21" data-id="powell-lake" data-km="17.5" data-kmacc="52.31" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="powell-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Back on the trail with a beautiful view of Powell Lake.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="inland-lake" class="g-slide g-slide-22      g-slide-portrait  " data-slide="22" data-id="inland-lake" data-km="31.4" data-kmacc="66.21" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="inland-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Here’s Inland Lake, where people were paddleboarding, swimming and lounging. For a moment, it was a perfectly lovely afternoon, minus the 600-meter climb up to Confederation Lake awaiting me.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="confederation-lake-sign" class="g-slide g-slide-23      g-slide-portrait  " data-slide="23" data-id="confederation-lake-sign" data-km="35.7" data-kmacc="70.51" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg="confederation-lake-sign"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">A British guy, who had come down from Confederation Lake on a day hike, cheerily said it was just another 6 kilometers to the hut, which left me feeling confident about reaching soon.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-24       g-slide-nopic " data-slide="24" data-id="" data-km="38.2" data-kmacc="73.01" data-day="2" data-mark="">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Before long, the trail began winding upwards, getting steeper and steeper, deeper and deeper into a thick forest. Jarvier, who started the climb with me, was soon nowhere to be found behind. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> This part of the trail almost drove me insane. Every time I checked the map I looked devastatingly close to reaching. But the trail kept turning back and forth, switchbacks upon switchbacks. It felt never ending. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="confederation-lake-shit" class="g-slide g-slide-25         g-slide-end-1" data-slide="25" data-id="confederation-lake-shit" data-km="42.57" data-kmacc="77.38" data-day="2" data-mark="end-1">
+            <div class="g-slide-background" data-bg="confederation-lake-shit"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Finally around 9:30 p.m., moments before I was about to pull out my headlamp (and possibly all my hair), I reached Confederation Lake.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-26         g-slide-end" data-slide="26" data-id="" data-km="42.57" data-kmacc="77.38" data-day="2" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="confederation-lake" class="g-slide g-slide-27         g-slide-start" data-slide="27" data-id="confederation-lake" data-km="0" data-kmacc="77.38" data-day="3" data-mark="start">
+            <div class="g-slide-background" data-bg="confederation-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">For two nights, I had reached in the dark. It was only in the morning that I get a good look at the hut I slept in.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-28       g-slide-nopic  g-slide-start" data-slide="28" data-id="" data-km="0" data-kmacc="77.38" data-day="3" data-mark="start">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I chatted with the 59-year-old Chicagoan, who was already asleep in the hut when I arrived last night. We talked about Chicago and backpacking as we went about our morning routine. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> Meanwhile, Jarvier, who arrived even later than me last night, ate breakfast and packed with remarkable speed and set off before either of us. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> I spent some time taping up the blisters on my feet before I set off. Everything hurts after two long days, but somehow my body agrees to keep going.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="tinhat-up" class="g-slide g-slide-29        " data-slide="29" data-id="tinhat-up" data-km="10.5" data-kmacc="87.88" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="tinhat-up"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The third day involves a trek to the 1,100-meter Tin Hat mountain. The hike up was brutal, straight up the side of the mountain through a thick forest. There was no wind and the bugs were incessant.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="tinhat-77" class="g-slide g-slide-30      g-slide-portrait  " data-slide="30" data-id="tinhat-77" data-km="11.5" data-kmacc="88.88" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="tinhat-77"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">This was where I came up with the idea of using “push mode,” something I channeled from Formula One. I always wondered what it meant when drivers were told to “push.” Surely they were going as fast as they can already. What more can they do? What do they mean “push”?</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="tinhat-78" class="g-slide g-slide-31      g-slide-portrait  " data-slide="31" data-id="tinhat-78" data-km="12.5" data-kmacc="89.88" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="tinhat-78"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">But on this trip, this concept clicked for me. It turns out there was always more to “push” out of myself. When faced with a big climb, I would tell myself “ok push mode” and I would put my head down taking one step after the other, no matter how hard it got. Before I knew it, I would have made it one kilometer further.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="tinhat" class="g-slide g-slide-32        " data-slide="32" data-id="tinhat" data-km="15.5" data-kmacc="92.88" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="tinhat"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">At the top of Tin Hat mountain.</span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner">Jarvier arrived about an hour after me, and helped take possibly the only photo of me on the whole trip. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="rain" class="g-slide g-slide-33      g-slide-portrait  " data-slide="33" data-id="rain" data-km="21.9" data-kmacc="99.28" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="rain"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">As I descended the mountain, it started to rain. A drizzle quickly turned into a full-on thunderstorm. I decided to stop and wait out the rain while I was in a relatively thick part of a forest.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-34       g-slide-nopic " data-slide="34" data-id="" data-km="21.9" data-kmacc="99.28" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The temperature dropped quickly. I wanted to check the weather on my phone, but there was no service. For the first time on the trail, I felt scared. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> I put on my down jacket and rain jacket, zipping up and pulling on the hoods tightly. I cursed myself for not bringing more warm layers as I shivered in the cold. I imagined all the scenarios in which I could die. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> I wondered why I push myself so hard. I wondered what I was doing there. After some internal battle, I decided to take it easy, and made a new plan for a five-day trip instead of four. This way I would end my night at Elk Lake hut which was only 5 km away, instead of going to Walt Hill which was even further. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="elk-lake-sun" class="g-slide g-slide-35      g-slide-portrait  " data-slide="35" data-id="elk-lake-sun" data-km="32.15" data-kmacc="109.53" data-day="3" data-mark="">
+            <div class="g-slide-background" data-bg="elk-lake-sun"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I set off again when the rain lightened. The sun even came out to play for a bit. Life was full of hope again!</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="elk-lake" class="g-slide g-slide-36         g-slide-end-1" data-slide="36" data-id="elk-lake" data-km="32.15" data-kmacc="109.53" data-day="3" data-mark="end-1">
+            <div class="g-slide-background" data-bg="elk-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I made it to Elk Lake hut with a few hours of sunlight left. For the first time since I started my trip, I enjoyed a swim, lounged around, and went to bed clean and refreshed.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-37         g-slide-end" data-slide="37" data-id="" data-km="32.15" data-kmacc="109.53" data-day="3" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="elk-lake-morning" class="g-slide g-slide-38         g-slide-start" data-slide="38" data-id="elk-lake-morning" data-km="0" data-kmacc="109.53" data-day="4" data-mark="start">
+            <div class="g-slide-background" data-bg="elk-lake-morning"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">In the morning, I caught up with Jarvier who arrived after I had already sleep. Turns out he got caught in the rain on top of Tin Hat. All his stuff got wet. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> Between the rain last night and the thick morning fog, nothing got dry. I put on my damp clothes, and set off. I said goodbye to Jarvier again, this time for real.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="blue-skies" class="g-slide g-slide-39        " data-slide="39" data-id="blue-skies" data-km="11.8" data-kmacc="121.33" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="blue-skies"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I had a hard time getting warm that morning as the sun hid behind thick clouds. I hustled down the mountain, wanting to get away from that lingering feeling of fear from yesterday. Finally around midday, we were back to blue skies and full sun. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="logging-road" class="g-slide g-slide-40      g-slide-portrait  " data-slide="40" data-id="logging-road" data-km="14.4" data-kmacc="123.93" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="logging-road"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">At some point, I got on a logging road and departed from the trail. The SCT has been one of the most well marked trails I’ve been on. But I couldn’t find any signs in this part, I even circled back a few times. When I looked at the blue dot on my phone, it says I wasn’t on any road at all. I started to worry.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="logging-road-sign" class="g-slide g-slide-41      g-slide-portrait  " data-slide="41" data-id="logging-road-sign" data-km="18.3" data-kmacc="127.83" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="logging-road-sign"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">After a confusing hour or so, I was so relieved when I rejoined the trail. From then on, every time I saw the “S.C.T. South” sign, I chanted the name of the trail in joy. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner">  I later learned that logging companies move roads around as they work on different areas, rendering the maps useless.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="river" class="g-slide g-slide-42      g-slide-portrait  " data-slide="42" data-id="river" data-km="23.4" data-kmacc="132.93" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="river"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Later, as I reached Lois Lake, I was faced with a river crossing! I carefully stepped across, balancing on large rocks. Right as I thought I had made it safely across, I slipped and my right leg was submerged into the cold river water. Brrrrr.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="lois-lake" class="g-slide g-slide-43        " data-slide="43" data-id="lois-lake" data-km="25.8" data-kmacc="135.33" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="lois-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The trail followed the banks of Lois Lake with great views. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="chicken" class="g-slide g-slide-44      g-slide-portrait  " data-slide="44" data-id="chicken" data-km="27.8" data-kmacc="137.33" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="chicken"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">And I saw some wild chickens!</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="elephant-lake" class="g-slide g-slide-45        " data-slide="45" data-id="elephant-lake" data-km="40.8" data-kmacc="150.33" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="elephant-lake"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The hike up towards Mount Troubridge was much nicer compared to Confederation Lake and Tin Hat, more straightforward and more open. Here’s Elephant Lake, which sits near the top of the mountain.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="troubridge-climb" class="g-slide g-slide-46      g-slide-portrait  " data-slide="46" data-id="troubridge-climb" data-km="42.7" data-kmacc="152.23" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="troubridge-climb"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Towards the top of Mount Troubridge, the last big climb of the SCT, I put myself in “push mode.”</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="troubridge-hut" class="g-slide g-slide-47      g-slide-portrait  " data-slide="47" data-id="troubridge-hut" data-km="43.59" data-kmacc="153.12" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="troubridge-hut"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The Mount Troubridge Hut was perfectly nestled in the trees. Sam and Sarah (both British!) welcomed me as I walked into the hut breathless from the climb. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="sam" class="g-slide g-slide-48        " data-slide="48" data-id="sam" data-km="43.59" data-kmacc="153.12" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="sam"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I cleaned myself up at the nearby Jocelyn Pond. Sam came by to filter some water. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="chat" class="g-slide g-slide-49       g-slide-nopic " data-slide="49" data-id="chat" data-km="43.59" data-kmacc="153.12" data-day="4" data-mark="">
+            <div class="g-slide-background" data-bg="chat"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Sarah was doing the trail over nine days, to train for the Te Araroa in New Zealand. Sam was doing day hikes around the area. We talked about backpacking, Vancouver, and everything in between. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> After a while, Sam asked, “Have we met before?” Turns out, he was the British guy from two days ago, before the brutal hike up to Confederation Lake. He apologized that his comment wasn’t a fair warning about how hard the rest of the hike was. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> As we chatted, Sarah also realized she shared a shuttle with the Chicagoan I met at Confederation Lake. We had a good laugh about how we all ran into the same people along the trail.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-50       g-slide-nopic  g-slide-end-1" data-slide="50" data-id="" data-km="43.59" data-kmacc="153.12" data-day="4" data-mark="end-1">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I felt grateful that I didn’t stick with my four day plan, or else I wouldn’t be having this truly lovely conversation. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> As it got dark, we retreated into our sleeping bags on the loft and I drifted into a peaceful sleep. What a life it is to go to bed as the sun sets, and rise as the sun rises. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-51         g-slide-end" data-slide="51" data-id="" data-km="43.59" data-kmacc="153.12" data-day="4" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="troubridge-summit" class="g-slide g-slide-52      g-slide-portrait   g-slide-start" data-slide="52" data-id="troubridge-summit" data-km="0" data-kmacc="153.12" data-day="5" data-mark="start">
+            <div class="g-slide-background" data-bg="troubridge-summit"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The last day was beautifully uneventful. I rose early and was the first off. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="troubridge-view" class="g-slide g-slide-53        " data-slide="53" data-id="troubridge-view" data-km="1.5" data-kmacc="154.62" data-day="5" data-mark="">
+            <div class="g-slide-background" data-bg="troubridge-view"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">I climbed the rest of the way to the summit of Troubridge and took in the view. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> Then it was a long, long, long descent down to the coast where I would follow it to my final destination, Saltery Bay.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="fairview-bay" class="g-slide g-slide-54      g-slide-portrait  " data-slide="54" data-id="fairview-bay" data-km="11.4" data-kmacc="164.52" data-day="5" data-mark="">
+            <div class="g-slide-background" data-bg="fairview-bay"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">After a brutal descent, I stopped at the Fairview Bay Hut for one last break. With only 10 kilometers left, I didn’t have to do any more mental math about mileage, water or food anymore.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="ferry" class="g-slide g-slide-55        " data-slide="55" data-id="ferry" data-km="17.3" data-kmacc="170.42" data-day="5" data-mark="">
+            <div class="g-slide-background" data-bg="ferry"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The coast was beautiful and peaceful. I let out a small welp when I saw the ferry in the distance, a little bewildered that I was finally headed home. </span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="end" class="g-slide g-slide-56         g-slide-end-1" data-slide="56" data-id="end" data-km="18.1" data-kmacc="171.22" data-day="5" data-mark="end-1">
+            <div class="g-slide-background" data-bg="end"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">Before I knew it, I had reached the end of the trail.</span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-57         g-slide-end" data-slide="57" data-id="" data-km="18.1" data-kmacc="171.22" data-day="5" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="" class="g-slide g-slide-58       g-slide-nopic  g-slide-end" data-slide="58" data-id="" data-km="18.1" data-kmacc="171.22" data-day="5" data-mark="end">
+            <div class="g-slide-background" data-bg=""></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    
+                        <p class="g-text"><span class="g-text-inner">The Sunshine Coast Trail was so much harder than I had expected. I pushed myself with a harsh schedule. It rained and thundered. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> But in these five days, I learned about myself, about my limits, about what I cared about, and what I’m willing to let go. </span></p>
+                    
+                        <p class="g-text"><span class="g-text-inner"> <em>P.S. Thank you, Julia, for giving me a ride home across two ferries, and all the way back to Vancouver. It’s truly rare that one enjoys spending six hours with a complete stranger. </em></span></p>
+                    
+                
+                </div>
+            </div>
+
+            
+        </div>
+        
+        <div id="related" class="g-slide g-slide-59 g-slide-last     g-slide-portrait  " data-slide="59" data-id="related" data-km="18.1" data-kmacc="171.22" data-day="5" data-mark="">
+            <div class="g-slide-background" data-bg="related"></div>
+            <div class="g-text-cont">
+                
+                <div class="g-text-cont-inner">
+                
+                    <p class="g-text"><span class="g-text-inner">Read more on LKK MAP</span></p>
+                
+                </div>
+            </div>
+
+            
+                <a href="https://lkk-store.com/lkk-map">
+                <div class="g-related-link"></div>
+                </a>
+            
+        </div>
+        
+    </div>
+
+</div>
+
+<div class="g-nav-cont">
+    <div class="g-nav g-nav-left" data-dir="left">
+        <div class="g-nav-inner"><</div>
+    </div>
+    <div class="g-nav g-nav-right" data-dir="right">
+        <div class="g-nav-inner">></div>
+    </div>
+</div><script src="https://www.lkk-store.com/lkk-map/d3_.js"></script>
+<script src="https://www.lkk-store.com/lkk-map/topojson.min.js"></script>
+
+<script>
+let usehash = false;
+
+function convertToSlug(Text) {
+    return Text.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "");
+}
+
+let slidecont = d3.select(".g-slide-cont-inner");
+let maxslide = +d3.select(".g-slide-last").attr("data-slide");
+let curslide = 0;
+let prevmark = "";
+let minimap = d3.select('.g-minimap');
+let prevkm, prevkmacc;
+let lastkm = +d3.select(".g-slide-" + curslide).attr("data-km");
+let lastkmacc = +d3.select(".g-slide-" + curslide).attr("data-kmacc");
+let animating;
+
+let daytotal = [
+    34.81,
+    77.38,
+    109.53,
+    153.12,
+    171.22
+]
+
+let dayeach = [
+    34.8,
+    42.57,
+    32.15,
+    43.59,
+    18.1
+]
+
+let days = [1,2,3,4,5];
+
+let route, routef;
+
+d3.loadData(
+    "_assets/box.json",
+    "_assets/box-mobile.json",
+    "_assets/route-byday.json",
+    "_assets/maplabels.json",
+    "_assets/chart-byday.json"
+, function (err, res){
+
+    let box = res[0];
+    let boxf = topojson.feature(box, box.objects.box);
+    let boxmobile = res[1];
+    let boxmobilef = topojson.feature(boxmobile, boxmobile.objects["box-mobile"]);
+    route = res[2];
+    routef = topojson.feature(route, route.objects.route);
+    let places = res[3];
+    let chartdata = res[4];
+    let isMobile = innerWidth < 600;
+
+    let labelsettings = {
+        "Sarah Point": {
+            type: "point",
+            align: "middle",
+            offset: isMobile ? [0,-20] : [0,-30],
+            overall: true
+        },
+        "Tin Hat Mountain": {
+            type: "mountain",
+            align: "start",
+            text: ["TIn Hat", "Mountain"],
+            offset: isMobile ? [10,-18] : [12,-20],
+            day: [3],
+            overall: true
+        },
+        "Mt. Troubridge": {
+            type: "mountain",
+            align: "start",
+            offset: isMobile ? [0,-20] : [0,-26],
+            day: [4,5],
+            overall: true
+        },
+        "Lund": {
+            type: "place",
+            overall: true
+        },
+        "Powell River": {
+            type: "place",
+            overall: true
+        },
+        "Saltery Bay": {
+            type: "point",
+            align: "end",
+            offset: isMobile ? [-6,8] : [-10,0],
+            overall: true
+        },
+        "Lois Lake": {
+            type: "place",
+            text: ["Lois Lake"],
+            overall: true
+        },
+        "Rieveley Pond": {
+            type: "point",
+            align: "start",
+            offset: isMobile ? [5,-15] : [0,-25],
+            day: [1,2],
+            offset_day2: isMobile ? [-5,-18] : [-5,-25]
+        },
+        "Confederation Lake": {
+            type: "point",
+            align: "start",
+            offset: isMobile ? [0,-18] : [0,-25],
+            day: [2,3],
+            align_day3: "end",
+            offset_day3: isMobile ? [-4,-15] : [-2,-20]
+        },
+        "Elk Lake": {
+            type: "point",
+            align: "start",
+            text: ["Elk Lake"],
+            offset: isMobile ? [5,10] : [0,0],
+            day: [3,4],
+            offset_day3: isMobile ? [0,12] : [0,15],
+            align_day4: "middle",
+            offset_day4: [0,-10]
+        }
+    }
+
+    function drawChart() {
+        console.log("running draw chart");
+
+        let isMobile = innerWidth < 600;
+        let cont = d3.select(".g-chart").html("");
+        let chartw = isMobile ? innerWidth - 70 : 300;
+        let charth = 50;
+        let margin = {top: 0, right: 0, bottom: 0, left: 40};
+        let chartw_adj = chartw - margin.left - margin.right;
+        let charth_adj = charth - margin.top - margin.bottom;
+
+        let chartsvg = cont.append("svg").attr("width", chartw).attr("height", charth).append("g").translate([margin.left, margin.top]);
+
+        let offset = [];
+        let offsetcalc = 0;
+        chartdata.forEach(function(d){
+            offsetcalc += d[d.length - 1][1]
+            offset.push(offsetcalc);
+        })
+
+        let x = d3.scaleLinear().range([0,chartw_adj]).domain([0,160])
+        let y = d3.scaleLinear().range([charth_adj,0]).domain([0,1400])
+        let line = d3.line()
+            .curve(d3.curveBasis)
+            .x(d => x(d[1])).y(d => y(d[0]))
+
+        let yAxis = d3.axisLeft(y)
+            .tickSize(chartw)
+            .tickValues([400,800,1200])
+            .tickFormat(d => d == 1200 ? "1,200M" : d)
+    
+        let xAxis = d3.axisBottom(x)
+            .tickSize(3)
+            .tickValues([50,100,150])
+            .tickFormat(d => d == 150 ? "150 KM" : d)
+
+        chartsvg.append("g.y.axis").translate([chartw,0]).call(yAxis);
+        chartsvg.append("g.x.axis").translate([0,charth_adj]).call(xAxis);
+
+        chartsvg.append("text.axis-lab").translate([0,-5]).attr("text-anchor", "end").text("ELEV.")
+
+        chartsvg.appendMany("path.g-path-bg", chartdata)
+            .translate((d,i) => i == 0 ? [0,0] : [x(offset[i-1]),0])
+            .attr("d", d => line(d))
+
+        chartsvg.appendMany("path", chartdata)
+            .attr("class", (d,i) => 'g-path g-path-' + i)
+            .translate((d,i) => i == 0 ? [0,0] : [x(offset[i-1]),0])
+            .attr("d", d => line(d))
+    }
+
+    function drawmap() {
+
+        console.log("running draw map");
+
+        let isMobile = innerWidth < 600;
+        let boxuse = innerWidth < 600 ? boxmobilef : boxf;
+        let cont = d3.select(".g-map").html("");
+        let width = isMobile ? window.innerWidth*1.1 : window.innerWidth;
+        let height = window.innerHeight;
+        let mapext = isMobile ? "mobile" : "desktop";
+        let bgcont = cont.append("div.g-map-bg")
+        let bg = bgcont.append("img").attr("src", `images/map/map-base_${mapext}.jpg`);
+
+        let svgouter = cont.append("svg").attr("width", width).attr("height", height);
+        let svg = svgouter.append("g").translate([0,0])
+        let projection = d3.geoIdentity().reflectY(true).fitSize([width, height], boxuse);
+        let path = d3.geoPath().projection(projection);
+
+        let boxpath = svg.appendMany("path", boxuse.features)
+            .attr("d", path)
+            .style("fill", "none")
+
+        let boxbb = boxpath.node().getBBox();
+        let boxw = boxbb.width;
+        let boxh = boxbb.height;
+        bgcont.style("width", boxw + "px").style("height", boxh + "px").style("top", boxbb.y + "px");
+
+        if (boxw < innerWidth && innerWidth > 600) {
+            bg.style("left", 0)
+            bg.style("transform", "translate(" + (innerWidth/2 - boxw/2) + "px, -50%)");
+        }
+
+        svg.appendMany("path.g-path-bg", topojson.feature(route, route.objects.route).features)
+            .attr("d", path)            
+
+        topojson.feature(places, places.objects.maplabels).features.forEach(function(d){
+
+            let setting = labelsettings[d.properties.name];
+            let type = setting ? setting.type : d.properties.description ? d.properties.description.toLowerCase() : "" ;
+            let classadd = setting && setting.day ? '.g-day-' + setting.day.join(".g-day-") : '.g-always-show';
+            let overall = setting && setting.overall ? '.g-show-overall' : '';
+            let labelid = convertToSlug(d.properties.name);
+            let textg = svg.append("g.g-map-label.g-map-label-" + type + classadd + overall)
+                .attr("id", "label-" + labelid)
+                .translate(path.centroid(d))
+
+            let text = textg.append("text");
+            let align = setting && setting.align ? setting.align : "middle"
+            let offset = setting && setting.offset ? setting.offset : null;
+
+            text.attr("text-anchor", align);
+            text.translate(offset ? offset : align == "start" ? [5,0] : align == "end" ? [-5,0] : [0,0])
+
+            let tspans = setting && setting.text ? setting.text : d.properties.name.split(" ");
+
+            tspans.forEach(function(t,i){
+                text.append("tspan")
+                    .attr("x", 0)
+                    .attr("y", isMobile ? i*10 : i*14)
+                    .text(t)    
+            })
+            
+            if (setting && type  == "point") {
+                textg.append("circle.g-map-point")
+                    .attr("r", 2)  
+            }
+
+            if (setting && type == "mountain") {
+                let mtw = 10;
+                let mth = 7;
+                textg.append("path")
+                    .attr("d", `M0,0 L${mtw},0 L${mtw/2},-${mth}, L0,0 L0,0`)
+                    .attr("fill", "#fff")
+                    .attr("stroke", "#000")
+            }
+        })
+
+        let p = svg.appendMany("path", topojson.feature(route, route.objects.route).features)
+            .attr("class", (d,i) => "g-path g-path-" + i)
+            .attr("d", path);
+    }
+
+    function drawMinimap() {
+        console.log("running mini map");
+
+        let sel = d3.select(".g-map-svg");
+        let width = sel.node().getBoundingClientRect().width;
+        let height = sel.node().getBoundingClientRect().width;
+
+        let svg = sel.append("svg").attr("width", width).attr("height", height)
+        let routef = topojson.feature(route, route.objects.route);
+        let projection = d3.geoIdentity().reflectY(true).fitSize([width, height], routef);
+        let path = d3.geoPath().projection(projection);
+        
+        svg.appendMany("path.g-path-bg", routef.features)
+            .attr("d", path);
+        
+        svg.appendMany("path", routef.features)
+            .attr("class", (d,i) => "g-path g-minimap-path-" + i)
+            .attr("d", path)
+        
+        days.forEach(function(day,i){
+            let p = svg.select(".g-minimap-path-" + i);
+            let totalLength = p.node().getTotalLength();
+            p
+                .attr("stroke-dasharray", totalLength + " " + totalLength)
+                .attr("stroke-dashoffset", totalLength)
+        })
+        
+        let startpt = svg.select(".g-minimap-path-0").node().getPointAtLength(0);
+
+        let lastpath = sel.select(".g-minimap-path-4");
+        let endpt = lastpath.node().getPointAtLength(lastpath.node().getTotalLength());
+
+        let pulsedot = svg.append("g.g-mini-dot")
+            .translate([startpt.x-2, startpt.y-2]);;
+
+            pulsedot.append("circle.g-mini-dot-bg")
+            .attr("r", 4)
+
+        svg.append("circle.g-mini-dot")
+            .attr("r", 4)
+            .translate([startpt.x-2, startpt.y-2]);
+        
+        let starttxt = svg.append("text")
+            .attr("transform", `translate(${startpt.x - 15}, ${startpt.y + 5}) rotate(56)`)
+        
+        starttxt.append("tspan")
+            .attr("x", 0)
+            .attr("y", 0)
+            .text("SARAH")
+        
+        starttxt.append("tspan")
+            .attr("x", 0)
+            .attr("y", 10)
+            .text("POINT")
+        
+        let endtxt = svg.append("text")
+            .attr("transform", `translate(${endpt.x - 10}, ${endpt.y + 8}) rotate(56)`)
+        
+        endtxt.append("tspan")
+            .attr("x", 0)
+            .attr("y", 0)
+            .text("SALTERY")
+        
+        endtxt.append("tspan")
+            .attr("x", 0)
+            .attr("y", 10)
+            .text("BAY")
+    }
+    
+    function updateMinimap(animate) {
+
+        console.log("update mini map, animate: ", animate);
+
+        let el = d3.select(".g-slide-" + curslide);
+        let km = +el.attr("data-km");
+        let kmacc = +el.attr("data-kmacc");
+        let day = el.attr("data-day");
+        let mark = el.attr("data-mark");
+        let p = d3.select(".g-minimap .g-minimap-path-" + (day-1));
+        let dot = d3.selectAll(".g-minimap .g-mini-dot");
+
+        if (mark == "start" && prevmark == "end") {
+            d3.select(".g-dist span").text("0.0 km");
+            days.forEach(function(day,i){
+                let p = d3.select(".g-minimap .g-minimap-path-" + i);
+                let totalLength = p.node().getTotalLength();
+                p.attr("stroke-dasharray", totalLength + " " + totalLength)
+                    .attr("stroke-dashoffset", totalLength)
+            })
+            let dayp = d3.select(".g-minimap .g-minimap-path-" + (day-1));
+            let startp = dayp.node().getPointAtLength(0);
+            d3.selectAll(".g-minimap .g-mini-dot").translate([startp.x,startp.y])
+            let point = p.node().getPointAtLength(0);
+            dot.transition()
+                .duration(0)
+                .style("transform", "translate(" + point.x + "px," + point.y + "px)");
+            lastkm = 0;
+        } else if (mark != "end") {
+            if (p && p.node()) {
+                let totalLength = p.node().getTotalLength();
+                let pct = (km/dayeach[day-1]);
+                let lastpct = (lastkm/dayeach[day-1]);
+
+                if (!animate && animating) {
+                    d3.select(".g-minimap").transition()
+                        .duration(0)
+                        .tween("pathTween", function() { return pathTween(p)});
+                } else if (pct != lastpct) {
+                    d3.select(".g-minimap").transition()
+                        .duration(Math.abs((lastpct - pct))*3000)
+                        .tween("pathTween", function() { return pathTween(p)});
+                } else {
+                    if (mark == "end-1" && prevmark == "end") {
+                        p.attr("stroke-dasharray", 0)
+                        let point = p.node().getPointAtLength(p.node().getTotalLength())
+                        dot.translate([point.x, point.y])     
+                        d3.select(".g-dist span").text((km).toFixed(1) + " km");                   
+                    }
+                }
+
+                function pathTween(path){
+                    return function(t){
+                        let pctuse = (pct - lastpct)*t + lastpct;
+                        p.transition()
+                            .duration(0)
+                            .ease(d3.easeLinear)
+                            .attr("stroke-dashoffset", totalLength*(1-pctuse))
+
+                        var point = p.node().getPointAtLength(totalLength*(pctuse));
+                        dot.transition()
+                            .duration(0)
+                            .ease(d3.easeLinear)
+                            .style("transform", "translate(" + point.x + "px," + point.y + "px)");
+
+                        let kmuse = lastkm > km ? lastkm - (lastkm - km)*t : (km - lastkm)*t + lastkm;
+                        d3.transition().duration(0).select(".g-dist span").text((kmuse).toFixed(1) + " km");
+                        animating = true;
+                        if (t == 1) {
+                            lastkm = km;
+                            lastkmacc = kmacc;
+                            animating = false;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+
+    function updateMap(day) {
+
+        console.log("update map for day ", day);
+
+        let mapcont = d3.select(".g-map");
+        let curslideEl = d3.select(".g-slide-" + curslide);
+        let mark = curslideEl.attr("data-mark");
+        
+        days.forEach(function(d){
+            d3.selectAll(".g-path-" + (d-1)).each(function(e,i){
+                let p = d3.select(this);
+                let totalLength = p.node().getTotalLength();
+                p.transition().duration(0).attr("stroke-dasharray", totalLength + " " + totalLength)
+                    .attr("stroke-dashoffset", totalLength)
+            })
+        })
+
+        if (mark != "start") {
+            mapcont.selectAll(".g-map-label").classed("g-hide", true);
+            mapcont.selectAll(".g-map-label.g-always-show").classed("g-hide", false);
+            mapcont.selectAll(".g-map-label.g-day-" + day).classed("g-hide", false);
+        }
+
+        let labelsKey = Object.keys(labelsettings);
+        if (curslide == 0) {
+            days.forEach(function(d){
+                d3.selectAll(".g-path-" + (d-1)).each(function(e,i){
+                    let p = d3.select(this);
+                    p.transition()
+                        .delay((d-1)*2000)
+                        .duration(2000)
+                        .attr("stroke-dashoffset", 0);
+                })
+            })
+            mapcont.selectAll(".g-map-label.g-show-overall").classed("g-hide", false);
+            labelsKey.forEach(function(d){
+                let id = convertToSlug(d);
+                let el = mapcont.select("#label-" + id + " text");
+                if (labelsettings[d].offset) {
+                    el.translate(labelsettings[d].offset)
+                }
+
+                if (labelsettings[d].align) {
+                    el.attr("text-anchor", labelsettings[d].align)
+                }
+            })
+        } else if (mark == "end") {
+            day = !day ? 1 : day;
+            let p = mapcont.select(".g-path-" + (day-1));
+            let totalLength = p.node().getTotalLength();
+            p
+                .attr("stroke-dasharray", totalLength + " " + totalLength)
+                .attr("stroke-dashoffset", totalLength)
+                .transition()
+                .duration(2000)
+                .attr("stroke-dashoffset", 0);
+
+            // chart stuff
+            let chartcont = d3.select(".g-chart");
+            let chartp = chartcont.select(".g-path-" + (day-1));
+            let charttotalLength = chartp.node().getTotalLength();
+            chartp.attr("stroke-dasharray", charttotalLength + " " + charttotalLength)
+            .attr("stroke-dashoffset", charttotalLength)
+            .transition()
+                .duration(2000)
+                .attr("stroke-dashoffset", 0);
+
+            labelsKey.forEach(function(d){
+                let id = convertToSlug(d);
+                let el = mapcont.select("#label-" + id + " text");
+                if (labelsettings[d]["offset_day" + day]) {
+                    el.translate(labelsettings[d]["offset_day" + day])
+                }
+
+                if (labelsettings[d]["align_day" + day]) {
+                    el.attr("text-anchor", labelsettings[d]["align_day" + day])
+                }
+            })
+        }
+    }
+
+
+    function checkkeys() {
+        if (curslide == 0) {
+            d3.select(".g-nav-left").classed("g-hide", true);
+        } else if (curslide == maxslide) {
+            d3.select(".g-nav-left").classed("g-hide", false);
+            d3.select(".g-nav-right").classed("g-hide", true);
+        }  else {
+            d3.select(".g-nav-left").classed("g-hide", false);
+            d3.select(".g-nav-right").classed("g-hide", false);
+        }
+    }
+
+    function gotoslide(slide) {
+        // something to kill all the transforms
+
+        updateMinimap(false);
+
+        slidecont.style("transform", "translate(-" + slide*window.innerWidth + "px,0)");
+        curslide = +slide;
+        checkkeys();
+
+        if (usehash) {
+            history.pushState(null,null,'#' + curslide);
+        }
+
+        let curslideEl = d3.select(".g-slide-" + curslide);
+        let slideElBg = curslideEl.select(".g-slide-background");
+        let slideId = curslideEl.attr("data-id");
+        let mark = curslideEl.attr("data-mark");
+        let day = curslideEl.attr("data-day");
+        let km = +curslideEl.attr("data-km");
+        let kmacc = +curslideEl.attr("data-kmacc");
+
+        minimap.classed("g-active", slideId == "related" ? false : slide > 1 ? true : false);
+        if (slideElBg.attr("data-bg") && slideElBg.style("background-image") == "none") {
+            slideElBg.style("background-image", `url(images/${isMobile ? slideElBg.attr("data-bg") + "-m.jpg" : slideElBg.attr("data-bg") + ".jpg"}`);
+        }
+    
+        d3.select(".g-map-svg").classed("g-active", mark == "end" ? false : true);
+
+        if (curslide == 0) {
+            updateMap();
+        } else if (mark == "end") {
+            updateMap(day);
+        } else {
+            updateMinimap(true);
+            
+            days.forEach(function(d){
+                d3.selectAll(".g-map .g-path-" + (d-1)).each(function(e,i){
+                    let p = d3.select(this);
+                    let totalLength = p.node().getTotalLength();
+                    p.transition().duration(0).attr("stroke-dasharray", totalLength + " " + totalLength)
+                        .attr("stroke-dashoffset", totalLength)
+                })
+            })
+        }
+        
+
+        d3.select(".g-day span").text(day)
+        if (day != '1' || mark == "end") {
+            d3.select(".g-total-dist").classed("g-active", true);
+            d3.select(".g-total-dist span").text((kmacc.toFixed(1)) + " km");
+        } else if (day == '1') {
+            d3.select(".g-total-dist").classed("g-active", false);
+        }
+
+        if (mark == "end" || mark == "end-1" || mark == "start") {
+            d3.select(".g-dist span").transition().duration(0).text(((+km).toFixed(1)) + " km");
+        }
+
+        prevmark = mark;
+        prevkm = km;
+        prevkmacc = kmacc;
+        if (slideId == "related") {
+            d3.select(".g-nav-cont").classed("g-noclick", true);
+        } else {
+            d3.select(".g-nav-cont").classed("g-noclick", false);
+        }
+    }
+
+    //  clicker
+
+    d3.selectAll(".g-nav").on("click", function(){
+        d3.select(".g-slide-cont-inner").classed("g-animate", true);
+        let el = d3.select(this);
+        let dir = el.attr("data-dir");
+        curslide = dir == "left" ? +curslide - 1 : +curslide + 1;
+
+        if (curslide < 0) { curslide = 0 };
+        if (curslide > maxslide) { curslide = maxslide };
+        gotoslide(curslide);
+    })
+
+    // arrow key
+
+    document.onkeydown = checkKey;
+
+    function checkKey(e) {
+        e = e || window.event;
+        if (e.keyCode == '37') {
+            d3.select(".g-slide-cont-inner").classed("g-animate", true);
+            gotokey = curslide - 1;
+            if (gotokey < 0) { gotokey = 0 };
+
+            if (gotokey != curslide) {
+                curslide = gotokey;
+                gotoslide(curslide);   
+            }
+        } else if (e.keyCode == '39') {
+            d3.select(".g-slide-cont-inner").classed("g-animate", true);
+            gotokey = curslide + 1;
+            if (gotokey > maxslide) { gotokey = maxslide };
+
+            if (gotokey != curslide) {
+                curslide = gotokey;
+                gotoslide(curslide);
+            }
+       
+        }
+    }
+    
+    drawChart();
+    drawmap();
+    drawMinimap();
+    checkkeys();
+
+    if (usehash) {
+        if (window.location.hash) {
+            let slide = window.location.hash.replace("#", "");
+            if (slide != 0) {
+                lastkm = +d3.select(".g-slide-" + (slide-1)).attr("data-km");
+            }
+            gotoslide(slide);
+        } else {
+            gotoslide(0);
+        }
+    } else {
+        gotoslide(0);
+    }
+
+
+    
+    
+    // window.addEventListener('resize', function(event) {
+    //     d3.select(".g-slide-cont-inner").classed("g-animate", false);
+    //     gotoslide(curslide);
+    // }, true);
+    
+})
+
+
+</script>
+</body>
+</html>
