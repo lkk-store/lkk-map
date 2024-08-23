@@ -1651,11 +1651,11 @@ let days = [1,2,3,4,5];
 let route, routef;
 
 d3.queue()
-    .defer(d3.json, "_assets/box.json")
-    .defer(d3.json, "_assets/box-mobile.json")
-    .defer(d3.json, "_assets/route-byday-simplified.json")
-    .defer(d3.json, "_assets/maplabels.json")
-    .defer(d3.json, "_assets/chart-byday.json")
+    .defer(d3.json, "box.json")
+    .defer(d3.json, "box-mobile.json")
+    .defer(d3.json, "route-byday-simplified.json")
+    .defer(d3.json, "maplabels.json")
+    .defer(d3.json, "chart-byday.json")
 .awaitAll(function (err, res){
 
     let box = res[0];
