@@ -215,6 +215,9 @@ a:visited {
   #sarah-point-coast .g-text-cont {
     top: 50%;
   }
+  #wednesday-lake .g-text-cont {
+    top: 69%;
+  }
   #chat .g-text-cont {
     top: 55%;
   }
@@ -328,6 +331,10 @@ a:visited {
   height: 100dvh;
   transform-origin: center;
   overflow: visible;
+  transition: opacity 0.5s;
+}
+.g-map.g-hide {
+  opacity: 0;
 }
 @media screen and (min-width: 600px) {
   .g-map {
@@ -398,6 +405,10 @@ path {
   background-image: linear-gradient(to top, #000 50%, rgba(0, 0, 0, 0));
   padding-bottom: 20px;
   padding-left: 10px;
+  transition: opacity 0.5s;
+}
+.g-chart.g-hide {
+  opacity: 0;
 }
 @media screen and (min-width: 600px) {
   .g-chart {
@@ -2176,9 +2187,15 @@ d3.queue()
 
         if (curslide == 0) {
             updateMap();
+            d3.select(".g-map").classed("g-hide", false);
+            d3.select(".g-chart").classed("g-hide", false);
         } else if (mark == "end") {
             updateMap(day);
+            d3.select(".g-map").classed("g-hide", false);
+            d3.select(".g-chart").classed("g-hide", false);
         } else {
+            d3.select(".g-map").classed("g-hide", true);
+            d3.select(".g-chart").classed("g-hide", true);
             updateMinimap(true);
             
             days.forEach(function(d){
