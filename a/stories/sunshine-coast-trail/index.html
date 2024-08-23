@@ -2135,6 +2135,15 @@ d3.queue()
         minimap.classed("g-active", slideId == "related" ? false : slide > 1 ? true : false);
         if (slideElBg.attr("data-bg") && slideElBg.style("background-image") == "none") {
             slideElBg.style("background-image", `url(images/${isMobile ? slideElBg.attr("data-bg") + "-m.jpg" : slideElBg.attr("data-bg") + ".jpg"}`);
+
+            // get next
+            let nextSlideEl = d3.select(".g-slide-" + (+curslide+1));
+            let nextSlideElBg = nextSlideEl.select(".g-slide-background");
+
+            if (nextSlideEl && nextSlideElBg.attr("data-bg") && nextSlideElBg.style("background-image") == "none") {
+                console.log("load bg for next")
+                nextSlideElBg.style("background-image", `url(images/${isMobile ? nextSlideElBg.attr("data-bg") + "-m.jpg" : nextSlideElBg.attr("data-bg") + ".jpg"}`);
+            }
         }
     
         d3.select(".g-map-svg").classed("g-active", mark == "end" ? false : true);
