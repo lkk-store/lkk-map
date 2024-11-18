@@ -131,7 +131,7 @@ fs.watch(currentPath + '/data', (eventType, filename) => {
 
 // // this is from https://github.com/1wheel/hot-server
 
-var defaults = {port: 3989, dir: currentPath} 
+var defaults = {port: 3999, dir: currentPath} 
 var args = require('minimist')(process.argv.slice(2))
 var {port, dir} = Object.assign(defaults, args)
 dir = require('path').resolve(dir) + '/'
@@ -146,12 +146,13 @@ var server = express()
 		child.exec('open http://localhost:' + port)
 		console.log('hot-server http://localhost:' + port)
 	})
-	
-process.on('uncaughtException', (err => 
-	err.errno == 'EADDRINUSE' ? server.listen(++port) : 0)) //inc port if in use
 
-// append websocket/injecter script to all html pages served
-var wsInject = fs.readFileSync('bin/ws-inject.html', 'utf8')
+	
+// process.on('uncaughtException', (err => 
+// 	err.errno == 'EADDRINUSE' ? server.listen(++port) : 0)) //inc port if in use
+
+// // append websocket/injecter script to all html pages served
+// var wsInject = fs.readFileSync('bin/ws-inject.html', 'utf8')
 
 function injectHTML(req, res, next){
 	try{
@@ -164,18 +165,18 @@ function injectHTML(req, res, next){
 	} catch(e){ next() }
 }
 
-// if a .js or .css files changes, load and send to client via websocket
-var wss = new SocketServer({server})
-chokidar
-	.watch(dir, {ignored: /node_modules|\.git|[\/\\]\./ })
-	.on('change', path => {
-		var str = fs.readFileSync(path, 'utf8')
-		var path = '/' + path.replace(__dirname, '')
+// // if a .js or .css files changes, load and send to client via websocket
+// var wss = new SocketServer({server})
+// chokidar
+// 	.watch(dir, {ignored: /node_modules|\.git|[\/\\]\./ })
+// 	.on('change', path => {
+// 		var str = fs.readFileSync(path, 'utf8')
+// 		var path = '/' + path.replace(__dirname, '')
 
-		var type = 'reload'
-		if (path.includes('.js'))  type = 'jsInject'
-		if (path.includes('.css')) type = 'cssInject'
+// 		var type = 'reload'
+// 		if (path.includes('.js'))  type = 'jsInject'
+// 		if (path.includes('.css')) type = 'cssInject'
 
-		var msg = {path, type, str}
-		wss.clients.forEach(d => d.send(JSON.stringify(msg)))
-	})
+// 		var msg = {path, type, str}
+// 		wss.clients.forEach(d => d.send(JSON.stringify(msg)))
+// 	})
