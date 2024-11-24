@@ -47,6 +47,12 @@ d3.queue()
             .attr("vector-effect", "non-scaling-stroke")
             .attr("id", (d,i) => "path-" + i)
             .attr("d", path);
+        
+        svg.append("g").appendMany("path.g-path.g-overlay", routef.features)
+            .attr("vector-effect", "non-scaling-stroke")
+            .attr("id", (d,i) => "path-overlay-" + i)
+            .attr("d", path);
+        
 
         circle = svg.append("circle")
             .attr("r", 0)
@@ -140,35 +146,43 @@ d3.queue()
             .attr("y", (d,i) => isM ? i * 5 : i * 12)
             .text(a => a)
     }
-    
+
+    let totalSeconds = 0;
+    let hoursLabel = document.getElementById("hours");
+    let minutesLabel = document.getElementById("minutes");
+    let secondsLabel = document.getElementById("seconds");
+    let endTimeF = new Date();
+
+    function elapsedTimer() {
+
+        let startTime = data[0].real_time_start;
+        let startTimeSplit = startTime.split(":");
+        let startDateSplit = data[0].start_date.split("/");
+        let startTimeF = new Date(2024,+startDateSplit[0]-1,startDateSplit[1],startTimeSplit[0],startTimeSplit[1]);
+        totalSeconds = (endTimeF.getTime() - startTimeF.getTime()) / 1000;
+        let s10 = data.filter(d => d.section == 10)[0];
+        if (s10.real_time_end == '') {
+            setTime();
+            setInterval(setTime, 1000);
+        } else {
+            let lastSplit = s10.real_time_end.split(":");
+            let lastDateSplit = s10.end_date.split("/");
+            let lastTimeF = new Date(2024,+lastDateSplit[0]-1,lastDateSplit[1],lastSplit[0],lastSplit[1]);
+            totalSeconds = (lastTimeF.getTime() - startTimeF.getTime()) / 1000;
+            setTime("ended");
+        }
+    }
 
     function updateTimer() {
 
-        let hoursLabel = document.getElementById("hours");
-        let minutesLabel = document.getElementById("minutes");
-        // let secondsLabel = document.getElementById("seconds");
+        let sectionsdone = data.filter(d => d.section != '' && d.real_time_end != '');
 
-        let startTime = data[0].real_time_start;
-        let totalSeconds = 0, endTimeF = new Date();
-
-        let sectionsdone = data.filter(d => d.real_time_end != '');
         let last = sectionsdone[sectionsdone.length-1];
 
         if (last) {
             let lastSplit = last.real_time_end.split(":");
             let lastDateSplit = last.end_date.split("/");
             let lastTimeF = new Date(2024,+lastDateSplit[0]-1,lastDateSplit[1],lastSplit[0],lastSplit[1]);
-
-            if (startTime) {
-                let startTimeSplit = startTime.split(":");
-                let startDateSplit = data[0].start_date.split("/");
-                let startTimeF = new Date(2024,+startDateSplit[0]-1,startDateSplit[1],startTimeSplit[0],startTimeSplit[1]);
-                totalSeconds = (lastTimeF.getTime() - startTimeF.getTime()) / 1000;
-                console.log(lastTimeF, startTimeF, totalSeconds)
-                setTime();
-                // setInterval(setTime, 1000);
-            }
-
             let totalDistArr = data.filter(d => d.real_time_end != '').map(d => d.dist)
             
             if (totalDistArr.length > 0) {
@@ -180,39 +194,54 @@ d3.queue()
                 let m = Math.floor(minCalc / 60);
                 d3.select("#last-updated").text(h + " h " + m + " m ago");
             }
-        
         }
-        
-        function setTime() {
-            // ++totalSeconds;
-
-            let h = Math.floor(totalSeconds / 3600);
-            let minCalc = totalSeconds % 3600;
-            let m = Math.floor(minCalc / 60);
-            // let s = Math.floor(minCalc % 60);
-
-            hoursLabel.innerHTML = pad(parseInt(h));
-            minutesLabel.innerHTML = pad(parseInt(m));
-            // secondsLabel.innerHTML = pad(s);
-        }
-
-        function pad(val) {
-             var valString = val + "";
-            if (valString.length < 2) {
-                return "0" + valString;
-            } else {
-                return valString;
-            }
-        }
-
     }
 
-    function goTo() {
+    function setTime(status) {
+        ++totalSeconds;
 
-        let sectionsdone = data.filter(d => d.real_time_end != '');
+        let h = Math.floor(totalSeconds / 3600);
+        let minCalc = totalSeconds % 3600;
+        let m = Math.floor(minCalc / 60);
+        let s = Math.floor(minCalc % 60);
+
+        hoursLabel.innerHTML = pad(parseInt(h));
+        minutesLabel.innerHTML = pad(parseInt(m));
+        secondsLabel.innerHTML = pad(s);
+
+        if (status == "ended") {
+            secondsLabel.innerHTML = "";
+        }
+    }
+
+    function pad(val) {
+         var valString = val + "";
+        if (valString.length < 2) {
+            return "0" + valString;
+        } else {
+            return valString;
+        }
+    }
+
+    function goTo(animate) {
+
+        let sectionsdone = data.filter(d => d.section != '' && d.real_time_end != '');
+
+        sectionsdone.forEach(function(d){
+            d3.select("#path-overlay-" + (d.section-1)).classed("done", true);
+        })
+
+        let current = data.filter(d => d.real_time_start != "" && d.real_time_end == "");
+
+        if (current.length > 0) {
+            let currentuse = current[current.length - 1];
+            d3.select(".section-" + currentuse.section).classed("current", true);
+            d3.select("#path-" + (currentuse.section-1)).classed("current", true);
+        }
+
         let last = sectionsdone[sectionsdone.length-1];
         
-        if (last) {
+        if (last && animate) {
             let range = d3.range(0,+last.section);
 
             range.forEach(function(id){
@@ -243,7 +272,12 @@ d3.queue()
                     }
                 }, durationacc[id])
             })
+        } else if (last) {
 
+            let getlastpt = d3.select("#path-" + (last.section-1));
+            let totalL = getlastpt.node().getTotalLength();
+            let pt = getlastpt.node().getPointAtLength(last.section == 2 ? 0 : totalL);
+            hed.style("transform", "translate(" + pt.x + 'px,' + pt.y + 'px')
         }
         
     }
@@ -253,11 +287,11 @@ d3.queue()
         let tb = sel.append("table");
 
         let th = tb.append("thead").append("tr");
-        th.append("td.section");
+        th.append("td.section").text("Section");
         th.append("td.dist").text("Dist. (km)");
         th.append("td.duration").text("Duration");
         
-        let rows = tb.append("tbody").appendMany("tr", data.filter(d => d.section));
+        let rows = tb.append("tbody").appendMany("tr", data.filter(d => d.section)).attr("class", (d,i) => "section-" + d.section);
         rows.append("td.section").text(d => d.section);
         rows.append("td.dist").text(d => d.dist);
         rows.append("td.duration").text(d => d.real_duration);
@@ -268,12 +302,14 @@ d3.queue()
     drawMap();
     summaryText();
     updateTimer();
-    goTo();
+    elapsedTimer();
+    goTo(true);
 
     d3.select(".g-map-outer").classed("ready", true);
 
     window.addEventListener('resize', function(event) {
         drawMap();
+        goTo(false);
     }, true);
 
 })

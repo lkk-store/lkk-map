@@ -148,7 +148,7 @@ d3.queue()
 
     //---------Execution--------
 
-    console.log(s10)
+    // console.log(s10)
     if (s10.real_time_end != '') {
 
         d3.select("#finish-text").classed("finished", true);

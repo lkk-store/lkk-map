@@ -162,6 +162,15 @@ svg {
     fill: none;
 }
 
+.g-path.g-overlay {
+    display: none;
+    stroke: #ff00d3;
+}
+
+.g-path.g-overlay.done {
+    display: block;
+}
+
 .g-map circle {
     fill: #fbed22;
     stroke-width: 1;
@@ -191,6 +200,10 @@ svg {
 .info .n span {
     display: inline-block;
     vertical-align: middle;
+}
+
+.info .time .n span {
+    width: 12px;
 }
 
 .hed {
@@ -397,3 +410,35 @@ svg {
 
     
 }
+
+tr.current {
+    animation: currentanim 2s infinite; 
+    color: #ff00d3;
+    background-color: white;
+}
+
+@keyframes currentanim {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: rgba(255, 0, 211, 0.1);
+    }
+}
+
+
+path.current {
+    animation: pathanim 2s infinite; 
+}
+
+@keyframes pathanim {
+    0% {
+        stroke: #fbed22;
+    }
+
+    50% {
+        stroke: #ff00d3;
+    }
+}
+
