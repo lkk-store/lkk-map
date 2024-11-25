@@ -3,11 +3,13 @@ d3.queue()
     .defer(d3.json, "../maclehose-trail/meta.json")
     .defer(d3.json, "hkg.json")
     .defer(d3.csv, "https://docs.google.com/spreadsheets/d/e/2PACX-1vSU7WUEmGn6K4Fc6MOw_46trqCnhtIxaCYo9AQOOWT_yNQi43LF0e_m0G61H8FBTEAyAY65nFqgY4x7/pub?gid=71895201&single=true&output=csv")
+    // .defer(d3.csv, "data.csv")
     .awaitAll(function(err, res){
         
     let route = res[0];
     let hkg = res[2];
     let data = res[3];
+    console.log(data)
     let hed = d3.select(".hed");
     let reversed = false;
     let proj, path, circle, duration, durationacc, durationtotal;
@@ -151,26 +153,43 @@ d3.queue()
     let hoursLabel = document.getElementById("hours");
     let minutesLabel = document.getElementById("minutes");
     let secondsLabel = document.getElementById("seconds");
-    let endTimeF = new Date();
+    let endTimeF = getHKTime();
 
+    function getHKTime(city, offset) {
+        var d = new Date();
+        var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+        var nd = new Date(utc + (3600000*8));
+        return nd;
+    }
+    
     function elapsedTimer() {
 
         let startTime = data[0].real_time_start;
-        let startTimeSplit = startTime.split(":");
-        let startDateSplit = data[0].start_date.split("/");
-        let startTimeF = new Date(2024,+startDateSplit[0]-1,startDateSplit[1],startTimeSplit[0],startTimeSplit[1]);
-        totalSeconds = (endTimeF.getTime() - startTimeF.getTime()) / 1000;
-        let s10 = data.filter(d => d.section == 10)[0];
-        if (s10.real_time_end == '') {
-            setTime();
-            setInterval(setTime, 1000);
-        } else {
-            let lastSplit = s10.real_time_end.split(":");
-            let lastDateSplit = s10.end_date.split("/");
-            let lastTimeF = new Date(2024,+lastDateSplit[0]-1,lastDateSplit[1],lastSplit[0],lastSplit[1]);
-            totalSeconds = (lastTimeF.getTime() - startTimeF.getTime()) / 1000;
-            setTime("ended");
+
+        if (startTime) {
+            let startTimeSplit = startTime.split(":");
+            let startDateSplit = data[0].start_date.split("/");
+            let startTimeF = new Date(2024,+startDateSplit[0]-1,startDateSplit[1],startTimeSplit[0],startTimeSplit[1]);
+            totalSeconds = (endTimeF.getTime() - startTimeF.getTime()) / 1000;
+            let s10 = data.filter(d => d.section == 10)[0];
+
+            if (totalSeconds > 0) {
+
+                if (s10.real_time_end == '') {
+                    setTime();
+                    setInterval(setTime, 1000);
+                } else {
+                    let lastSplit = s10.real_time_end.split(":");
+                    let lastDateSplit = s10.end_date.split("/");
+                    let lastTimeF = new Date(2024,+lastDateSplit[0]-1,lastDateSplit[1],lastSplit[0],lastSplit[1]);
+                    totalSeconds = (lastTimeF.getTime() - startTimeF.getTime()) / 1000;
+                    setTime("ended");
+                }
+
+            }   
+           
         }
+        
     }
 
     function updateTimer() {
@@ -233,7 +252,7 @@ d3.queue()
 
         let current = data.filter(d => d.real_time_start != "" && d.real_time_end == "");
 
-        if (current.length > 0) {
+        if (current.length > 0 && totalSeconds > 0) {
             let currentuse = current[current.length - 1];
             d3.select(".section-" + currentuse.section).classed("current", true);
             d3.select("#path-" + (currentuse.section-1)).classed("current", true);

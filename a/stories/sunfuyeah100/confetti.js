@@ -1,5 +1,7 @@
 let url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSU7WUEmGn6K4Fc6MOw_46trqCnhtIxaCYo9AQOOWT_yNQi43LF0e_m0G61H8FBTEAyAY65nFqgY4x7/pub?gid=71895201&output=csv&" + Date.now()
 
+// let url = "data.csv";
+
 
 d3.queue()
     .defer(d3.csv, url)
