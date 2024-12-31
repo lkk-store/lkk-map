@@ -652,8 +652,8 @@ export const mainScript = {
 		const getScreenPos = (x, y, z) => {
 			var p = new THREE.Vector3(x, y, z);
 			var vector = p.project(camera);
-			vector.x = ((vector.x + 1) / 2) * window.innerWidth;
-			vector.y = (-(vector.y - 1) / 2) * window.innerHeight;
+			vector.x = ((vector.x + 1) / 2) * containerCanvas.offsetWidth;
+			vector.y = (-(vector.y - 1) / 2) * containerCanvas.offsetHeight;
 			return vector;
 		};
 
