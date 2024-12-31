@@ -1,106 +1,1061 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNFUYEAH 100</title>
+<title>SUNFUYEAH 100</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<link rel="shortcut icon" href="https://www.lkk-store.com/lkk-map/img/lkk-logo-06.webp" />
+<link rel="apple-touch-icon" sizes="128x128" href="https://www.lkk-store.com/lkk-map/app-icon.png">
+<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">
 
-    <!-- For Google -->
-    <meta name="description" content="SUNFUYEAH 100" />
-    <meta name="keywords" content="Nov 29, 2024" />
-    <meta name="author" content="LKK" />
-    <meta name="copyright" content="LKK" />
-    <meta name="application-name" content="LKK" />
+<!-- For Google -->
+<meta name="description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="keywords" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="author" content="LKK" />
+<meta name="copyright" content="LKK" />
+<meta name="application-name" content="LKK" />
 
-    <!-- For Facebook -->
-    <meta property="og:title" content="SUNFUYEAH 100" />
-    <meta property="og:image" content="https://www.lkk-store.com/lkk-map/img/social/sunfuyeah100-fb.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://www.lkk-store.com/lkk-map/a/stories/sunfuyeah100" />
-    <meta property="og:description" content="Nov 29, 2024" />
+<!-- For Facebook -->
+<meta property="og:title" content="SUNFUYEAH 100" />
+<meta property="og:image" content="https://www.lkk-store.com/lkk-map/img/social/sunfuyeah100-fb.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://www.lkk-store.com/lkk-map/a/stories/sunfuyeah100/" />
+<meta property="og:description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
 
-    <!-- For Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@lkkmap" />
-    <meta name="twitter:creator" content="@lkkmap" />
-    <meta name="twitter:title" content="SUNFUYEAH 100" />
-    <meta name="twitter:description" content="Nov 19, 2024" />
-    <meta name="twitter:image:src" content="https://www.lkk-store.com/lkk-map/img/social/sunfuyeah100-twitter.jpg" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="420" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="style.css">
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SUNFUYEAH 100" />
+<meta name="twitter:description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="twitter:image" content="https://www.lkk-store.com/lkk-map/img/social/sunfuyeah100-twitter.jpg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="420" />
+<style>
+@font-face {
+  font-family: 'Hong Kong Map Type';
+  /*a name to be used later*/
+  src: url('https://www.lkk-store.com/lkk-map/Hong-Kong-Map-Type.otf');
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Arial, sans-serif;
+  line-height: 1.3;
+}
+.g-header {
+  text-align: center;
+  font-family: 'Hong Kong Map Type';
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  font-size: 11px;
+  background: #000;
+  border-bottom: 1px solid #333;
+}
+.g-header a,
+.g-header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.g-header-inner {
+  padding: 10px 0 10px 0;
+}
+.text {
+  padding: 0 20px;
+  max-width: 460px;
+  margin: 0 auto 10px auto;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+}
+.g-switch {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 13px;
+  cursor: pointer;
+  position: relative;
+  z-index: 999999;
+}
+.g-switch .g-cn {
+  letter-spacing: 1px;
+}
+.g-switch .g-en {
+  letter-spacing: 0.3px;
+}
+.g-switch .g-divider {
+  margin: 0 10px;
+  display: inline-block;
+}
+.g-switch .g-read {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.6;
+}
+.g-switch .g-read:hover {
+  opacity: 1;
+}
+.hed {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  padding: 55px 10px 10px 10px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 600px) {
+  .hed {
+    font-size: 40px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.hed .cn {
+  letter-spacing: 5px;
+}
+.map {
+  margin: 30px auto;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (min-width: 460px) {
+  .map-inner {
+    margin-bottom: 100vh;
+  }
+}
+.map-meta {
+  text-align: center;
+  margin: 30px auto;
+}
+.map-meta .map-title {
+  width: 150px;
+  margin: 0 auto;
+}
+.g-body,
+.text {
+  position: relative;
+}
+.g-asset-container {
+  position: relative;
+  width: 100%;
+  height: 20000px;
+  z-index: 1;
+}
+.orbit .g-3d-labels-cont,
+.orbit .g-asset-scroll-annotations {
+  display: none;
+}
+.g-asset-scroll-annotations {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.g-asset-scroll-annotations .g-text-cont {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner {
+  background-color: #000;
+  padding: 20px 0;
+  max-width: 600px;
+  transform: translate(-50%);
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner {
+    padding: 20px;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner.has-subhed {
+  background-color: transparent;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed {
+  margin: 10px auto 10px auto;
+  text-align: center;
+  text-shadow: 0 0 3px #000, 0 0 5px #000, 0 0 10px #000;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .kicker {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  display: inline;
+  padding: 0 3px 3px 6px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .kicker .cn {
+  font-size: 14px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed {
+  font-weight: 700;
+  margin: 10px 0 15px;
+  font-size: 18px;
+  position: relative;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 10px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed .cn {
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text {
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text {
+    padding: 0;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text:last-child {
+  margin-bottom: 0;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.caption {
+  font-style: italic;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.caption:last-child {
+  margin-bottom: 0;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.note {
+  margin-top: 50px;
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 13px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img {
+  width: 100%;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-desktop {
+  aspect-ratio: 4 / 2.9;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-desktop {
+    display: block;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-mobile {
+  aspect-ratio: 2 / 3;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-mobile {
+    display: none;
+  }
+}
+.g-asset-container canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.g-asset-debug-container {
+  position: -webkit-fixed;
+  position: fixed;
+  margin-top: -100vh;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: #000;
+  margin-left: 2px;
+  padding: 10px;
+  display: none;
+  transform: translateZ(0);
+  z-index: 203;
+}
+.g-asset-debug-pct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 100%;
+  color: #000;
+  background-color: rgba(252, 0, 255, 0.6);
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: -7px;
+  z-index: 204;
+  clip-path: polygon(/* calc(100% - 110px) 7px, */ calc(100% - 48px) 7px, calc(100% - 38px) 0, 100% 0, 100% 100%, calc(100% - 38px) 100%, calc(100% - 48px) 8px /* calc(100% - 110px) 8px */);
+}
+.g-asset-debug-pct-soft {
+  color: #fff;
+  background-color: rgba(50, 50, 50, 0.6);
+  opacity: 0.8;
+  z-index: 204;
+  clip-path: polygon(/* calc(100% - 110px) 7px, */ calc(100% - 48px) 7px, calc(100% - 38px) 0, 100% 0, 100% 100%, calc(100% - 38px) 100%, calc(100% - 48px) 8px /* calc(100% - 110px) 8px */);
+}
+.g-3d-labels-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.g-3d-label {
+  margin-top: -5px;
+  transform: none;
+  position: absolute;
+  font-family: 'Hong Kong Map Type', arial, sans-serif;
+  text-shadow: none;
+  font-size: 7px;
+  line-height: 9px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  transition: opacity 1s, color 1s;
+  opacity: 0;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label {
+    font-size: 9px;
+    line-height: 13px;
+    letter-spacing: 1px;
+  }
+}
+.g-3d-label .cn {
+  font-size: 10px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label .cn {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 3px;
+  }
+}
+.g-3d-label span {
+  display: block;
+  white-space: nowrap;
+}
+.g-3d-label.active {
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 0 0 3px #000, 0 0 6px #000;
+}
+.g-3d-label.active .g-show {
+  display: block;
+}
+.g-3d-label.big {
+  font-size: 9px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big {
+    font-size: 12px;
+  }
+}
+.g-3d-label.big span:last-child {
+  font-size: 7px;
+  opacity: 0.5;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big span:last-child {
+    margin-top: 5px;
+    font-size: 8px;
+  }
+}
+.g-3d-label.big .cn {
+  font-size: 13px;
+  letter-spacing: 8px;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big .cn {
+    font-size: 16px;
+  }
+}
+.g-3d-label.big .cn span:last-child {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big .cn span:last-child {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
+.g-3d-label.big .en {
+  white-space: nowrap;
+}
+.g-3d-label.small {
+  font-size: 6px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.small {
+    font-size: 10px;
+  }
+}
+span.en {
+  display: none;
+}
+span.en.g-show {
+  display: block;
+}
+span.cn {
+  display: none;
+  line-height: 1.5;
+}
+span.cn.g-show {
+  display: block;
+}
+.g-version {
+  display: none;
+}
+.g-version.g-show {
+  display: block;
+}
+</style>
 </head>
 <body>
+<div class="g-header"><a href="https://www.lkk-store.com/lkk-map">
+    <div class="g-header-inner">LKK MAP</div>
+</a></div>
 
-    <div class="hed-cont">
-        <img class="img" src="sunfuyeah.png" alt="">
-
-        <table class="info">
-            <tr class="time">
-                <td class="desc">Elapsed</td>
-                <td class="n">
-                    <span id="hours">00</span>
-                    <span class="time-colon">h</span>
-                    <span id="minutes">00</span>
-                    <span class="time-colon">m</span>
-                    <span id="seconds">00</span>
-            </td>
-            </tr>
-            <tr class="distance">
-                <td class="desc">Dist.</td>
-                <td class="n"><span id="distance">0 km</span></td>
-            </tr>
-            <tr class="last-updated">
-                <td class="desc">Last Updated</td>
-                <td class="n" id="last-updated">–</td>
-            </tr>
-        </table>
-
-        <img class="north-arrow" src="north-arrow.png" alt="">
-    </div>
-
-    <div class="g-map-outer">
-        <div class="g-map">
-            <div class="g-map-inner">
-                <div class="g-map-base">
-                    <img src="mapbase.jpg" alt="">
-                </div>
-                <div class="g-svg-cont"></div>
-                <div class="hed">
-                    <div class="hed-inner">
-                        <img src="lkk-head-arrow.png" alt="">
-                    </div>
-                </div>
-
+<div class="g-body">
+    
+        
+            <div class="hed">
+                <span class="g-version en g-show">A Trail to See All of Hong Kong, All At Once</span>
+                <span class="g-version cn">至少跑一次離譜的100K</span>
             </div>
+        
+    
+        
+            <div class="text">
+                <span class="g-version en g-show">On Nov. 29, 2024, I completed the 100-kilometer MacLehose Trail in my hometown in 23.5 hours. This was the longest distance I’ve ever completed in one go. I was full of doubt before I set off, but if anything, I knew how to put one foot in front of the other.</span>
+                <span class="g-version cn">2024 年 11 月 29 日，我用了 23.5 小時完成了麥理浩徑。這是我人生試過最長的距離。出發前，我對能否完成這件事充滿了懷疑，但我知道唯一可以做的就是踏出第一步。</span>
+            </div>
+        
+    
+        
+     
+</div>
+
+<div class="g-switch">
+    <div class="g-read g-cn">用中文閱讀</div><div class="g-divider">|</div><div class="g-read g-en">Read in English</div>
+</div>
+
+
+<div class="map">
+    <div class="map-inner">
+        <div class="g-asset-container"></div>
+        <div class="g-3d-labels-cont"></div>
+        <div class="g-asset-scroll-annotations">
+            
+                
+            
+                
+                <div class="g-text-cont g-text-cont-1" data-id="trail" data-frame="30" data-mobile-frame="" data-index="1" style="top: 4%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Prologue </span>
+                                        <span class="g-version cn">前傳 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> The Trail</span>
+                                        <span class="g-version cn"> 山徑</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-2" data-id="background" data-frame="70" data-mobile-frame="50" data-index="2" style="top: 9.333333333333334%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Spanning 100 kilometers across Hong Kong, the MacLehose Trail is the longest established trail in the city. People are always surprised when I tell them that Hong Kong, a famous metropolis, actually has an abundance of nature. This trail is everything I love about Hong Kong. Traversing the entire length of the city, it offers epic mountain views as well as panorama cityscapes.</span>
+                                        <span class="g-version cn">麥理浩徑全程 100 公里，是香港最長的遠足徑。由西貢北潭涌橫跨整個香港，經過馬鞍山、獅子山、畢架山，穿過九龍之後，再繞過城門水塘、針山草山大帽山，終點於屯門。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I’ve backpacked the trail over three days before, and it was one of the most wonderful things I’ve ever done. But since I picked up trail running, a question has been brewing in the back of my head – could I possibly complete this whole trail, all 100 kilometers, in one go?</span>
+                                        <span class="g-version cn">幾年前，我用三天全走麥徑，是我人生做過其中一件最難忘的事。後來開始跑步跑山，就在心裡種下了一個疑問：究竟我可不可以一口氣完成這條足足 100 公里的麥理浩徑呢？</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">For those with the burning question – but why? I don’t have a great answer other than I <i>want</i> to. Setting <i>arbitrary stupid goals</i>, a term coined by the writer Tamara Shopsin, has been a driving force in my pursuit of the meaning of life as I step into my 30s. Don’t <i>you</i> want to find out for how far and how long you can run for?</span>
+                                        <span class="g-version cn">對於要挑戰 100 公里這個距離，或者你感到不明所以。其實我心裡也沒有什麼好解釋。大家不妨參考一下今年一首流行曲 —《至少做一件離譜的事》。這件離譜的事，為我今年的人生付予了很充實的意義。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">My childhood friend, Stephanie, somehow agreed to this under my relentless urging. We had originally signed up for a race that later got cancelled, but there was no stopping us. We kept the original date, made our own bibs and arranged for friends and family to act as support stations.</span>
+                                        <span class="g-version cn">這個離譜的想法，竟然有位中學同學阮應約。我們原本報了一個麥理浩徑的跑山比賽，但它沒有解釋取消了。但我們下定決心，自行發起活動並命名為 SUNFUYEAH 100 ，還自家製號碼布，安排了家人和朋友為我們補給，在原定的日子，出！發！</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/bib-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/bib.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Our homemade bibs.</span>
+                                        <span class="g-version cn">SUNFUYEAH 100，參加人數：2。</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-3" data-id="section-1" data-frame="140" data-mobile-frame="" data-index="3" style="top: 18.666666666666668%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Section 1 </span>
+                                        <span class="g-version cn">第一段 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> The Start</span>
+                                        <span class="g-version cn"> 開始</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-4" data-id="section-1-text" data-frame="180" data-mobile-frame="165" data-index="4" style="top: 24%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We set off in the dark at 5:30 in the morning. The start was somewhat anticlimactic with just the two of us.</span>
+                                        <span class="g-version cn">我們 5：30 到達起點，四周還是漆黑的。這個人生最長距離的挑戰，開始好像有點反高潮，只有我們二人靜靜地起跑。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/start-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/start.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The official start of the MacLehose Trail.</span>
+                                        <span class="g-version cn">麥理浩徑起點</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I was filled with nerves for what the day had in store for us. But as the moon slowly gave way to the sun, revealing the most gorgeous landscape, I was able to relax and knew that the most important thing was to enjoy myself (while I pushed my body to the brink.)</span>
+                                        <span class="g-version cn">起步的時候還真的很緊張，不竟要做一件從來沒有做過的事。但當天空漸漸亮起來時，飽覽著萬宜水庫及西貢的美影，才放鬆下來，提醒自已（把自己的體能推至極限的同時）要好好去享受這件事情，畢竟不是常常有機會欣賞這樣的香港。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/moon-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/moon.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The moon.</span>
+                                        <span class="g-version cn">月色多美</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-5" data-id="section2" data-frame="250" data-mobile-frame="" data-index="5" style="top: 33.33333333333333%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Section 2 - 4 </span>
+                                        <span class="g-version cn">第二至第四段 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> Hard But Okay</span>
+                                        <span class="g-version cn"> 最緊要辛苦</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-6" data-id="section-2-text" data-frame="290" data-mobile-frame="275" data-index="6" style="top: 38.666666666666664%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We flew through the first few sections. We were surrounded by endless, epic views. It didn’t feel like the hard thing that it was supposed to be.</span>
+                                        <span class="g-version cn">頭幾段雖然辛苦但可以說是享受。西貢的影色是世界級的，浪茄、西灣、遠眺蚺蛇尖、長咀讓人心曠神怡，甚至忘了我們正在挑戰 100 公里。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/saikungviews-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/saikungviews.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The views in Sai Kung are unreal.</span>
+                                        <span class="g-version cn">西貢真係好靚</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We arrived half an hour ahead of schedule for lunch and a resupply. (Special thanks to my parents!)</span>
+                                        <span class="g-version cn">我們還比預期早了半小時到達補給點。（感謝爸媽！）</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-7" data-id="section5" data-frame="330" data-mobile-frame="" data-index="7" style="top: 44%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Section 5 </span>
+                                        <span class="g-version cn">第五段 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> The Turning Point</span>
+                                        <span class="g-version cn"> 轉捩點</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-8" data-id="section5-text" data-frame="370" data-mobile-frame="" data-index="8" style="top: 49.333333333333336%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Section 5 is when the trail moves from rural parts to being closer to urban areas. We stopped to take in the whole view of the city.</span>
+                                        <span class="g-version cn">第五段離開西貢走近九龍市區，在沙田坳道不忘停下來欣嘗香港全影。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/cityview-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/cityview.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">City view.</span>
+                                        <span class="g-version cn">香港城市影色</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The trail is marked by these signposts every 500 meters. So when we reached M100, it meant we were halfway through. (Hey! <i>ONLY</i> 50K more to go!)</span>
+                                        <span class="g-version cn">麥理浩徑每 500 米都會有標距柱，到了 M100 代表我們已經走了一半了！（<i>只剩</i> 50 公里<i>而已</i>！）</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/m100-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/m100.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">M100 signpost, 50 kilometers done, 50 more to go.</span>
+                                        <span class="g-version cn">M100 標距柱，完成 50 公里，還有 50 公里</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We’ve been on the trail for 10 hours, but we were still feeling energized at this point. We ate and drank constantly, almost never letting ourselves go hungry or thirsty.</span>
+                                        <span class="g-version cn">到這裡剛好過了 10 小時，我們還算精神。我們有跟教練指示，每小時起碼補 100 卡路里，整天我們都不停吃不停喝，維持能量。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">But the second 50 kilometers was going to be the real challenge. I've run a marathon, I've done a 50k, but anything beyond this point was new territory to me.</span>
+                                        <span class="g-version cn">但我知道後半的 50 公里才是真正的考驗。我跑過馬拉松，走過 50 公里，但從這裡開始的每一步，都是從沒踏足過的距離。</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-9" data-id="section6" data-frame="455" data-mobile-frame="" data-index="9" style="top: 60.66666666666667%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Section 6 - 8 </span>
+                                        <span class="g-version cn">第六至第八段 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> The Darkness</span>
+                                        <span class="g-version cn"> 黑夜來臨</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-10" data-id="section6-text" data-frame="500" data-mobile-frame="480" data-index="10" style="top: 66.66666666666666%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The distance had caught up with us. By the time we reached section 6, we were desperate.</span>
+                                        <span class="g-version cn">到第六段時，開始崩潰了。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I had planned this stop poorly, forgetting the swarm of monkeys that dwell in this part of town. They’ve been around humans and packaged food for so long, that they would immediately jump you if you had any food or drinks in plain sight.</span>
+                                        <span class="g-version cn">我在計劃這個補給點時失策了，忘記金山被馬騮佔據。他們跟人類相處太久，任何飲品跟食物只要暴露出來，就會給牠們搶掉。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/monkeys-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/monkeys.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Monkeys: 1, Humans: 0.</span>
+                                        <span class="g-version cn">馬騮：1 , 人類：0</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We had been looking forward to taking a break with a hot meal, it was what kept us going through the last section. Instead, all we could do was stuff supplies into our packs while the monkeys encircled us. We thanked our friends and moved on. It was 5:30 p.m., 12 hours since we started.</span>
+                                        <span class="g-version cn">到這之前的尾段，我們開始意志消沉，一直在期待這個補給點的食物。但因為馬騮實在太猛了，我們唯有放棄吃飯，把可以帶的乾糧放進跑步背心裡，然後繼續前進。那時 5 時 30 分，已走了 12 小時。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">As the sun set, the views were as gorgeous as the morning’s, but our mood was less pleasant. We continued to move, but there was no more chit-chatting, no more sprinting on the flats and downhill.</span>
+                                        <span class="g-version cn">日落跟日出一樣美，但我們的心情卻跟出發時差很多。我們繼續前進，但都提不起勁聊天，提不起腿跑。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/sunset-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/sunset.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The sunset was as beautiful as the sunrise, but our mood was not as nice.</span>
+                                        <span class="g-version cn">日落跟日出一樣美，但我們的心情卻很不一樣</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">It was completely dark when we reached a monkey-free spot and finally sat down for some food. We chomped on protein bars and other snacks, dreaming of the hot meal that we left behind. My friend burst into tears.</span>
+                                        <span class="g-version cn">找到一個沒有馬騮的地方坐下來吃東西時，已經完全天黑了。我們吃著 soyjoy 條，內心想著剛才遺留了的飯盒，阮突然濠哭。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">“This is so much harder than I thought it was going to be,” Stephanie said as she sobbed.</span>
+                                        <span class="g-version cn">「我無諗過會咁辛苦！」</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">“And I really wanted that fried rice!!!”</span>
+                                        <span class="g-version cn">「同埋我真係好想食鹹魚雞粒炒飯！」</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I laughed when I realized what was making her most upset was not the pain from the 56 kilometers and the dozen of peaks we’ve put behind us, but the lack of fried rice.</span>
+                                        <span class="g-version cn">我大笑起來，因為我發現讓她最傷心的，不是有多辛苦，不是因為行了多少座山，而是因為沒有得吃鹹魚雞粒炒飯。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">“We could just go home right now,” I suggested, not entirely joking.</span>
+                                        <span class="g-version cn">「咁辛苦我地可以番屋企喎。」那時我們在城門水塘，我真的有在考慮離開。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">But she was more determined than I was.</span>
+                                        <span class="g-version cn">但阮比我更有決心，還說已經走到這裡，我們一定可以完成。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The next part was infamously tough, with three consecutive big climbs – Needle Hill, Grass Hill and Tai Mo Shan, the last being the tallest peak in Hong Kong.</span>
+                                        <span class="g-version cn">休息後就要打大佬，針山、草山、還有全香港最高的大帽山。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Tack onto that, the 14 hours we’ve been out there, and the complete darkness around us. As we tackled peak after peak, I actually started to doze off… while walking!</span>
+                                        <span class="g-version cn">14 小時的疲憊，加上漆黑的環境，在這段我體驗了跑山界傳說中一路走一路睡著的情況。我走著走著真的不知何時睡着了，然後 “中” 了一下才發現自己還在走路。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/sad-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/sad.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Sleep beckoned as we sat down to rest in the dark…</span>
+                                        <span class="g-version cn">在漆黑中坐下來休息時，真的很想睡</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Stephanie powered on ahead of me, more resolute than I was at this point. The little glow from her headlamp was my guiding light. I told myself I could not let that light out of my sight, as I closed my eyes periodically for mini naps.</span>
+                                        <span class="g-version cn">阮在我前方默默前進，我就望著她頭燈弱弱的一點光，一步一步征服這座全香港最高的山。每次眨眼都多合上幾秒，當是補眠了一點吧。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/light-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/light.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Just follow the light…</span>
+                                        <span class="g-version cn">向著光走 ⋯</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">When we finally reached the peak of Tai Mo Shan, a strong, cold gust slapped us awake. We’ve reached the highest point of the trail.</span>
+                                        <span class="g-version cn">突然一陣強風打在我們的面上，我們終於到了大帽山頂了，也是整個麥理浩徑的最高點。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I felt like a new person, ready to run all the way downhill, where our friends awaited us with another resupply, this time monkeyfree.</span>
+                                        <span class="g-version cn">我好像重生了一樣，準備奔向正在等待我們的朋友。這次可以沒有馬騮，好好地吃一頓了。</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-11" data-id="section910" data-frame="650" data-mobile-frame="630" data-index="11" style="top: 86.66666666666667%;">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">Section 9 - 10 </span>
+                                        <span class="g-version cn">第九至第十段 </span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show"> Running Towards the End</span>
+                                        <span class="g-version cn"> 向終點奔跑</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-12" data-id="section910-text" data-frame="680" data-mobile-frame="660" data-index="12" style="top: 90.66666666666666%;">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">It was midnight when we reached our last support station where friends met us with a hot meal (finally!), hot cocoa and coffee.</span>
+                                        <span class="g-version cn">到了最後的補給點已是凌晨十二時。我們的朋友準備了熱食，熱朱古力，熱咖啡。（真的十萬分無限感激。）</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/food-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/food.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">FOOD!</span>
+                                        <span class="g-version cn">食！飯！</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The last two sections were more a mental challenge than physical. We kept each other awake by belting out pop songs from our childhood, feeling like somehow all the lyrics applied to us in this moment.</span>
+                                        <span class="g-version cn">最後兩段，真的是用意志捱過。為了抗衡睡意，我們大聲高唱著我們中學時代的金曲。唱到《無間道》，突然覺得那歌詞很適合我們「明明我已奮力無間 天天上路／有沒有終點 誰能知道」。最後的九、十段，是我們的無間地獄。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">It was past 4 a.m. when we reached the very last part of the trail which was 6 kilometers of flat road.</span>
+                                        <span class="g-version cn">走到最後 6 公里的引水道，凌晨 4 點。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">“Come on, this is it. Let’s run,” I said, putting away my trekking poles. We’ve somehow perfectly balanced each other out through this journey. I pushed her on the flats and downhills, while she led the way uphill.</span>
+                                        <span class="g-version cn">「最後直路！跑吧！」我跟阮說。在這天的路途上，我們完美地互相補位。平路和下坡時就我推著她跑，上斜時就由阮帶領。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Stephanie started to jog, at first unwillingly. But slowly she sped up, and before I knew it, I was struggling to keep up. I’m normally a faster runner than her, my ego would not let her outrun me.</span>
+                                        <span class="g-version cn">阮不情願地開始慢跑，但不知不覺間慢慢加速，越跑越快，直至我開始有點跟不上。我平常都比她跑得快，自尊心推著我已筋皮力盡的身體不斷跟著她加速。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">At the very last kilometer, a cursed uphill stretch awaited us. I resorted to a power walk as she sprinted (how???) uphill. (I thought I was going to lose! Wait, is this suddenly a competition???) Thankfully a downhill followed where I caught up with her. Somehow, after 23.5 hours, we were still able to blast our way together to the finish.</span>
+                                        <span class="g-version cn">在最後的 1 公里，竟然還有一個奪命斜。阮往上狂奔（點做到？？？）我只能快行。（我以為自己要輸了？等等，這是個比賽嗎？）幸好最後還有一段下坡，我拔足狂奔追上她，最後我們一同以 100 米的衝勁跑至這 100 公里的終點。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="img img-desktop" style="background-image: url('img/end-d.jpg');"></div>
+                                    <div class="img img-mobile" style="background-image: url('img/end.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The official end of the MacLehose Trail.</span>
+                                        <span class="g-version cn">麥理浩徑終點</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Life checklist:</span>
+                                        <span class="g-version cn">人生清單:</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">✅ 100 kilometers, MacLehose Trail</span>
+                                        <span class="g-version cn">✅ 100K 麥理浩徑</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text note">
+                                        <span class="g-version en g-show">Special thanks: Mom and dad, Showroom, Lam On Lok, 大細孖, Yiu, Our Legs™, everyone who cheered us on.</span>
+                                        <span class="g-version cn">特別鳴謝我的家人、Showroom、林安樂、大細孖、瑤、我地對腳™、為我們打過氣的每一個人。</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
         </div>
     </div>
+</div>
+<script type='module'>
 
-    <div class="summary-text"></div>
+import { mainScript } from './src/script-3d.js';
 
-<!-- 
-    <h2>Schedule</h2>
-
-    <table class="schedule">
-    </table> -->
-
-    <div id="canvas">
-		<canvas></canvas>
-	</div>
-
-    <div id="finish-text">
-        WE DID IT!
-    </div>
-
-    <script src="../../../d3_.js"></script>
-    <script src="../../../topojson.min.js"></script>
-    <script src="script.js"></script>
-    <script src="confetti.js"></script>
-    
+mainScript.init(null, null, [])
+</script>
 </body>
 </html>
