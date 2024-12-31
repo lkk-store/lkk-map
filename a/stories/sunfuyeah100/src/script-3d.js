@@ -336,18 +336,23 @@ export const mainScript = {
 			// console.log(scrollPct)
 		};
 
+		let ogwidth = window.innerWidth;
 		const onWindowResize = () => {
 			if (!throttleResize) {
-				const width = window.innerWidth;
-				const height = window.innerHeight;
 
-				renderer.setSize(width, height);
-				camera.aspect = width / height;
-				camera.updateProjectionMatrix();
+				if (ogwidth !== window.innerWidth) {
+					const width = window.innerWidth;
+					const height = window.innerHeight;
+					ogwidth = width;
 
-				setTimeout(function () {
-					throttleResize = false;
-				}, 150);
+					renderer.setSize(width, height);
+					camera.aspect = width / height;
+					camera.updateProjectionMatrix();
+
+					setTimeout(function () {
+						throttleResize = false;
+					}, 150);
+				}
 			}
 		};
 
